@@ -10,19 +10,19 @@ const VENTURES = [
     status: "LIVE" as const,
   },
   {
-    title: "HeroDuo",
-    link: "https://heroduo.com",
-    image: "/companies/heroduo-preview.png",
-    description: "Human + technology collaboration system.",
-    status: "BUILDING" as const,
-  },
-  {
     title: "WYZ",
     link: "https://website-cfo.vercel.app/",
     image: "/companies/wyz-preview.png",
     description:
       "Financial intelligence platform for modern businesses.",
     status: "LIVE" as const,
+  },
+  {
+    title: "HeroDuo",
+    link: "https://heroduo.com",
+    image: "/companies/heroduo-preview.png",
+    description: "Human + technology collaboration system.",
+    status: "BUILDING" as const,
   },
 ];
 
