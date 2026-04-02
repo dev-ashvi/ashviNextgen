@@ -14,6 +14,7 @@ import {
   useState,
 } from "react";
 import { CompaniesShowcase } from "@/components/landing/CompaniesShowcase";
+import { HowAshviBuilds } from "@/components/landing/HowAshviBuilds";
 import LightRays from "@/components/LightRays";
 import { VisionStarField } from "@/components/landing/VisionStarField";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
@@ -1105,6 +1106,12 @@ export function CinematicStory() {
         <div className="ac-hdiv" aria-hidden />
 
         <CompaniesShowcase />
+
+        <div className="ac-hdiv" aria-hidden />
+
+        <HowAshviBuilds />
+
+        <div className="ac-hdiv" aria-hidden />
 
         <section className="ac-ch" id="solutions" aria-label="Solutions">
           <div className="ac-s-label ac-fi">Technology Solutions</div>

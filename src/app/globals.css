@@ -1520,6 +1520,10 @@ html::-webkit-scrollbar-corner {
   transition-delay: 0.34s;
 }
 
+.ac-fi-d3b {
+  transition-delay: 0.4s;
+}
+
 .ac-fi-d4 {
   transition-delay: 0.46s;
 }
@@ -1530,6 +1534,465 @@ html::-webkit-scrollbar-corner {
 
 .ac-fi-d6 {
   transition-delay: 0.7s;
+}
+
+.ac-fi-d7 {
+  transition-delay: 0.82s;
+}
+
+/* How Ashvi Builds — two-column radar + editorial (#how-builds) */
+.ac-build-radar {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  padding: clamp(48px, 7.5vw, 96px) clamp(20px, 4.5vw, 56px)
+    clamp(44px, 7vw, 88px);
+  overflow: visible;
+  isolation: isolate;
+  border: none;
+  box-shadow: none;
+}
+
+.ac-build-radar-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+  width: 100%;
+  max-width: min(1180px, 100%);
+  margin-inline: auto;
+}
+
+.ac-build-radar-visual {
+  container-type: inline-size;
+  container-name: ac-build-radar-v;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.ac-build-radar-visual .ac-build-radar-label {
+  width: min(102px, 30cqi);
+}
+
+.ac-build-radar-visual .ac-build-radar-label--wide {
+  width: min(150px, 44cqi);
+}
+
+.ac-build-radar-visual .ac-build-radar-label-text {
+  font-size: clamp(9px, 2.8cqi, 10.5px);
+}
+
+.ac-build-radar-visual .ac-build-radar-disk {
+  --ac-build-orbit: min(28cqi, 220px);
+  --ac-build-label-gap: clamp(6px, 1.5cqi, 10px);
+  position: relative;
+  width: min(100%, 548px);
+  aspect-ratio: 1;
+  max-width: 100%;
+  margin: 0;
+  transform: scale(1.06);
+  transform-origin: center center;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.ac-build-radar-editorial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  min-width: 0;
+  text-align: left;
+  min-height: clamp(300px, 52vh, 540px);
+}
+
+.ac-build-radar-lead {
+  margin: 0;
+  padding: 0;
+  max-width: 40rem;
+}
+
+.ac-build-radar-title {
+  font-size: clamp(1.6rem, 2.85vw, 2.25rem);
+  font-weight: 300;
+  letter-spacing: -0.036em;
+  line-height: 1.1;
+  color: var(--ashvi-white);
+  margin: 0 0 clamp(12px, 1.8vw, 18px);
+  text-shadow:
+    0 0 40px rgba(0, 0, 0, 0.72),
+    0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.ac-build-radar-sub {
+  font-size: clamp(14.5px, 1.32vw, 17px);
+  font-weight: 300;
+  line-height: 1.62;
+  letter-spacing: 0.012em;
+  color: rgba(206, 216, 228, 0.86);
+  margin: 0;
+  max-width: 36rem;
+  text-shadow:
+    0 0 22px rgba(0, 0, 0, 0.5),
+    0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 900px) {
+  .ac-build-radar-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(36px, 7vw, 52px);
+  }
+
+  .ac-build-radar-visual .ac-build-radar-disk {
+    --ac-build-orbit: min(42vw, 200px);
+    width: min(420px, 88vw);
+    transform: scale(1);
+    margin-inline: auto;
+  }
+
+  .ac-build-radar-editorial {
+    min-height: 0;
+    max-width: 38rem;
+    margin-inline: 0;
+  }
+}
+
+.ac-build-radar-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  pointer-events: none;
+  width: min(100px, 26vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform-origin: center;
+  transition:
+    opacity 0.4s ease,
+    filter 0.45s ease;
+}
+
+.ac-build-radar-label--wide {
+  width: min(148px, 40vw);
+}
+
+.ac-build-radar-label-text {
+  display: block;
+  max-width: 11em;
+  font-size: clamp(9.5px, 2.25vw, 10.5px);
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: rgba(228, 236, 245, 0.44);
+  line-height: 1.22;
+  transition:
+    color 0.4s ease,
+    text-shadow 0.45s ease,
+    opacity 0.4s ease;
+}
+
+.ac-build-radar-label--active .ac-build-radar-label-text {
+  color: var(--ashvi-cyan);
+  text-shadow:
+    0 0 12px rgba(0, 212, 255, 0.5),
+    0 0 28px rgba(0, 212, 255, 0.22),
+    0 0 40px rgba(0, 0, 0, 0.55);
+  opacity: 1;
+}
+
+.ac-build-radar-label--idle {
+  opacity: 1;
+}
+
+.ac-build-radar-label--idle .ac-build-radar-label-text {
+  color: rgba(218, 228, 238, 0.46);
+  opacity: 0.96;
+}
+
+.ac-build-radar-flow-base {
+  pointer-events: none;
+}
+
+.ac-build-radar-flow-progress {
+  pointer-events: none;
+  transition: stroke-opacity 0.25s ease;
+}
+
+@keyframes ac-build-radar-cycle-ring-glow {
+  0%,
+  100% {
+    stroke: rgba(0, 212, 255, 0.075);
+    stroke-width: 0.6;
+  }
+  38% {
+    stroke: rgba(0, 236, 255, 0.52);
+    stroke-width: 1.85;
+  }
+}
+
+@keyframes ac-build-radar-cycle-progress-glow {
+  0%,
+  100% {
+    stroke: rgba(0, 212, 255, 0.3);
+    stroke-width: 1.05;
+  }
+  42% {
+    stroke: rgba(0, 244, 255, 0.72);
+    stroke-width: 1.85;
+  }
+}
+
+@keyframes ac-build-radar-cycle-burst-out {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(1.48);
+    opacity: 0;
+  }
+}
+
+.ac-build-radar-disk--cycle-flash .ac-build-radar-flow-base {
+  animation: ac-build-radar-cycle-ring-glow 0.92s ease-out both;
+}
+
+.ac-build-radar-disk--cycle-flash .ac-build-radar-flow-progress {
+  animation: ac-build-radar-cycle-progress-glow 0.92s ease-out both;
+}
+
+.ac-build-radar-cycle-burst {
+  transform-origin: 0 0;
+  animation: ac-build-radar-cycle-burst-out 0.9s cubic-bezier(0.2, 0.85, 0.36, 1)
+    forwards;
+}
+
+.ac-build-radar-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.34;
+  transition: opacity 0.8s ease;
+}
+
+.ac-build-radar--reduced .ac-build-radar-svg {
+  opacity: 0.28;
+}
+
+.ac-build-radar-conn {
+  transition: opacity 0.28s ease;
+}
+
+@keyframes ac-build-radar-mesh-breathe {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(0.65deg) scale(1.012);
+  }
+}
+
+@keyframes ac-build-radar-mesh-rev {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(-0.55deg) scale(1.01);
+  }
+}
+
+.ac-build-radar-mesh {
+  transform-origin: 0 0;
+  animation: ac-build-radar-mesh-breathe 20s ease-in-out infinite;
+}
+
+.ac-build-radar-mesh-inner {
+  transform-origin: 0 0;
+  animation: ac-build-radar-mesh-rev 24s ease-in-out infinite;
+}
+
+.ac-build-radar--reduced .ac-build-radar-mesh,
+.ac-build-radar--reduced .ac-build-radar-mesh-inner {
+  animation: none;
+}
+
+.ac-build-radar--reduced .ac-build-radar-node-glow {
+  animation: none;
+  opacity: 0.65;
+  transform: scale(1);
+}
+
+.ac-build-radar-node-glow {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: ac-build-radar-node-glow-pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes ac-build-radar-node-glow-pulse {
+  0%,
+  100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.08);
+  }
+}
+
+.ac-build-radar-node--hot {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: ac-build-radar-node-pulse 2.8s ease-in-out infinite;
+}
+
+@keyframes ac-build-radar-node-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes ac-build-radar-hit-ring {
+  0% {
+    transform: scale(0.4);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(3.2);
+    opacity: 0;
+  }
+}
+
+.ac-build-radar-hit-pulse {
+  transform-origin: 0 0;
+  animation: ac-build-radar-hit-ring 1.15s cubic-bezier(0.33, 0, 0.2, 1)
+    forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ac-build-radar-mesh,
+  .ac-build-radar-mesh-inner,
+  .ac-build-radar-node--hot,
+  .ac-build-radar-node-glow,
+  .ac-build-radar-hit-pulse,
+  .ac-build-radar-cycle-burst,
+  .ac-build-radar-disk--cycle-flash .ac-build-radar-flow-base,
+  .ac-build-radar-disk--cycle-flash .ac-build-radar-flow-progress {
+    animation: none !important;
+  }
+
+  .ac-build-radar-cycle-burst {
+    opacity: 0;
+  }
+}
+
+.ac-build-radar-live {
+  margin-top: clamp(26px, 4vw, 40px);
+  padding-top: clamp(24px, 3.6vw, 34px);
+  border-top: 1px solid rgba(0, 212, 255, 0.12);
+  max-width: 38rem;
+}
+
+.ac-build-radar-live-stage {
+  font-size: clamp(10.5px, 1.05vw, 11.5px);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ashvi-cyan);
+  margin: 0 0 clamp(14px, 2.2vw, 20px);
+  line-height: 1.35;
+  text-shadow:
+    0 0 18px rgba(0, 212, 255, 0.22),
+    0 0 28px rgba(0, 0, 0, 0.45);
+  animation: ac-build-radar-detail-fade 0.48s ease both;
+}
+
+.ac-build-radar-live-copy {
+  font-size: clamp(16.5px, 1.45vw, 19px);
+  font-weight: 300;
+  line-height: 1.72;
+  letter-spacing: -0.011em;
+  color: rgba(250, 252, 255, 0.94);
+  margin: 0;
+  text-shadow:
+    0 0 28px rgba(0, 0, 0, 0.68),
+    0 1px 2px rgba(0, 0, 0, 0.4);
+  animation: ac-build-radar-detail-fade 0.58s ease 0.04s both;
+}
+
+.ac-build-radar-principle {
+  margin: clamp(26px, 4vw, 40px) 0 0;
+  padding: 0;
+  max-width: 34rem;
+  text-align: left;
+  font-size: clamp(12px, 1.14vw, 13.5px);
+  font-weight: 300;
+  line-height: 1.68;
+  letter-spacing: 0.018em;
+  color: rgba(176, 194, 212, 0.48);
+  text-shadow:
+    0 0 20px rgba(0, 0, 0, 0.42),
+    0 1px 2px rgba(0, 0, 0, 0.32);
+}
+
+@keyframes ac-build-radar-detail-fade {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ac-build-radar-close {
+  text-align: left;
+  max-width: 32rem;
+  margin: clamp(22px, 3.6vw, 34px) 0 0;
+  padding-top: clamp(4px, 0.75vw, 10px);
+  font-size: clamp(13px, 1.22vw, 14.5px);
+  font-weight: 300;
+  line-height: 1.68;
+  color: rgba(232, 238, 248, 0.38);
+  letter-spacing: 0.018em;
+  transition:
+    color 1s ease,
+    opacity 1s ease;
+}
+
+.ac-build-radar-close-line {
+  display: block;
+}
+
+.ac-build-radar-close-line + .ac-build-radar-close-line {
+  margin-top: 0.35em;
+}
+
+.ac-build-radar-close--complete {
+  color: rgba(244, 248, 255, 0.52);
+}
+
+.ac-build-radar-close--complete .ac-build-radar-close-line {
+  text-shadow:
+    0 0 38px rgba(0, 212, 255, 0.16),
+    0 0 56px rgba(0, 0, 0, 0.5);
 }
 
 /* SVG story */
