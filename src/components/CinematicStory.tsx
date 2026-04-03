@@ -13,13 +13,19 @@ import {
   useRef,
   useState,
 } from "react";
+import { motion } from "motion/react";
 import { CompaniesShowcase } from "@/components/landing/CompaniesShowcase";
 import { HowAshviBuilds } from "@/components/landing/HowAshviBuilds";
 import LightRays from "@/components/LightRays";
 import { VisionStarField } from "@/components/landing/VisionStarField";
+import { LampContainer } from "@/components/ui/lamp";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 const FI_SELECTOR = ".ac-fi";
+
+/** Public research output destinations (update papers URL when a dedicated index exists). */
+const LINK_RESEARCH_PAPERS = "https://github.com/dev-ashvi";
+const LINK_OPEN_SOURCE = "https://github.com/dev-ashvi";
 
 type TimerId = ReturnType<typeof globalThis.setTimeout>;
 
@@ -503,7 +509,7 @@ export function CinematicStory() {
     document.addEventListener("mousemove", move, { passive: true });
 
     const interactive =
-      ".ac-landing a, .ac-landing button, .ac-page-skip, .ac-company-wrap, .ac-company-card, .ac-sol-cell, .ac-kw";
+      ".ac-landing a, .ac-landing button, .ac-page-skip, .ac-company-wrap, .ac-company-card, .ac-sol-cell";
     document.querySelectorAll(interactive).forEach((el) => {
       el.addEventListener("mouseenter", scaleUp);
       el.addEventListener("mouseleave", scaleDn);
@@ -1113,63 +1119,75 @@ export function CinematicStory() {
 
         <div className="ac-hdiv" aria-hidden />
 
-        <section className="ac-ch" id="solutions" aria-label="Solutions">
-          <div className="ac-s-label ac-fi">Technology Solutions</div>
-          <div className="ac-sol-grid ac-fi ac-fi-d2">
-            <article className="ac-sol-cell">
-              <div className="ac-sol-name">Intelligent Automation</div>
-              <div className="ac-sol-desc">
-                AI systems and automation for complex, high-stakes workflows.
+        <section className="ac-research" id="research" aria-label="Research">
+          <div className="ac-research-inner">
+            <header className="ac-research-hero ac-fi ac-fi-d1">
+              <p className="ac-research-eyebrow">Research</p>
+              <div className="ac-research-lamp-head">
+                <div className="ac-research-lamp-glow" aria-hidden>
+                  <LampContainer
+                    backdropOnly
+                    className="h-full min-h-[12rem] w-full border-0 bg-transparent shadow-none"
+                  />
+                </div>
+                <motion.h2
+                  initial={{ opacity: 0.5, y: 28 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.35 }}
+                  transition={{
+                    delay: 0.15,
+                    duration: 0.75,
+                    ease: "easeInOut",
+                  }}
+                  className="ac-research-headline"
+                >
+                  We explore the foundations of intelligence.
+                </motion.h2>
               </div>
-            </article>
-            <article className="ac-sol-cell">
-              <div className="ac-sol-name">Software &amp; Platform Development</div>
-              <div className="ac-sol-desc">
-                Full-stack engineering from architecture to deployment at
-                scale.
-              </div>
-            </article>
-            <article className="ac-sol-cell">
-              <div className="ac-sol-name">Data &amp; Decision Systems</div>
-              <div className="ac-sol-desc">
-                Pipelines, intelligence layers, and clarity for critical
-                decisions.
-              </div>
-            </article>
-            <article className="ac-sol-cell">
-              <div className="ac-sol-name">Custom Technology Systems</div>
-              <div className="ac-sol-desc">
-                Bespoke systems when off-the-shelf tools are not enough.
-              </div>
-            </article>
-          </div>
-        </section>
+              <p className="ac-research-support">
+                Not for applications alone —
+                <br />
+                but for understanding how systems think, learn, and evolve.
+              </p>
+            </header>
 
-        <div className="ac-hdiv" aria-hidden />
-
-        <section className="ac-ch" id="research" aria-label="Research">
-          <div className="ac-s-label ac-fi">Research</div>
-          <p className="ac-r-lead ac-fi ac-fi-d1">
-            We invest in deep technology research across AI, systems design,
-            data, and scalable architectures.
-          </p>
-          <div className="ac-kw-cloud ac-fi ac-fi-d2">
-            {[
-              "Agent Architectures",
-              "Model Distillation",
-              "Self-Evaluating Systems",
-              "Multi-Agent Intelligence",
-              "Scalable Reasoning",
-              "Intelligence Compression",
-            ].map((k) => (
-              <span key={k} className="ac-kw">
-                {k}
-              </span>
-            ))}
+            <div
+              className="ac-research-out ac-fi ac-fi-d2"
+              role="group"
+              aria-label="Research output"
+            >
+              <article className="ac-research-highlight">
+                <h3 className="ac-research-highlight-title">Research Papers</h3>
+                <p className="ac-research-highlight-text">
+                  Our research is shared through papers, experiments, and
+                  technical explorations.
+                </p>
+                <a
+                  href={LINK_RESEARCH_PAPERS}
+                  className="ac-research-cta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Papers →
+                </a>
+              </article>
+              <article className="ac-research-highlight">
+                <h3 className="ac-research-highlight-title">Open Source</h3>
+                <p className="ac-research-highlight-text">
+                  We build in the open — contributing systems, tools, and
+                  frameworks to the community.
+                </p>
+                <a
+                  href={LINK_OPEN_SOURCE}
+                  className="ac-research-cta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Explore GitHub →
+                </a>
+              </article>
+            </div>
           </div>
-          <p className="ac-r-note ac-fi ac-fi-d3">
-            Built for long-term breakthroughs, not short-term outcomes.
-          </p>
         </section>
 
         <div className="ac-hdiv" aria-hidden />
@@ -1247,6 +1265,40 @@ export function CinematicStory() {
                 Our Mission
               </a>
             </div>
+          </div>
+        </section>
+
+        <div className="ac-hdiv" aria-hidden />
+
+        <section className="ac-ch" id="solutions" aria-label="Solutions">
+          <div className="ac-s-label ac-fi">Technology Solutions</div>
+          <div className="ac-sol-grid ac-fi ac-fi-d2">
+            <article className="ac-sol-cell">
+              <div className="ac-sol-name">Intelligent Automation</div>
+              <div className="ac-sol-desc">
+                AI systems and automation for complex, high-stakes workflows.
+              </div>
+            </article>
+            <article className="ac-sol-cell">
+              <div className="ac-sol-name">Software &amp; Platform Development</div>
+              <div className="ac-sol-desc">
+                Full-stack engineering from architecture to deployment at
+                scale.
+              </div>
+            </article>
+            <article className="ac-sol-cell">
+              <div className="ac-sol-name">Data &amp; Decision Systems</div>
+              <div className="ac-sol-desc">
+                Pipelines, intelligence layers, and clarity for critical
+                decisions.
+              </div>
+            </article>
+            <article className="ac-sol-cell">
+              <div className="ac-sol-name">Custom Technology Systems</div>
+              <div className="ac-sol-desc">
+                Bespoke systems when off-the-shelf tools are not enough.
+              </div>
+            </article>
           </div>
         </section>
       </main>
