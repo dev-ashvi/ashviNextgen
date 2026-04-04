@@ -4,6 +4,7 @@ import Link from "next/link";
 import type {
   CSSProperties,
   MouseEvent as ReactMouseEvent,
+  ReactNode,
 } from "react";
 import {
   useCallback,
@@ -13,12 +14,13 @@ import {
   useRef,
   useState,
 } from "react";
-import { motion } from "motion/react";
 import { CompaniesShowcase } from "@/components/landing/CompaniesShowcase";
 import { HowAshviBuilds } from "@/components/landing/HowAshviBuilds";
+import { DedicationWhisper } from "@/components/landing/DedicationWhisper";
+import { VentureEmergence } from "@/components/landing/VentureEmergence";
 import LightRays from "@/components/LightRays";
+import { MissionNetwork } from "@/components/landing/MissionNetwork";
 import { VisionStarField } from "@/components/landing/VisionStarField";
-import { LampContainer } from "@/components/ui/lamp";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 const FI_SELECTOR = ".ac-fi";
@@ -27,16 +29,27 @@ const FI_SELECTOR = ".ac-fi";
 const LINK_RESEARCH_PAPERS = "https://github.com/dev-ashvi";
 const LINK_OPEN_SOURCE = "https://github.com/dev-ashvi";
 
+/** Quiet taxonomy pills below research output (two fixed rows) */
+const RESEARCH_PILLS_LINE1: readonly string[] = [
+  "Agent Systems",
+  "Multi-Agent Intelligence",
+  "Intelligence Compression",
+];
+const RESEARCH_PILLS_LINE2: readonly string[] = [
+  "Scalable Reasoning",
+  "Self-Evaluating Systems",
+];
+
 type TimerId = ReturnType<typeof globalThis.setTimeout>;
 
 /** Slide crossfade duration (match globals `ac-page-out` / `ac-page-in` ~0.7s) */
 const PAGE_TRANSITION_MS = 700;
 
-/** Hero is the last intro slide (0 opening → 3 hero), then user scrolls freely */
-const INTRO_LAST_SLIDE = 3;
+/** Last intro slide index (0 opening → 2 loop), then user scrolls freely; hero follows in-page */
+const INTRO_LAST_SLIDE = 2;
 
 /** Hold on each slide before advancing (slide 1 story + slide 2 loop use longer staged sequences) */
-const PAGE_HOLD_MS = [2800, 3600, 6400, 3200] as const;
+const PAGE_HOLD_MS = [2800, 3600, 6400] as const;
 
 /** Story slide: show content this long after slide is active (diagram + copy finish) */
 const STORY_VISIBLE_MS = 4200;
@@ -55,12 +68,8 @@ const LOOP_INTRO_STEP_MS = [
 ] as const;
 const LOOP_INTRO_LAST_STAGE = LOOP_INTRO_STEP_MS.length;
 
-/** Hero: DOM order unchanged (badge above headline); opacity reveal order — h1 → sub → badge → CTAs → learn more */
-const HERO_INTRO_START_MS = 450;
-const HERO_INTRO_STEP_MS = [520, 500, 520, 600, 450] as const;
+/** Hero copy reveals together once intro unlocks (no separate hero intro slide) */
 const HERO_INTRO_LAST_STAGE = 5;
-/** After final hero line appears, hold before unlocking scroll */
-const HERO_COMPLETE_DWELL_MS = 2200;
 
 function slideClass(
   index: number,
@@ -81,7 +90,11 @@ function slideClass(
   return `${base} ac-page-slide--future`;
 }
 
-export function CinematicStory() {
+export function CinematicStory({
+  capitalSpline,
+}: {
+  capitalSpline: ReactNode;
+}) {
   const uid = useId().replace(/:/g, "");
   const rootRef = useRef<HTMLDivElement>(null);
   const reduced = usePrefersReducedMotion();
@@ -95,9 +108,13 @@ export function CinematicStory() {
   const [storyContentFading, setStoryContentFading] = useState(false);
   const [storyIntroStage, setStoryIntroStage] = useState(0);
   const [loopIntroStage, setLoopIntroStage] = useState(0);
-  const [heroIntroStage, setHeroIntroStage] = useState(0);
   const [lightRaysVisible, setLightRaysVisible] = useState(false);
+  const [missionFlowLive, setMissionFlowLive] = useState(false);
   const storyPlayedRef = useRef(false);
+
+  const onMissionNetworkActive = useCallback(() => {
+    setMissionFlowLive(true);
+  }, []);
 
   const completeIntro = useCallback(() => {
     setIntroTransition(null);
@@ -162,14 +179,18 @@ export function CinematicStory() {
   useEffect(() => {
     if (introDone || reduced || introTransition) return;
     if (introSlide === 1) return;
-    if (introSlide === INTRO_LAST_SLIDE) return;
 
     const hold = PAGE_HOLD_MS[introSlide] ?? 3200;
+    if (introSlide === INTRO_LAST_SLIDE) {
+      const id: TimerId = globalThis.setTimeout(() => completeIntro(), hold);
+      return () => globalThis.clearTimeout(id);
+    }
+
     const id: TimerId = globalThis.setTimeout(() => {
       setIntroTransition({ from: introSlide, to: introSlide + 1 });
     }, hold);
     return () => globalThis.clearTimeout(id);
-  }, [introSlide, introDone, reduced, introTransition]);
+  }, [introSlide, introDone, reduced, introTransition, completeIntro]);
 
   useEffect(() => {
     if (introSlide !== 1) setStoryContentFading(false);
@@ -181,10 +202,6 @@ export function CinematicStory() {
 
   useEffect(() => {
     if (introSlide !== 2) setLoopIntroStage(0);
-  }, [introSlide]);
-
-  useEffect(() => {
-    if (introSlide !== INTRO_LAST_SLIDE) setHeroIntroStage(0);
   }, [introSlide]);
 
   useEffect(() => {
@@ -244,7 +261,7 @@ export function CinematicStory() {
       setLoopIntroStage(0);
       return;
     }
-    /* Keep full loop stage during 1↔2 / 2↔3 crossfade so inner opacity does not pop back */
+    /* Keep full loop stage during 1↔2 crossfade so inner opacity does not pop back */
     if (introTransition) return;
 
     setLoopIntroStage(0);
@@ -259,50 +276,6 @@ export function CinematicStory() {
     }
     return () => timeouts.forEach((id) => globalThis.clearTimeout(id));
   }, [reduced, introDone, introSlide, introTransition]);
-
-  useEffect(() => {
-    if (reduced || introDone) {
-      setHeroIntroStage(HERO_INTRO_LAST_STAGE);
-      return;
-    }
-    if (introSlide !== INTRO_LAST_SLIDE) {
-      setHeroIntroStage(0);
-      return;
-    }
-    if (introTransition) return;
-
-    setHeroIntroStage(0);
-    const timeouts: TimerId[] = [];
-    let acc = HERO_INTRO_START_MS;
-    for (let s = 1; s <= HERO_INTRO_LAST_STAGE; s++) {
-      const stage = s;
-      timeouts.push(
-        globalThis.setTimeout(() => setHeroIntroStage(stage), acc),
-      );
-      if (s < HERO_INTRO_LAST_STAGE) {
-        acc += HERO_INTRO_STEP_MS[s - 1] ?? 500;
-      }
-    }
-    return () => timeouts.forEach((id) => globalThis.clearTimeout(id));
-  }, [reduced, introDone, introSlide, introTransition]);
-
-  useEffect(() => {
-    if (introDone || reduced || introTransition) return;
-    if (introSlide !== INTRO_LAST_SLIDE) return;
-    if (heroIntroStage < HERO_INTRO_LAST_STAGE) return;
-    const id: TimerId = globalThis.setTimeout(
-      () => completeIntro(),
-      HERO_COMPLETE_DWELL_MS,
-    );
-    return () => globalThis.clearTimeout(id);
-  }, [
-    introDone,
-    reduced,
-    introTransition,
-    introSlide,
-    heroIntroStage,
-    completeIntro,
-  ]);
 
   useLayoutEffect(() => {
     if (!introDone || reduced) return;
@@ -509,7 +482,7 @@ export function CinematicStory() {
     document.addEventListener("mousemove", move, { passive: true });
 
     const interactive =
-      ".ac-landing a, .ac-landing button, .ac-page-skip, .ac-company-wrap, .ac-company-card, .ac-sol-cell";
+      ".ac-landing a, .ac-landing button, .ac-page-skip, .ac-company-wrap, .ac-company-card";
     document.querySelectorAll(interactive).forEach((el) => {
       el.addEventListener("mouseenter", scaleUp);
       el.addEventListener("mouseleave", scaleDn);
@@ -547,11 +520,7 @@ export function CinematicStory() {
   });
 
   const heroReveal =
-    reduced || introDone
-      ? HERO_INTRO_LAST_STAGE
-      : introSlide !== INTRO_LAST_SLIDE
-        ? 0
-        : heroIntroStage;
+    reduced || introDone ? HERO_INTRO_LAST_STAGE : 0;
   const heroLv = (minStage: number): CSSProperties => ({
     opacity: heroReveal >= minStage ? 1 : 0,
     transition: "opacity 0.52s cubic-bezier(0.33, 0, 0.2, 1)",
@@ -641,8 +610,10 @@ export function CinematicStory() {
         <div className="ac-nav-links">
           <a href="#products">Companies</a>
           <a href="#research">Research</a>
+          <a href="#venture">Venture</a>
+          <a href="#capital">Capital</a>
           <a href="#mission">Mission</a>
-          <a href="#founder">Team</a>
+          <a href="#identity">Identity</a>
           <a href="mailto:hello@ashvi.tech" className="ac-nav-cta">
             Contact
           </a>
@@ -1083,7 +1054,7 @@ export function CinematicStory() {
               >
                 Explore Ashvi
               </a>
-              <a href="#solutions" className="ac-btn-s">
+              <a href="mailto:hello@ashvi.tech" className="ac-btn-s">
                 For Businesses
               </a>
             </div>
@@ -1123,27 +1094,9 @@ export function CinematicStory() {
           <div className="ac-research-inner">
             <header className="ac-research-hero ac-fi ac-fi-d1">
               <p className="ac-research-eyebrow">Research</p>
-              <div className="ac-research-lamp-head">
-                <div className="ac-research-lamp-glow" aria-hidden>
-                  <LampContainer
-                    backdropOnly
-                    className="h-full min-h-[12rem] w-full border-0 bg-transparent shadow-none"
-                  />
-                </div>
-                <motion.h2
-                  initial={{ opacity: 0.5, y: 28 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.35 }}
-                  transition={{
-                    delay: 0.15,
-                    duration: 0.75,
-                    ease: "easeInOut",
-                  }}
-                  className="ac-research-headline"
-                >
-                  We explore the foundations of intelligence.
-                </motion.h2>
-              </div>
+              <h2 className="ac-research-headline">
+                We explore the foundations of intelligence.
+              </h2>
               <p className="ac-research-support">
                 Not for applications alone —
                 <br />
@@ -1187,38 +1140,184 @@ export function CinematicStory() {
                 </a>
               </article>
             </div>
+
+            <div
+              className="ac-research-pills ac-fi ac-fi-d3"
+              aria-label="Research focus areas"
+            >
+              <div className="ac-research-pills-lines">
+                <div className="ac-research-pills-row">
+                  {RESEARCH_PILLS_LINE1.map((term) => (
+                    <span key={term} className="ac-research-pill">
+                      {term}
+                    </span>
+                  ))}
+                </div>
+                <div className="ac-research-pills-row">
+                  {RESEARCH_PILLS_LINE2.map((term) => (
+                    <span key={term} className="ac-research-pill">
+                      {term}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         <div className="ac-hdiv" aria-hidden />
 
-        <section className="ac-ch" id="mission" aria-label="Mission">
+        <section
+          className="ac-venture"
+          id="venture"
+          aria-labelledby="venture-heading"
+        >
+          <div className="ac-venture-inner">
+            <header className="ac-venture-hero">
+              <p className="ac-venture-label ac-fi">Venture</p>
+              <h2 id="venture-heading" className="ac-venture-headline ac-fi ac-fi-d1">
+                We bring systems to life.
+              </h2>
+              <p className="ac-venture-lead ac-fi ac-fi-d2">
+                From insight to existence — turning intelligence into real-world
+                systems.
+              </p>
+            </header>
+
+            <div className="ac-venture-visual ac-fi ac-fi-d3" aria-hidden>
+              <VentureEmergence />
+            </div>
+
+            <div className="ac-venture-narrative">
+              <p className="ac-venture-line ac-fi ac-fi-d4">
+                What begins as research becomes structure.
+              </p>
+              <p className="ac-venture-line ac-fi ac-fi-d5">
+                Structure becomes execution.
+              </p>
+              <p className="ac-venture-line ac-fi ac-fi-d6">
+                Execution becomes reality.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="ac-hdiv" aria-hidden />
+
+        <section
+          className="ac-capital"
+          id="capital"
+          aria-labelledby="capital-heading"
+        >
+          <div className="ac-capital-inner">
+            <header className="ac-capital-hero">
+              <p className="ac-capital-label ac-fi">Capital</p>
+              <h2
+                id="capital-heading"
+                className="ac-capital-headline ac-fi ac-fi-d1"
+              >
+                We fuel what deserves to continue.
+              </h2>
+              <p className="ac-capital-lead ac-fi ac-fi-d2">
+                Capital is not the goal — it is the force that lets research
+                deepen, ventures grow, and systems endure.
+              </p>
+            </header>
+
+            <div className="ac-capital-spline-slot ac-fi ac-fi-d3">
+              {capitalSpline}
+            </div>
+
+            <div className="ac-capital-pillars">
+              <article className="ac-capital-pillar ac-fi ac-fi-d4">
+                <h3 className="ac-capital-pillar-title">Sustains Research</h3>
+                <p className="ac-capital-pillar-text">
+                  Supports long-term exploration beyond short-term pressure.
+                </p>
+              </article>
+              <article className="ac-capital-pillar ac-fi ac-fi-d5">
+                <h3 className="ac-capital-pillar-title">Scales Ventures</h3>
+                <p className="ac-capital-pillar-text">
+                  Helps strong ideas survive, grow, and reach the world.
+                </p>
+              </article>
+              <article className="ac-capital-pillar ac-fi ac-fi-d6">
+                <h3 className="ac-capital-pillar-title">Reinvests Forward</h3>
+                <p className="ac-capital-pillar-text">
+                  Turns outcomes into fuel for the next cycle.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <div className="ac-hdiv" aria-hidden />
+
+        <div className="ac-finale">
+          <div className="ac-finale__bg" aria-hidden>
+            <VisionStarField />
+          </div>
+
+        <section className="ac-ch ac-mission" id="mission" aria-label="Mission">
           <div className="ac-mission-in">
             <p className="ac-m-label ac-fi">Our Mission</p>
-            <p className="ac-m-line ac-fi ac-fi-d1">
-              India has some of the most <strong>brilliant minds</strong> in the
-              world.
-              <br />
-              But many never reach their full potential.
-            </p>
-            <div className="ac-m-pause ac-fi ac-fi-d2" />
-            <p
-              className="ac-m-line ac-fi ac-fi-d2"
-              style={{ color: "var(--ashvi-gray)" }}
-            >
-              Not because of lack of intelligence —
-              <br />
-              but because the system around them is incomplete.
-            </p>
-            <div className="ac-m-pause ac-fi ac-fi-d3" />
-            <div className="ac-m-list ac-fi ac-fi-d3">
-              <div className="ac-m-item">Research is supported</div>
-              <div className="ac-m-item">Builders are empowered</div>
-              <div className="ac-m-item">Capital is accessible</div>
-              <div className="ac-m-item">Ideas can become reality</div>
+
+            <div className="ac-m-realize">
+              <p className="ac-m-realize-line ac-fi ac-fi-d1">
+                India has some of the most{" "}
+                <strong>brilliant minds</strong> in the world.
+              </p>
+              <p className="ac-m-realize-line ac-fi ac-fi-d2">
+                But many never reach their full potential.
+              </p>
             </div>
-            <div className="ac-m-pause ac-fi ac-fi-d4" />
-            <p className="ac-m-final ac-fi ac-fi-d4">
+
+            <div className="ac-m-truth" role="group" aria-label="Why">
+              <p className="ac-m-truth-left ac-fi ac-fi-d3">
+                Not because of lack of intelligence
+              </p>
+              <div className="ac-m-truth-divider ac-fi ac-fi-d3" aria-hidden />
+              <p className="ac-m-truth-right ac-fi ac-fi-d4">
+                But because the system around them is incomplete.
+              </p>
+            </div>
+
+            <div
+              className={
+                missionFlowLive ? "ac-m-flow ac-m-flow--live" : "ac-m-flow"
+              }
+              role="list"
+              aria-label="How the system changes"
+            >
+              <span className="ac-m-flow-seg ac-fi ac-fi-d5" role="listitem">
+                Research is supported
+              </span>
+              <span
+                className="ac-m-flow-link ac-fi ac-fi-d6"
+                aria-hidden="true"
+              />
+              <span className="ac-m-flow-seg ac-fi ac-fi-d7" role="listitem">
+                Builders are empowered
+              </span>
+              <span
+                className="ac-m-flow-link ac-fi ac-fi-d8"
+                aria-hidden="true"
+              />
+              <span className="ac-m-flow-seg ac-fi ac-fi-d9" role="listitem">
+                Capital is accessible
+              </span>
+              <span
+                className="ac-m-flow-link ac-fi ac-fi-d10"
+                aria-hidden="true"
+              />
+              <span className="ac-m-flow-seg ac-fi ac-fi-d11" role="listitem">
+                Ideas become reality
+              </span>
+            </div>
+
+            <MissionNetwork onActive={onMissionNetworkActive} />
+
+            <p className="ac-m-closing ac-fi">
               So no one building something meaningful
               <br />
               has to do it alone.
@@ -1228,100 +1327,186 @@ export function CinematicStory() {
 
         <div className="ac-hdiv" aria-hidden />
 
-        <section className="ac-ch" id="founder" aria-label="Founder">
-          <p className="ac-f-name ac-fi">
-            Apoorv
-            <br />
-            Agrawal
-          </p>
-          <p className="ac-f-role ac-fi ac-fi-d2">
-            Founder &amp; Chief Intelligence Officer
-          </p>
-          <div className="ac-f-div ac-fi ac-fi-d3" />
-          <p className="ac-f-note ac-fi ac-fi-d3">
-            Building systems that enable technology and people to grow together.
-          </p>
-        </section>
+        <section
+          className="ac-ch ac-identity"
+          id="identity"
+          aria-labelledby="identity-heading"
+        >
+          <div className="ac-identity-in">
+            <p className="ac-id-label ac-fi">Identity</p>
+            <header className="ac-id-header" id="identity-heading">
+              <p className="ac-id-title ac-fi ac-fi-d1">
+                Ashvi is not just built.
+              </p>
+              <p className="ac-id-title ac-id-title--emph ac-fi ac-fi-d2">
+                It is composed.
+              </p>
+            </header>
 
-        <section className="ac-ch" id="vision" aria-label="Vision">
-          <VisionStarField />
-          <div className="ac-vis-in">
-            <div
-              className="ac-f-div ac-fi"
-              style={{ background: "var(--ashvi-dim2)" }}
-            />
-            <p className="ac-vis-q ac-fi ac-fi-d1">
-              The future will be built by systems
-              <br />
-              that can build <span>technology and companies.</span>
-              <br />
-              Ashvi is one of them.
-            </p>
-            <div className="ac-btn-row ac-fi ac-fi-d2">
-              <a href="mailto:hello@ashvi.tech" className="ac-btn-p">
-                Work with Ashvi
-              </a>
-              <a href="#mission" className="ac-btn-s">
-                Our Mission
-              </a>
+            <div className="ac-id-grid">
+            <article className="ac-id-layer ac-id-layer--soul ac-fi ac-fi-d3">
+              <div
+                className="ac-id-layer-decor ac-id-layer-decor--soul"
+                aria-hidden
+              />
+              <div className="ac-id-layer-inner">
+                <h3 className="ac-id-layer-name">
+                  <span className="ac-id-layer-k">Soul</span>
+                  <span className="ac-id-layer-tag">Why</span>
+                </h3>
+                <p className="ac-id-layer-lead">
+                  The intent behind everything we build.
+                </p>
+                <ul className="ac-id-traits">
+                  <li>Truth</li>
+                  <li>Curiosity</li>
+                  <li>Compassion</li>
+                  <li>Long-term thinking</li>
+                </ul>
+              </div>
+            </article>
+
+            <article className="ac-id-layer ac-id-layer--mind ac-fi ac-fi-d4">
+              <div
+                className="ac-id-layer-decor ac-id-layer-decor--mind"
+                aria-hidden
+              >
+                <svg
+                  className="ac-id-mind-svg"
+                  viewBox="0 0 200 72"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M 16 44 L 58 30 L 100 40 L 142 28 L 184 36"
+                    className="ac-id-mind-path"
+                  />
+                  <path
+                    d="M 42 56 L 100 48 L 158 52"
+                    className="ac-id-mind-path ac-id-mind-path--2"
+                  />
+                  <circle cx="58" cy="30" r="2.5" className="ac-id-mind-node" />
+                  <circle cx="100" cy="40" r="2.5" className="ac-id-mind-node" />
+                  <circle cx="142" cy="28" r="2.5" className="ac-id-mind-node" />
+                  <circle cx="100" cy="48" r="2" className="ac-id-mind-node ac-id-mind-node--dim" />
+                </svg>
+              </div>
+              <div className="ac-id-layer-inner">
+                <h3 className="ac-id-layer-name">
+                  <span className="ac-id-layer-k">Mind</span>
+                  <span className="ac-id-layer-tag">How</span>
+                </h3>
+                <p className="ac-id-layer-lead">
+                  How intelligence is structured.
+                </p>
+                <ul className="ac-id-traits">
+                  <li>Systems thinking</li>
+                  <li>Research-driven decisions</li>
+                  <li>First principles</li>
+                  <li>Continuous learning</li>
+                </ul>
+              </div>
+            </article>
+
+            <article className="ac-id-layer ac-id-layer--body ac-fi ac-fi-d5">
+              <div
+                className="ac-id-layer-decor ac-id-layer-decor--body"
+                aria-hidden
+              />
+              <div className="ac-id-layer-inner">
+                <h3 className="ac-id-layer-name">
+                  <span className="ac-id-layer-k">Body</span>
+                  <span className="ac-id-layer-tag">Execution</span>
+                </h3>
+                <p className="ac-id-layer-lead">
+                  Where ideas become real.
+                </p>
+                <ul className="ac-id-traits">
+                  <li>Engineering</li>
+                  <li>Product</li>
+                  <li>Infrastructure</li>
+                  <li>Deployment</li>
+                </ul>
+              </div>
+            </article>
+
+            <article className="ac-id-layer ac-id-layer--people ac-fi ac-fi-d6">
+              <div
+                className="ac-id-layer-decor ac-id-layer-decor--people"
+                aria-hidden
+              >
+                <span className="ac-id-people-node" />
+                <span className="ac-id-people-node" />
+                <span className="ac-id-people-node" />
+                <span className="ac-id-people-node" />
+              </div>
+              <div className="ac-id-layer-inner ac-id-layer-inner--people">
+                <h3 className="ac-id-layer-name">
+                  <span className="ac-id-layer-k">People</span>
+                  <span className="ac-id-layer-tag">Who</span>
+                </h3>
+                <p className="ac-id-layer-lead">
+                  The ones who carry it forward.
+                </p>
+                <ul className="ac-id-traits">
+                  <li>Builders</li>
+                  <li>Thinkers</li>
+                  <li>Operators</li>
+                  <li>Learners</li>
+                </ul>
+              </div>
+            </article>
             </div>
           </div>
         </section>
 
         <div className="ac-hdiv" aria-hidden />
 
-        <section className="ac-ch" id="solutions" aria-label="Solutions">
-          <div className="ac-s-label ac-fi">Technology Solutions</div>
-          <div className="ac-sol-grid ac-fi ac-fi-d2">
-            <article className="ac-sol-cell">
-              <div className="ac-sol-name">Intelligent Automation</div>
-              <div className="ac-sol-desc">
-                AI systems and automation for complex, high-stakes workflows.
-              </div>
-            </article>
-            <article className="ac-sol-cell">
-              <div className="ac-sol-name">Software &amp; Platform Development</div>
-              <div className="ac-sol-desc">
-                Full-stack engineering from architecture to deployment at
-                scale.
-              </div>
-            </article>
-            <article className="ac-sol-cell">
-              <div className="ac-sol-name">Data &amp; Decision Systems</div>
-              <div className="ac-sol-desc">
-                Pipelines, intelligence layers, and clarity for critical
-                decisions.
-              </div>
-            </article>
-            <article className="ac-sol-cell">
-              <div className="ac-sol-name">Custom Technology Systems</div>
-              <div className="ac-sol-desc">
-                Bespoke systems when off-the-shelf tools are not enough.
-              </div>
-            </article>
+        <section
+          className="ac-ch"
+          id="vision"
+          aria-labelledby="closing-heading"
+        >
+          <div className="ac-close-glow" aria-hidden />
+          <div className="ac-close-in">
+            <h2 className="sr-only" id="closing-heading">
+              Invitation
+            </h2>
+            <p className="ac-close-main ac-fi ac-fi-d1">
+              If you&apos;re building something meaningful,
+              <br />
+              you shouldn&apos;t have to do it alone.
+            </p>
+            <p className="ac-close-support ac-fi ac-fi-d2">
+              Ashvi exists for builders like you.
+            </p>
+            <div className="ac-close-cta-row">
+              <a
+                href="#hero"
+                className="ac-close-cta ac-close-cta--primary ac-fi ac-fi-d3"
+              >
+                Enter Ashvi
+              </a>
+              <a
+                href="mailto:hello@ashvi.tech"
+                className="ac-close-cta ac-close-cta--ghost ac-fi ac-fi-d4"
+              >
+                Start a Conversation
+              </a>
+            </div>
+            <p className="ac-close-tagline ac-fi ac-fi-d5">
+              Not a platform.
+              <br />
+              Not a service.
+              <br />A system.
+            </p>
+            <DedicationWhisper />
           </div>
         </section>
-      </main>
+        </div>
 
-      <footer className="ac-footer">
-        <div className="ac-ft-logo">
-          ash<b>vi</b>
-        </div>
-        <Link href="/prateesh" className="ac-ft-tribute">
-          Dedicated to a friend who believed in building something greater.
-        </Link>
-        <div className="flex flex-col items-end gap-1 text-right sm:items-end">
-          <small>
-            Bengaluru, India · {new Date().getFullYear()}
-          </small>
-          <Link
-            href="/manifesto"
-            className="text-[10px] font-light text-white/15 transition-colors hover:text-white/35"
-          >
-            Manifesto
-          </Link>
-        </div>
-      </footer>
+        <div className="ac-hdiv" aria-hidden />
+      </main>
     </div>
   );
 }

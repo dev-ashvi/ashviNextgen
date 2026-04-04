@@ -1,58 +1,131 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
+
+const SCHOLAR_URL =
+  "https://scholar.google.com/citations?user=i3SWHncAAAAJ&hl=en";
+const LINKEDIN_URL =
+  "https://www.linkedin.com/in/prateesh-goyal-2a1534253/";
 
 export function TributeContent() {
-  return (
-    <div className="min-h-screen bg-[#050505] text-white">
-      <div
-        className="pointer-events-none fixed inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage: `url("https://grainy-gradients.vercel.app/noise.svg")`,
-        }}
-        aria-hidden
-      />
+  const reduced = usePrefersReducedMotion();
+  const [visible, setVisible] = useState(false);
 
-      <main className="relative z-10 mx-auto max-w-2xl px-8 pb-32 pt-28 md:pt-36">
-        <header className="mb-20 text-center md:mb-28">
-          <p className="text-[11px] font-medium uppercase tracking-[0.45em] text-white/35">
-            In Loving Memory
-          </p>
-          <h1 className="mt-10 text-3xl font-light tracking-tight text-white md:text-4xl">
-            Prateesh Goyal
-          </h1>
+  useEffect(() => {
+    if (reduced) {
+      setVisible(true);
+      return;
+    }
+    const id = requestAnimationFrame(() => {
+      requestAnimationFrame(() => setVisible(true));
+    });
+    return () => cancelAnimationFrame(id);
+  }, [reduced]);
+
+  return (
+    <div
+      className={`ac-memorial-root${visible ? " ac-memorial-root--visible" : ""}`}
+    >
+      <div className="ac-memorial-glow" aria-hidden />
+      <main className="ac-memorial-main">
+        <header className="ac-memorial-header ac-memorial-block">
+          <p className="ac-memorial-eyebrow">In loving memory</p>
+          <h1 className="ac-memorial-name">Prateesh Goyal</h1>
         </header>
 
-        <section className="mb-20 md:mb-28">
-          <p className="text-center text-lg font-extralight leading-relaxed text-white/85 md:text-xl">
-            A brilliant mind.
-            <br />
-            A relentless seeker of truth.
-            <br />A builder of the future.
-          </p>
+        <section
+          className="ac-memorial-section ac-memorial-section--lede ac-memorial-block"
+          aria-label="Remembered"
+        >
+          <p className="ac-memorial-line">A brilliant mind.</p>
+          <p className="ac-memorial-line">A relentless seeker of truth.</p>
+          <p className="ac-memorial-line">A builder of the future.</p>
         </section>
 
-        <section className="mb-20 md:mb-28">
-          <h2 className="sr-only">Timeline</h2>
-          <ul className="space-y-5 border-l border-white/[0.08] pl-8 text-sm font-light leading-relaxed text-white/65">
-            <li>IIT Bombay (AIR 53, Computer Science)</li>
-            <li>MIT Research</li>
-            <li>Microsoft Research</li>
-            <li>37+ research papers</li>
+        <section
+          className="ac-memorial-section ac-memorial-block"
+          aria-labelledby="memorial-timeline-heading"
+        >
+          <h2
+            id="memorial-timeline-heading"
+            className="ac-memorial-kicker"
+          >
+            Timeline
+          </h2>
+          <ul className="ac-memorial-timeline">
+            <li>
+              <span className="ac-memorial-timeline-title">IIT Bombay</span>
+              <span className="ac-memorial-timeline-detail">
+                {" "}
+                (AIR 53, Computer Science)
+              </span>
+            </li>
+            <li>
+              <span className="ac-memorial-timeline-title">MIT Research</span>
+            </li>
+            <li>
+              <span className="ac-memorial-timeline-title">
+                Microsoft Research
+              </span>
+            </li>
+            <li>
+              <span className="ac-memorial-timeline-title">
+                37+ research papers
+              </span>
+            </li>
           </ul>
         </section>
 
-        <section className="mb-20 md:mb-28">
-          <p className="text-center text-base font-extralight leading-relaxed text-white/75 md:text-lg">
+        <section
+          className="ac-memorial-section ac-memorial-block"
+          aria-labelledby="memorial-links-heading"
+        >
+          <h2 id="memorial-links-heading" className="ac-memorial-kicker">
+            Links
+          </h2>
+          <ul className="ac-memorial-links">
+            <li>
+              <a
+                href={SCHOLAR_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ac-memorial-external"
+              >
+                Research papers — Google Scholar
+              </a>
+            </li>
+            <li>
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ac-memorial-external"
+              >
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section
+          className="ac-memorial-section ac-memorial-block"
+          aria-labelledby="memorial-philosophy-heading"
+        >
+          <h2 id="memorial-philosophy-heading" className="ac-memorial-kicker">
+            Philosophy
+          </h2>
+          <p className="ac-memorial-philosophy">
             He believed in creating breakthrough technology for the good of the
             world.
           </p>
         </section>
 
-        <footer className="border-t border-white/[0.07] pt-14 text-center">
-          <p className="text-sm font-extralight tracking-wide text-white/55">
-            This work continues.
-          </p>
-          <p className="mt-16 text-[10px] text-white/25">
-            <Link href="/" className="transition-colors hover:text-white/45">
+        <footer className="ac-memorial-footer ac-memorial-block">
+          <p className="ac-memorial-closing">This work continues.</p>
+          <p className="ac-memorial-back-wrap">
+            <Link href="/" className="ac-memorial-back">
               ← Ashvi
             </Link>
           </p>

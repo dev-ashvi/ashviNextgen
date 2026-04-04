@@ -31,8 +31,10 @@ export function VisionStarField() {
     let running = false;
 
     const resize = () => {
-      const w = wrap.offsetWidth;
-      const h = wrap.offsetHeight;
+      const rect = wrap.getBoundingClientRect();
+      const w = Math.max(1, Math.round(rect.width));
+      const h = Math.max(1, Math.round(rect.height));
+      if (canvas.width === w && canvas.height === h) return;
       canvas.width = w;
       canvas.height = h;
     };
@@ -66,6 +68,13 @@ export function VisionStarField() {
       raf = requestAnimationFrame(frame);
     };
 
+    const ro = new ResizeObserver(() => {
+      resize();
+    });
+    ro.observe(wrap);
+    resize();
+    requestAnimationFrame(resize);
+
     const obs = new IntersectionObserver(
       ([e]) => {
         if (e?.isIntersecting) {
@@ -87,6 +96,7 @@ export function VisionStarField() {
     window.addEventListener("resize", resize, { passive: true });
 
     return () => {
+      ro.disconnect();
       obs.disconnect();
       window.removeEventListener("resize", resize);
       running = false;
@@ -97,12 +107,12 @@ export function VisionStarField() {
   if (reduced) return null;
 
   return (
-    <div ref={wrapRef} className="pointer-events-none absolute inset-0">
-      <canvas
-        ref={canvasRef}
-        className="h-full w-full"
-        aria-hidden
-      />
+    <div
+      ref={wrapRef}
+      className="ac-vis-starfield pointer-events-none"
+      aria-hidden
+    >
+      <canvas ref={canvasRef} className="ac-vis-starfield-canvas" aria-hidden />
     </div>
   );
 }
