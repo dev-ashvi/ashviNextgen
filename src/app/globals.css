@@ -1,0 +1,274 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-newsreader), Georgia, "Times New Roman", serif;
+  --font-display: var(--font-newsreader), Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-mono), ui-monospace, SFMono-Regular, monospace;
+
+  --color-ashvi-deep: var(--ashvi-deep-navy);
+  --color-ashvi-blue: var(--ashvi-blue);
+  --color-ashvi-teal: var(--ashvi-teal);
+  --color-ashvi-ink: var(--ashvi-ink);
+  --color-ashvi-cloud: var(--ashvi-cloud);
+  --color-ashvi-white: var(--ashvi-white);
+
+  /* Claude hero / brand token aliases */
+  --color-paper: #f8f9fd;
+  --color-paper-line: #e2e6f0;
+  --color-ink: #06183d;
+  --color-ink-900: #021336;
+  --color-ink-800: #0a1f4a;
+  --color-ink-700: #13295a;
+  --color-ink-600: #22396b;
+  --color-signal: #003876;
+  --color-tide: #00cdb8;
+  --color-mute: #56627a;
+
+  --color-page: var(--page-bg);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-ink-secondary: var(--text-secondary);
+  --color-ink-muted: var(--text-muted);
+  --color-line: var(--border);
+  --color-accent: var(--accent);
+  --color-focus: var(--focus-ring);
+
+  --ease-calm: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root {
+  --ashvi-deep-navy: #021336;
+  --ashvi-blue: #003876;
+  --ashvi-teal: #00cdb8;
+  --ashvi-ink: #06183d;
+  --ashvi-cloud: #f8f9fd;
+  --ashvi-white: #ffffff;
+
+  --page-bg: var(--ashvi-cloud);
+  --surface: var(--ashvi-white);
+  --surface-muted: #eef1f8;
+  --text-primary: var(--ashvi-ink);
+  --text-secondary: #3a4a6b;
+  --text-muted: #5c6b88;
+  --border: #d7deec;
+  --accent: var(--ashvi-teal);
+  --accent-hover: #00b8a5;
+  --focus-ring: #003876;
+  --dark-text: #f4f7fc;
+  --dark-text-secondary: rgba(244, 247, 252, 0.72);
+  --dark-text-muted: rgba(244, 247, 252, 0.52);
+  --dark-border: rgba(255, 255, 255, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "ss01", "cv11";
+}
+
+::selection {
+  background: color-mix(in srgb, var(--ashvi-blue) 85%, black);
+  color: var(--ashvi-white);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.shell {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.hero-shell {
+  width: 100%;
+  max-width: 1340px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .shell {
+    padding-inline: 2rem;
+  }
+
+  .hero-shell {
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .shell {
+    padding-inline: 2.5rem;
+  }
+
+  .hero-shell {
+    padding-inline: 3.5rem;
+  }
+}
+
+/* —— Approved Claude hero motion —— */
+.hero-in {
+  animation: hero-in 1100ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-float {
+  animation: hero-float 9s ease-in-out infinite;
+}
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.sculpt-float {
+  animation: sculpt-float 10s ease-in-out infinite;
+}
+@keyframes sculpt-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.sculpt-shadow {
+  animation: sculpt-shadow 10s ease-in-out infinite;
+  transform-origin: 37% 78%;
+}
+@keyframes sculpt-shadow {
+  0%,
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleX(0.96);
+    opacity: 0.82;
+  }
+}
+
+.hero-haze {
+  animation: hero-haze 18s ease-in-out infinite;
+}
+@keyframes hero-haze {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-in,
+  .hero-float,
+  .sculpt-float,
+  .sculpt-shadow,
+  .hero-haze {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.text-display {
+  font-size: clamp(2.25rem, 5.5vw, 4.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+}
+
+.text-title {
+  font-size: clamp(1.75rem, 3.4vw, 2.75rem);
+  line-height: 1.12;
+  letter-spacing: -0.028em;
+  font-weight: 600;
+}
+
+.text-lede {
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  border-radius: 0.25rem;
+  background: var(--ashvi-blue);
+  color: var(--ashvi-white);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.ashvi-grid {
+  background-image:
+    linear-gradient(to right, rgba(0, 56, 118, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 56, 118, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.ashvi-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
