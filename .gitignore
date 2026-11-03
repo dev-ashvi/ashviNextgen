@@ -22,3 +22,10 @@ yarn-error.log*
 .env*
 .vercel
 *.tsbuildinfo
+_prototype/
+_claude_ref/
+_handoff_extract/
+scripts/__pycache__/
+scripts/perf-results/
+
+scripts/*.log
