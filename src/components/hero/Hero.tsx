@@ -59,7 +59,7 @@ export function Hero() {
             </span>
             <span
               className="
-                mt-4 block font-normal leading-[1.25] tracking-[-0.018em] text-[#5A6B86]
+                mt-4 block font-normal leading-[1.25] tracking-[-0.018em] text-ashvi-teal
                 text-[clamp(1.25rem,0.85rem+1.35cqi,1.85rem)]
               "
             >

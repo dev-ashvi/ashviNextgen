@@ -69,6 +69,12 @@ export default function AboutPage() {
               knowledge into technology-driven businesses—starting with WYZ
               Finance.
             </p>
+            <a
+              href="/build"
+              className="mt-5 inline-flex text-[14px] font-medium text-ashvi-blue transition-colors hover:text-ashvi-deep"
+            >
+              Explore Build →
+            </a>
           </AnimatedReveal>
           <AnimatedReveal delay={0.08} className="rounded-2xl border border-line bg-ashvi-cloud p-8">
             <p className="label text-ashvi-blue">02 — Transform</p>
@@ -76,10 +82,16 @@ export default function AboutPage() {
               Reimagining existing operations
             </h3>
             <p className="mt-4 text-[16px] leading-relaxed text-ink-secondary">
-              A future, selective focus: helping established companies use AI to
-              change how work gets delivered—beginning with deep understanding of
-              the business.
+              We help established organisations rethink workflows, operations,
+              and services through intelligent technology—beginning with deep
+              understanding of the business.
             </p>
+            <a
+              href="/transform"
+              className="mt-5 inline-flex text-[14px] font-medium text-ashvi-blue transition-colors hover:text-ashvi-deep"
+            >
+              Explore Transform →
+            </a>
           </AnimatedReveal>
         </div>
       </section>

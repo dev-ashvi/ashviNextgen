@@ -11,7 +11,6 @@ export function BeliefSection() {
       <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.92fr)] lg:gap-12 xl:gap-16">
         <AnimatedReveal className="relative min-w-0">
           <p className="label text-mute">
-            <span className="text-ink/45">01</span>
             <span
               className="mx-2.5 inline-block h-px w-6 align-middle bg-tide/70"
               aria-hidden="true"
