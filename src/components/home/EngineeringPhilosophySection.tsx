@@ -1,107 +1,335 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { SectionContainer } from "@/components/ui/SectionContainer";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { cn } from "@/lib/utils";
 
-const steps = [
+const PRINCIPLES = [
   {
     id: "01",
-    title: "Understand the domain",
-    body: "Start with real operational challenges, judgement, and the work itself—not a catalogue of tools.",
+    title: "Understand the Work",
+    body: "We study how a business actually operates—its processes, challenges, decisions and the expertise behind them.",
   },
   {
     id: "02",
-    title: "Design for outcomes",
-    body: "Shape systems around meaningful business results rather than layering AI onto existing interfaces.",
+    title: "Design for Impact",
+    body: "We define the outcomes that matter, then design intelligent systems around measurable business value.",
   },
   {
     id: "03",
-    title: "Engineer reliable workflows",
-    body: "Build AI-powered products and processes that can be trusted in day-to-day operation.",
+    title: "Engineer for Reality",
+    body: "We build reliable systems that work beyond demonstrations—with robust architecture, data integration and operational resilience.",
   },
   {
     id: "04",
-    title: "Evaluate with oversight",
-    body: "Measure performance, quality, cost, and the places where human expertise must remain essential.",
+    title: "Measure What Matters",
+    body: "We continuously evaluate quality, reliability, cost and real-world performance to understand what works and what needs improvement.",
   },
   {
     id: "05",
-    title: "Improve continuously",
-    body: "Refine how technology supports the business—and apply the same principles to how Ashvi itself operates.",
+    title: "Keep Humans in Control",
+    body: "Intelligence should extend human capability, not remove accountability. We design clear roles for human judgement, oversight and intervention.",
   },
-];
+  {
+    id: "06",
+    title: "Evolve Continuously",
+    body: "Intelligent systems improve through feedback, evidence and iteration. Every deployment creates opportunities to learn and refine.",
+  },
+] as const;
+
+const CX = 200;
+const CY = 200;
+const R = 142;
+const LABEL_R = 176;
+const GAP = 7;
+const SWEEP = (360 - PRINCIPLES.length * GAP) / PRINCIPLES.length;
+const TRANSITION = "duration-[200ms] ease-calm motion-reduce:transition-none";
+
+function polar(cx: number, cy: number, r: number, angleDeg: number) {
+  const a = ((angleDeg - 90) * Math.PI) / 180;
+  return { x: cx + r * Math.cos(a), y: cy + r * Math.sin(a) };
+}
+
+function arcPath(startDeg: number, endDeg: number) {
+  const start = polar(CX, CY, R, startDeg);
+  const end = polar(CX, CY, R, endDeg);
+  const large = endDeg - startDeg > 180 ? 1 : 0;
+  return `M ${start.x.toFixed(2)} ${start.y.toFixed(2)} A ${R} ${R} 0 ${large} 1 ${end.x.toFixed(2)} ${end.y.toFixed(2)}`;
+}
+
+function segmentAngles(index: number) {
+  const start = index * (SWEEP + GAP);
+  const end = start + SWEEP;
+  const mid = start + SWEEP / 2;
+  return { start, end, mid };
+}
+
+function EngineeringCircle({
+  active,
+  onSelect,
+  labelledBy,
+}: {
+  active: number;
+  onSelect: (index: number) => void;
+  labelledBy: string;
+}) {
+  return (
+    <svg
+      viewBox="0 0 400 400"
+      role="group"
+      aria-labelledby={labelledBy}
+      className="mx-auto h-auto w-full max-w-[360px] touch-manipulation md:max-w-[350px] lg:mx-0 lg:ml-auto lg:max-w-[380px] xl:max-w-[410px]"
+    >
+      <circle
+        cx={CX}
+        cy={CY}
+        r={R}
+        fill="none"
+        stroke="#E4EAF2"
+        strokeWidth="1"
+      />
+
+      {PRINCIPLES.map((principle, index) => {
+        const { start, end, mid } = segmentAngles(index);
+        const selected = active === index;
+        const label = polar(CX, CY, LABEL_R, mid);
+        return (
+          <g key={principle.id}>
+            <path
+              d={arcPath(start, end)}
+              fill="none"
+              stroke="transparent"
+              strokeWidth={30}
+              strokeLinecap="round"
+              className="cursor-pointer outline-none focus-visible:stroke-[#00CDB8]/45"
+              role="button"
+              tabIndex={0}
+              aria-label={`${principle.id} ${principle.title}`}
+              aria-pressed={selected}
+              onClick={() => onSelect(index)}
+              onMouseEnter={() => onSelect(index)}
+              onFocus={() => onSelect(index)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  onSelect(index);
+                }
+                if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+                  e.preventDefault();
+                  onSelect((index + 1) % PRINCIPLES.length);
+                }
+                if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+                  e.preventDefault();
+                  onSelect((index - 1 + PRINCIPLES.length) % PRINCIPLES.length);
+                }
+              }}
+            />
+            <path
+              d={arcPath(start, end)}
+              fill="none"
+              stroke={selected ? "#003876" : "#C9D4E4"}
+              strokeWidth={selected ? 15 : 10}
+              strokeLinecap="round"
+              className={cn(
+                "pointer-events-none transition-[stroke,stroke-width]",
+                TRANSITION,
+              )}
+            />
+            <text
+              x={label.x}
+              y={label.y}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fill={selected ? "#003876" : "#7A8DA5"}
+              fontSize="11.5"
+              fontWeight="500"
+              letterSpacing="0.06em"
+              style={{ pointerEvents: "none", userSelect: "none" }}
+            >
+              {principle.id}
+            </text>
+          </g>
+        );
+      })}
+
+      <circle
+        cx={CX}
+        cy={CY}
+        r={20}
+        fill="none"
+        stroke="#00CDB8"
+        strokeOpacity="0.5"
+        strokeWidth="1.35"
+      />
+      <circle cx={CX} cy={CY} r={5} fill="#021336" />
+
+      <text
+        x={CX}
+        y={CY + 44}
+        textAnchor="middle"
+        fill="#021336"
+        fontSize="13.5"
+        fontWeight="700"
+        letterSpacing="0.15em"
+      >
+        HUMAN × AI
+      </text>
+      <text
+        x={CX}
+        y={CY + 64}
+        textAnchor="middle"
+        fill="#6E7F96"
+        fontSize="10.5"
+        fontWeight="500"
+        letterSpacing="0.2em"
+      >
+        ENGINEERING
+      </text>
+    </svg>
+  );
+}
 
 export function EngineeringPhilosophySection() {
   const [active, setActive] = useState(0);
+  const diagramTitleId = useId();
+  const panelId = useId();
 
   return (
-    <SectionContainer tone="white" className="py-20 md:py-28">
-      <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
-        <AnimatedReveal>
-          <SectionHeading
-            eyebrow="Engineering Philosophy"
-            title="Build for how the business works."
-          />
-          <div className="mt-6 space-y-4 text-[16px] leading-relaxed text-ink-secondary">
-            <p>
-              We don&apos;t believe putting an AI interface on existing software
-              automatically makes a business AI-native.
+    <SectionContainer tone="white" className="py-20 md:py-24 lg:py-28">
+      <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:gap-8 xl:gap-10">
+        {/* Left: eyebrow + headline + diagram */}
+        <div className="min-w-0">
+          <AnimatedReveal>
+            <p className="label text-mute">
+              <span
+                className="mr-2.5 inline-block h-px w-6 align-middle bg-tide/70"
+                aria-hidden="true"
+              />
+              Our Engineering Philosophy
             </p>
-            <p>The real opportunity is to examine the work itself.</p>
-            <p>What can intelligent systems reliably perform?</p>
-            <p>Where does human expertise remain essential?</p>
-            <p>How can both work together to create better outcomes?</p>
-          </div>
-        </AnimatedReveal>
 
-        <AnimatedReveal delay={0.1}>
-          <ol className="space-y-2">
-            {steps.map((step, index) => {
+            <h2 className="mt-6 max-w-[16ch] font-serif text-[clamp(1.85rem,1.1rem+2.4vw,2.85rem)] font-medium leading-[1.12] tracking-[-0.025em] text-ink [font-variation-settings:'opsz'_48]">
+              Build for how the business works.
+            </h2>
+          </AnimatedReveal>
+
+          <AnimatedReveal delay={0.06} className="mt-7 md:mt-8 lg:mt-7">
+            <p id={diagramTitleId} className="sr-only">
+              Six interconnected engineering principles. Selecting a segment
+              highlights the related principle. Centre label: Human times AI
+              Engineering.
+            </p>
+            <EngineeringCircle
+              active={active}
+              onSelect={setActive}
+              labelledBy={diagramTitleId}
+            />
+          </AnimatedReveal>
+        </div>
+
+        {/* Right: intro copy + interactive principles */}
+        <AnimatedReveal delay={0.08} className="min-w-0 lg:pt-1">
+          <div className="max-w-[32rem] space-y-4 text-[16px] leading-[1.7] text-ink/70 md:text-[17px]">
+            <p>
+              Adding an AI interface to existing software does not make a
+              business AI-native.
+            </p>
+            <p>
+              The opportunity is in understanding the workflows themselves, and
+              thoughtfully combining intelligent systems with the human expertise
+              that makes them work.
+            </p>
+          </div>
+
+          <div
+            role="list"
+            aria-label="Engineering principles"
+            className="mt-8 divide-y divide-line/80 border-y border-line/80 md:mt-9"
+          >
+            {PRINCIPLES.map((principle, index) => {
               const open = active === index;
+              const headingId = `${panelId}-h-${principle.id}`;
+              const bodyId = `${panelId}-b-${principle.id}`;
+
               return (
-                <li key={step.id}>
+                <div key={principle.id} role="listitem">
                   <button
                     type="button"
+                    id={headingId}
+                    aria-expanded={open}
+                    aria-controls={bodyId}
                     onClick={() => setActive(index)}
                     onMouseEnter={() => setActive(index)}
+                    onFocus={() => setActive(index)}
+                    onKeyDown={(e) => {
+                      if (e.key === "ArrowDown") {
+                        e.preventDefault();
+                        setActive((index + 1) % PRINCIPLES.length);
+                      }
+                      if (e.key === "ArrowUp") {
+                        e.preventDefault();
+                        setActive(
+                          (index - 1 + PRINCIPLES.length) % PRINCIPLES.length,
+                        );
+                      }
+                      if (e.key === "Home") {
+                        e.preventDefault();
+                        setActive(0);
+                      }
+                      if (e.key === "End") {
+                        e.preventDefault();
+                        setActive(PRINCIPLES.length - 1);
+                      }
+                    }}
                     className={cn(
-                      "group w-full rounded-xl border px-5 py-4 text-left transition-colors duration-300",
-                      open
-                        ? "border-ashvi-blue/30 bg-ashvi-cloud"
-                        : "border-transparent hover:border-line hover:bg-ashvi-cloud/60",
+                      "group flex w-full items-start gap-4 py-4 text-left outline-none transition-colors focus-visible:ring-2 focus-visible:ring-[color:var(--focus-ring)] focus-visible:ring-offset-2 md:py-[1.05rem]",
+                      TRANSITION,
+                      open ? "text-ink-900" : "text-[#5A6B86]",
                     )}
-                    aria-expanded={open}
                   >
-                    <div className="flex items-baseline gap-4">
-                      <span className="label text-ashvi-teal">{step.id}</span>
-                      <span className="text-[17px] font-semibold tracking-tight text-ashvi-ink">
-                        {step.title}
-                      </span>
-                    </div>
-                    <div
+                    <span
                       className={cn(
-                        "grid transition-[grid-template-rows] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]",
-                        open ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+                        "mt-0.5 shrink-0 text-[12px] font-medium tracking-[0.08em] transition-colors",
+                        TRANSITION,
+                        open ? "text-ashvi-teal" : "text-[#5E8FA3]",
                       )}
                     >
-                      <div className="overflow-hidden">
-                        <p className="mt-3 max-w-prose pl-10 text-[15px] leading-relaxed text-ink-secondary">
-                          {step.body}
-                        </p>
-                      </div>
-                    </div>
+                      {principle.id}
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span
+                        className={cn(
+                          "block text-[16.5px] font-semibold tracking-[-0.018em] transition-colors md:text-[17.5px]",
+                          TRANSITION,
+                          open ? "text-ink-900" : "text-[#4A5D78]",
+                        )}
+                      >
+                        {principle.title}
+                      </span>
+                      <span
+                        id={bodyId}
+                        role="region"
+                        aria-labelledby={headingId}
+                        aria-hidden={!open}
+                        className={cn(
+                          "grid transition-[grid-template-rows]",
+                          TRANSITION,
+                          open ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+                        )}
+                      >
+                        <span className="overflow-hidden">
+                          <span className="mt-2.5 block max-w-[36rem] text-[14.5px] font-normal leading-[1.65] text-ink-secondary md:text-[15px]">
+                            {principle.body}
+                          </span>
+                        </span>
+                      </span>
+                    </span>
                   </button>
-                </li>
+                </div>
               );
             })}
-          </ol>
-          <p className="mt-6 text-[14px] text-ink-muted">
-            Our approach combines understanding, design, engineering, evaluation,
-            and continuous improvement.
-          </p>
+          </div>
         </AnimatedReveal>
       </div>
     </SectionContainer>
