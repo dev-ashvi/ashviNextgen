@@ -18,7 +18,6 @@ export function ResearchPreviewSection() {
         <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] lg:gap-8 xl:gap-10">
           <div className="relative z-10 min-w-0 lg:max-w-[30rem]">
             <p className="label flex items-center gap-2.5 text-white/65">
-              <span className="text-tide">06</span>
               <span
                 className="inline-block h-px w-6 bg-white/25"
                 aria-hidden="true"
@@ -34,8 +33,7 @@ export function ResearchPreviewSection() {
             </h2>
 
             <p className="mt-5 max-w-[34ch] font-serif text-[clamp(1.05rem,1.3vw,1.3rem)] leading-[1.4] tracking-[-0.01em] text-white/80">
-              Exploring the architectures, intelligence and systems that may
-              shape what comes next.
+              Exploring the foundations of intelligent systems.
             </p>
 
             <div className="mt-6 max-w-[34rem] space-y-4 text-[16px] leading-[1.7] text-white/65 md:mt-7 md:space-y-5 md:text-[17px]">

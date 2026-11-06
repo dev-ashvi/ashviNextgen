@@ -56,11 +56,8 @@ export function BeliefSection() {
 
               <blockquote className="mt-6 border-l-[2.5px] border-ink-900 pl-5 sm:mt-7 sm:pl-6">
                 <p className="font-serif text-[1.05rem] font-medium leading-[1.35] tracking-[-0.018em] text-ink sm:text-[1.15rem] md:text-[1.2rem]">
-                  We believe the future belongs to those who can bring domain
-                  expertise and intelligent technology together.
-                </p>
-                <p className="mt-3 text-[14.5px] leading-relaxed text-mute sm:text-[15px]">
-                  That is the opportunity Ashvi Tech exists to explore.
+                  The opportunity isn&apos;t simply to do the same work faster.
+                  It&apos;s to rethink what a business can become.
                 </p>
               </blockquote>
             </div>
@@ -69,11 +66,8 @@ export function BeliefSection() {
           <AnimatedReveal delay={0.08} className="relative min-w-0">
             <blockquote className="mx-auto max-w-[25.5rem] border-l-[2.5px] border-ink-900 pl-5 sm:pl-6 lg:mx-0">
               <p className="font-serif text-[1.05rem] font-medium leading-[1.35] tracking-[-0.018em] text-ink sm:text-[1.15rem] md:text-[1.2rem]">
-                We believe the future belongs to those who can bring domain
-                expertise and intelligent technology together.
-              </p>
-              <p className="mt-3 text-[14.5px] leading-relaxed text-mute sm:text-[15px]">
-                That is the opportunity Ashvi Tech exists to explore.
+                The opportunity isn&apos;t simply to do the same work faster.
+                It&apos;s to rethink what a business can become.
               </p>
             </blockquote>
           </AnimatedReveal>

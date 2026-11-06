@@ -56,21 +56,12 @@ export function SiteFooter() {
 
           <div>
             <p className="label text-[color:var(--dark-text-muted)]">Contact</p>
-            <ul className="mt-4 flex flex-col gap-2.5">
-              <li>
-                <a
-                  href="mailto:dev.ashvi.tech@gmail.com"
-                  className={`break-all ${linkClass}`}
-                >
-                  dev.ashvi.tech@gmail.com
-                </a>
-              </li>
-              <li>
-                <a href="tel:+919079211168" className={linkClass}>
-                  +91 9079211168
-                </a>
-              </li>
-            </ul>
+            <a
+              href="mailto:hello@ashvi.tech"
+              className={`mt-4 inline-block break-all ${linkClass}`}
+            >
+              hello@ashvi.tech
+            </a>
           </div>
         </div>
       </div>

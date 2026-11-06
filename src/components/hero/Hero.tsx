@@ -78,7 +78,7 @@ export function Hero() {
               href="/#our-work"
               className="group inline-flex h-[54px] items-center gap-3 rounded-full bg-ink-900 px-5 text-[15px] font-medium text-white transition-colors duration-300 hover:bg-signal sm:px-7 sm:text-[16px]"
             >
-              Explore Our Work
+              See what we&apos;re building
               <span
                 aria-hidden="true"
                 className="transition-transform duration-500 ease-calm group-hover:translate-x-1"

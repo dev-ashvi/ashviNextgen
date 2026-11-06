@@ -35,7 +35,14 @@ export function SectionHeading({
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="text-title text-balance">{title}</h2>
+      <h2
+        className={cn(
+          "text-balance font-serif text-[clamp(1.85rem,1.1rem+2.4vw,2.85rem)] font-medium leading-[1.12] tracking-[-0.025em] [font-variation-settings:'opsz'_48]",
+          tone === "dark" ? "text-ashvi-white" : "text-ink",
+        )}
+      >
+        {title}
+      </h2>
       {description ? (
         <p
           className={cn(

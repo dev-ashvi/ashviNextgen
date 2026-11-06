@@ -111,7 +111,7 @@ export function BuildTransformSection() {
     <SectionContainer id="what-we-do" tone="white" className="py-20 md:py-24 lg:py-28">
       <SectionHeading
         eyebrow="What We Do"
-        title="Two paths. One engineering philosophy."
+        title="Two paths. One ambition."
         description="We work in two ways—building new AI-native businesses and helping existing businesses rethink how they operate."
       />
 

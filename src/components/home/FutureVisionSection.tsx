@@ -22,9 +22,8 @@ export function FutureVisionSection() {
         {/* Left — section introduction only */}
         <AnimatedReveal className="relative z-10 min-w-0 lg:max-w-[30rem]">
           <p className="label text-ashvi-blue">
-            <span className="text-ink/35">05</span>
             <span
-              className="mx-2.5 inline-block h-px w-6 align-middle bg-tide/60"
+              className="mr-2.5 inline-block h-px w-6 align-middle bg-tide/60"
               aria-hidden="true"
             />
             Beyond Today&apos;s Businesses
@@ -34,18 +33,15 @@ export function FutureVisionSection() {
             Making entrepreneurship more accessible.
           </h2>
 
-          <div className="mt-6 max-w-[34rem] space-y-4 text-[16px] leading-[1.7] text-ink/70 md:mt-7 md:space-y-5 md:text-[17px]">
+          <div className="mt-5 max-w-[34rem] space-y-4 text-[16px] leading-[1.7] text-ink/70 md:mt-6 md:text-[17px]">
             <p>
-              As intelligent technology becomes more capable, the skills
-              required to build a successful business may change. Someone with
-              deep expertise in finance, support, recruitment, or logistics may
-              increasingly be able to operate a business with a much smaller
-              team.
+              As intelligent systems become more capable, people with deep
+              industry expertise may be able to build and operate businesses
+              with much smaller teams.
             </p>
             <p>
-              Our long-term ambition is to help more professionals move from
-              offering their expertise as labour to building businesses they
-              own.
+              Our long-term ambition is to help more professionals turn their
+              expertise into businesses they own.
             </p>
           </div>
         </AnimatedReveal>
@@ -53,7 +49,7 @@ export function FutureVisionSection() {
         {/* Right — one exhibit: sculpture + caption on the same visual axis */}
         <AnimatedReveal
           delay={0.06}
-          className="relative z-0 min-w-0 w-full lg:pt-20 xl:pt-24"
+          className="relative z-0 min-w-0 w-full lg:pt-6 xl:pt-8"
         >
           <figure className="relative w-full">
             <Image

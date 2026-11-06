@@ -67,10 +67,14 @@ function segmentAngles(index: number) {
 
 function EngineeringCircle({
   active,
+  selected,
+  onHover,
   onSelect,
   labelledBy,
 }: {
   active: number;
+  selected: number;
+  onHover: (index: number | null) => void;
   onSelect: (index: number) => void;
   labelledBy: string;
 }) {
@@ -80,6 +84,7 @@ function EngineeringCircle({
       role="group"
       aria-labelledby={labelledBy}
       className="mx-auto h-auto w-full max-w-[360px] touch-manipulation md:max-w-[350px] lg:mx-0 lg:ml-auto lg:max-w-[380px] xl:max-w-[410px]"
+      onMouseLeave={() => onHover(null)}
     >
       <circle
         cx={CX}
@@ -92,7 +97,8 @@ function EngineeringCircle({
 
       {PRINCIPLES.map((principle, index) => {
         const { start, end, mid } = segmentAngles(index);
-        const selected = active === index;
+        const isActive = active === index;
+        const isSelected = selected === index;
         const label = polar(CX, CY, LABEL_R, mid);
         return (
           <g key={principle.id}>
@@ -106,9 +112,9 @@ function EngineeringCircle({
               role="button"
               tabIndex={0}
               aria-label={`${principle.id} ${principle.title}`}
-              aria-pressed={selected}
+              aria-pressed={isSelected}
               onClick={() => onSelect(index)}
-              onMouseEnter={() => onSelect(index)}
+              onMouseEnter={() => onHover(index)}
               onFocus={() => onSelect(index)}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
@@ -128,8 +134,8 @@ function EngineeringCircle({
             <path
               d={arcPath(start, end)}
               fill="none"
-              stroke={selected ? "#003876" : "#C9D4E4"}
-              strokeWidth={selected ? 15 : 10}
+              stroke={isActive ? "#003876" : "#C9D4E4"}
+              strokeWidth={isActive ? 15 : 10}
               strokeLinecap="round"
               className={cn(
                 "pointer-events-none transition-[stroke,stroke-width]",
@@ -141,7 +147,7 @@ function EngineeringCircle({
               y={label.y}
               textAnchor="middle"
               dominantBaseline="middle"
-              fill={selected ? "#003876" : "#7A8DA5"}
+              fill={isActive ? "#003876" : "#7A8DA5"}
               fontSize="11.5"
               fontWeight="500"
               letterSpacing="0.06em"
@@ -191,9 +197,17 @@ function EngineeringCircle({
 }
 
 export function EngineeringPhilosophySection() {
-  const [active, setActive] = useState(0);
+  const [selected, setSelected] = useState(0);
+  const [hovered, setHovered] = useState<number | null>(null);
+  const active = hovered ?? selected;
+  const activePrinciple = PRINCIPLES[active];
   const diagramTitleId = useId();
   const panelId = useId();
+
+  const select = (index: number) => {
+    setHovered(null);
+    setSelected(index);
+  };
 
   return (
     <SectionContainer tone="white" className="py-20 md:py-24 lg:py-28">
@@ -222,9 +236,21 @@ export function EngineeringPhilosophySection() {
             </p>
             <EngineeringCircle
               active={active}
-              onSelect={setActive}
+              selected={selected}
+              onHover={setHovered}
+              onSelect={select}
               labelledBy={diagramTitleId}
             />
+            <p
+              aria-live="polite"
+              className="mx-auto mt-3 max-w-[360px] text-center text-[13px] font-medium leading-snug tracking-[-0.01em] text-ink-900/75 md:max-w-[350px] lg:mx-0 lg:ml-auto lg:max-w-[380px] lg:text-right xl:max-w-[410px]"
+            >
+              <span className="text-ashvi-teal">{activePrinciple.id}</span>
+              <span className="mx-1.5 text-ink/25" aria-hidden="true">
+                ·
+              </span>
+              <span>{activePrinciple.title}</span>
+            </p>
           </AnimatedReveal>
         </div>
 
@@ -246,9 +272,11 @@ export function EngineeringPhilosophySection() {
             role="list"
             aria-label="Engineering principles"
             className="mt-8 divide-y divide-line/80 border-y border-line/80 md:mt-9"
+            onMouseLeave={() => setHovered(null)}
           >
             {PRINCIPLES.map((principle, index) => {
               const open = active === index;
+              const isSelected = selected === index;
               const headingId = `${panelId}-h-${principle.id}`;
               const bodyId = `${panelId}-b-${principle.id}`;
 
@@ -259,31 +287,36 @@ export function EngineeringPhilosophySection() {
                     id={headingId}
                     aria-expanded={open}
                     aria-controls={bodyId}
-                    onClick={() => setActive(index)}
-                    onMouseEnter={() => setActive(index)}
-                    onFocus={() => setActive(index)}
+                    aria-current={isSelected ? "true" : undefined}
+                    onClick={() => select(index)}
+                    onMouseEnter={() => setHovered(index)}
+                    onFocus={() => select(index)}
                     onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        select(index);
+                      }
                       if (e.key === "ArrowDown") {
                         e.preventDefault();
-                        setActive((index + 1) % PRINCIPLES.length);
+                        select((index + 1) % PRINCIPLES.length);
                       }
                       if (e.key === "ArrowUp") {
                         e.preventDefault();
-                        setActive(
+                        select(
                           (index - 1 + PRINCIPLES.length) % PRINCIPLES.length,
                         );
                       }
                       if (e.key === "Home") {
                         e.preventDefault();
-                        setActive(0);
+                        select(0);
                       }
                       if (e.key === "End") {
                         e.preventDefault();
-                        setActive(PRINCIPLES.length - 1);
+                        select(PRINCIPLES.length - 1);
                       }
                     }}
                     className={cn(
-                      "group flex w-full items-start gap-4 py-4 text-left outline-none transition-colors focus-visible:ring-2 focus-visible:ring-[color:var(--focus-ring)] focus-visible:ring-offset-2 md:py-[1.05rem]",
+                      "group flex min-h-[3.25rem] w-full items-start gap-4 py-4 text-left outline-none transition-colors focus-visible:ring-2 focus-visible:ring-[color:var(--focus-ring)] focus-visible:ring-offset-2 md:py-[1.05rem]",
                       TRANSITION,
                       open ? "text-ink-900" : "text-[#5A6B86]",
                     )}

@@ -46,19 +46,18 @@ export function FeaturedWorkSection() {
       */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 top-[52%] bg-ink-900 [clip-path:polygon(0%_12%,100%_4%,100%_100%,0%_100%)] sm:top-[50%] md:top-[46%] md:[clip-path:polygon(0%_22%,100%_6%,100%_100%,0%_100%)] lg:top-[42%]"
+        className="pointer-events-none absolute inset-x-0 bottom-0 top-[54%] bg-ink-900 [clip-path:polygon(0%_14%,100%_5%,100%_100%,0%_100%)] sm:top-[52%] md:top-[48%] md:[clip-path:polygon(0%_20%,100%_6%,100%_100%,0%_100%)] lg:top-[46%]"
       >
         <div className="absolute bottom-[-5%] left-[-2%] h-[78%] w-[68%] bg-[radial-gradient(ellipse_at_40%_55%,#12396A_0%,rgba(18,57,106,0.35)_38%,transparent_72%)] opacity-70 md:opacity-80" />
         <div className="absolute bottom-[8%] left-[10%] h-[52%] w-[48%] bg-[radial-gradient(ellipse_at_center,#003876_0%,transparent_70%)] opacity-45 md:opacity-55" />
       </div>
 
-      <div className="shell relative pb-12 pt-12 md:pb-14 md:pt-14 lg:pb-16 lg:pt-14">
+      <div className="shell relative pb-8 pt-12 md:pb-9 md:pt-14 lg:pb-10 lg:pt-14">
         {/* ── Compact introduction ── */}
         <AnimatedReveal>
           <p className="label text-ashvi-blue">
-           
             <span
-              className="mx-2.5 inline-block h-px w-6 align-middle bg-tide/60"
+              className="mr-2.5 inline-block h-px w-6 align-middle bg-tide/60"
               aria-hidden="true"
             />
             What We&apos;re Building
@@ -103,7 +102,7 @@ export function FeaturedWorkSection() {
         </div>
 
         {/* ── Product exhibit: bridges light → navy ── */}
-        <div className="relative z-10 mt-8 grid items-end gap-7 md:mt-9 lg:mt-9 lg:grid-cols-[minmax(0,1.38fr)_minmax(0,0.62fr)] lg:gap-9 xl:gap-10">
+        <div className="relative z-10 mt-7 grid items-end gap-5 md:mt-8 md:gap-7 lg:mt-8 lg:grid-cols-[minmax(0,1.38fr)_minmax(0,0.62fr)] lg:gap-8 xl:gap-9">
           <AnimatedReveal className="relative min-w-0">
             {/* Soft halo where product sits on the pale canvas */}
             <div
@@ -113,29 +112,38 @@ export function FeaturedWorkSection() {
             {/* Broad contact shadow + restrained blue ground reflection */}
             <div
               aria-hidden
-              className="pointer-events-none absolute -bottom-6 left-[2%] right-[4%] h-[4.5rem] rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.22)_42%,transparent_74%)]"
+              className="pointer-events-none absolute -bottom-4 left-[2%] right-[4%] h-[3.5rem] rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.22)_42%,transparent_74%)]"
             />
             <div
               aria-hidden
-              className="pointer-events-none absolute -bottom-1 left-[8%] right-[12%] h-12 rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(18,57,106,0.65)_0%,transparent_72%)]"
+              className="pointer-events-none absolute bottom-0 left-[8%] right-[12%] h-10 rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(18,57,106,0.65)_0%,transparent_72%)]"
             />
-            <div className="relative overflow-hidden rounded-[1.05rem] bg-ashvi-white shadow-[0_18px_40px_rgba(2,19,54,0.32),0_6px_14px_rgba(2,19,54,0.18)] ring-1 ring-[#C5D0E2] sm:rounded-[1.2rem]">
-              <Image
-                src="/companies/wyz-revenue-margin.webp"
-                alt="WYZ Finance Revenue & Margin product interface showing primary financial metrics and workspace navigation"
-                width={1263}
-                height={863}
-                className="h-auto w-full"
-                sizes="(max-width: 1024px) 100vw, 64vw"
-                quality={85}
-              />
-            </div>
+            <figure className="relative">
+              {/*
+                Mobile: overflow crop focused on Primary Financial State metrics.
+                md+: full desktop dashboard (no crop).
+              */}
+              <div className="relative overflow-hidden rounded-[1.05rem] bg-ashvi-white shadow-[0_18px_40px_rgba(2,19,54,0.32),0_6px_14px_rgba(2,19,54,0.18)] ring-1 ring-[#C5D0E2] max-md:aspect-[4/3] sm:rounded-[1.2rem] md:aspect-auto">
+                <Image
+                  src="/companies/wyz-revenue-margin.webp"
+                  alt="WYZ Finance Revenue & Margin product interface showing primary financial metrics and workspace navigation"
+                  width={1263}
+                  height={863}
+                  className="h-auto w-full max-md:absolute max-md:inset-0 max-md:h-full max-md:w-full max-md:origin-[58%_72%] max-md:scale-[1.85] max-md:object-cover max-md:object-[58%_72%] md:static md:h-auto md:w-full md:origin-center md:scale-100 md:object-contain md:object-center"
+                  sizes="(max-width: 767px) 100vw, (max-width: 1024px) 100vw, 64vw"
+                  quality={85}
+                />
+              </div>
+              <figcaption className="mt-2.5 text-[12.5px] font-normal leading-snug tracking-[-0.01em] text-[color:var(--dark-text-secondary)] md:mt-3 md:text-[13px]">
+                Product interface · Illustrative demo data
+              </figcaption>
+            </figure>
           </AnimatedReveal>
 
-          {/* Callout — aligned to lower product region on navy */}
+          {/* Callout — bottom-aligned with product on navy */}
           <AnimatedReveal
             delay={0.06}
-            className="relative min-w-0 lg:mb-[11%] lg:self-end lg:pr-1"
+            className="relative min-w-0 lg:self-end lg:pb-1 lg:pr-1"
           >
             <div className="flex max-w-[22rem] gap-4 rounded-2xl bg-ink-900 p-5 text-[color:var(--dark-text)] ring-1 ring-white/10 lg:bg-transparent lg:p-0 lg:ring-0">
               <span

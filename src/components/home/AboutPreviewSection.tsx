@@ -17,7 +17,6 @@ export function AboutPreviewSection() {
 
           <div className="relative z-10">
             <p className="label flex items-center gap-2.5 text-ink-900/65">
-              <span className="text-tide-deep">07</span>
               <span
                 className="inline-block h-px w-6 bg-ink-900/20"
                 aria-hidden="true"
@@ -35,8 +34,8 @@ export function AboutPreviewSection() {
             </h2>
 
             <p className="mt-5 max-w-[36rem] text-[18px] leading-[1.55] text-ink-900/70 md:mt-6 md:text-[19px] md:leading-[1.6] lg:max-w-[40rem]">
-              We believe technical capability should create value in the
-              world—and create room to explore what comes next.
+              We believe technical capability should solve meaningful problems
+              today while opening new possibilities for exploration.
             </p>
           </div>
         </div>
@@ -58,16 +57,18 @@ export function AboutPreviewSection() {
           <div className="border-t border-paper-line pt-8 lg:border-0 lg:pt-0">
             <Pillar
               label="Explore"
-              title="Discover what comes next."
+              title="Pursue questions worth exploring."
               copy="Invest learning, capability and time into independent research."
             />
           </div>
         </div>
 
-        <p className="mt-8 rounded-2xl bg-[rgba(0,205,184,0.06)] px-5 py-4 text-center font-serif text-[clamp(1.05rem,1.2vw,1.25rem)] font-medium leading-[1.35] tracking-[-0.015em] text-ink-900 md:mt-10 md:px-8 md:py-5 lg:mt-11">
-          What we build today should help make tomorrow&apos;s research
-          possible.
-        </p>
+        <blockquote className="mt-8 max-w-[34rem] border-l-[2.5px] border-tide pl-5 md:mt-9 md:max-w-[36rem] md:pl-6 lg:mt-10">
+          <p className="font-serif text-[clamp(1.05rem,1.1vw,1.2rem)] font-medium leading-[1.35] tracking-[-0.015em] text-ink-900">
+            What we build today should help make tomorrow&apos;s research
+            possible.
+          </p>
+        </blockquote>
 
         <Link
           href="/about"

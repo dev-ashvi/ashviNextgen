@@ -20,7 +20,6 @@ export function ContactSection() {
           <div className="relative z-10 px-7 py-10 sm:px-10 sm:py-12 md:px-12 md:py-14 lg:px-14 lg:py-16 xl:px-16">
             <div className="relative z-10 max-w-[34rem]">
               <p className="label flex items-center gap-2.5 text-white/65">
-                <span className="text-tide">08</span>
                 <span
                   className="inline-block h-px w-6 bg-white/25"
                   aria-hidden="true"
