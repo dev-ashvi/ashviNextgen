@@ -51,14 +51,16 @@ export function ResearchPreviewSection() {
             <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-4">
               <Link
                 href="/research"
-                className="group inline-flex items-center gap-2.5 border-b border-white/70 pb-1 text-[16px] font-medium text-white transition-colors hover:border-tide"
+                className="tap-target group inline-flex text-[16px] font-medium text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tide"
               >
-                Explore Ashvi Research
-                <span
-                  aria-hidden="true"
-                  className="transition-transform duration-500 ease-calm group-hover:translate-x-1"
-                >
-                  →
+                <span className="inline-flex items-center gap-2.5 border-b border-white/70 pb-1 transition-colors group-hover:border-tide">
+                  Explore Ashvi Research
+                  <span
+                    aria-hidden="true"
+                    className="transition-transform duration-500 ease-calm group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
                 </span>
               </Link>
               <span className="inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.22em] text-tide ring-1 ring-inset ring-tide/45">

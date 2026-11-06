@@ -76,7 +76,7 @@ export function Hero() {
           <div className="hero-in mt-10 flex flex-wrap items-center gap-3 [--d:240ms] sm:gap-4">
             <Link
               href="/#our-work"
-              className="group inline-flex h-[54px] items-center gap-3 rounded-full bg-ink-900 px-5 text-[15px] font-medium text-white transition-colors duration-300 hover:bg-signal sm:px-7 sm:text-[16px]"
+              className="group inline-flex h-[54px] min-h-11 items-center gap-3 rounded-full bg-ink-900 px-5 text-[15px] font-medium text-white transition-colors duration-300 hover:bg-signal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink-900 sm:px-7 sm:text-[16px]"
             >
               See what we&apos;re building
               <span
@@ -88,7 +88,7 @@ export function Hero() {
             </Link>
             <Link
               href="/#what-we-do"
-              className="inline-flex h-[54px] items-center rounded-full bg-white/50 px-5 text-[15px] font-medium text-ink ring-1 ring-inset ring-ink/25 transition-all duration-300 hover:bg-white hover:ring-ink/45 sm:px-7 sm:text-[16px]"
+              className="inline-flex h-[54px] min-h-11 items-center rounded-full bg-white/50 px-5 text-[15px] font-medium text-ink ring-1 ring-inset ring-ink/25 transition-all duration-300 hover:bg-white hover:ring-ink/45 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink sm:px-7 sm:text-[16px]"
             >
               What We Do
             </Link>

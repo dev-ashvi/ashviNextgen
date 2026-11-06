@@ -18,21 +18,21 @@ function CardLink({
   external?: boolean;
 }) {
   const className = cn(
-    "group inline-flex items-center gap-1.5 text-[14px] tracking-[-0.01em] transition-colors duration-300",
+    "tap-target group inline-flex gap-1.5 text-[14px] tracking-[-0.01em] transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4",
     emphasis === "primary" && "font-medium",
     emphasis === "secondary" && "font-normal",
     tone === "dark" &&
       emphasis === "primary" &&
-      "text-ashvi-white hover:text-ashvi-teal",
+      "text-ashvi-white hover:text-ashvi-teal focus-visible:outline-ashvi-teal",
     tone === "dark" &&
       emphasis === "secondary" &&
-      "text-white/45 hover:text-white/70",
+      "text-white/45 hover:text-white/70 focus-visible:outline-white/50",
     tone === "light" &&
       emphasis === "primary" &&
-      "text-ashvi-blue hover:text-ashvi-deep",
+      "text-ashvi-blue hover:text-ashvi-deep focus-visible:outline-ashvi-blue",
     tone === "light" &&
       emphasis === "secondary" &&
-      "text-mute hover:text-ashvi-blue",
+      "text-mute hover:text-ashvi-blue focus-visible:outline-ashvi-blue",
   );
 
   const arrow = (

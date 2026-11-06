@@ -119,18 +119,14 @@ export function FeaturedWorkSection() {
               className="pointer-events-none absolute bottom-0 left-[8%] right-[12%] h-10 rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(18,57,106,0.65)_0%,transparent_72%)]"
             />
             <figure className="relative">
-              {/*
-                Mobile: overflow crop focused on Primary Financial State metrics.
-                md+: full desktop dashboard (no crop).
-              */}
-              <div className="relative overflow-hidden rounded-[1.05rem] bg-ashvi-white shadow-[0_18px_40px_rgba(2,19,54,0.32),0_6px_14px_rgba(2,19,54,0.18)] ring-1 ring-[#C5D0E2] max-md:aspect-[4/3] sm:rounded-[1.2rem] md:aspect-auto">
+              <div className="relative overflow-hidden rounded-[1.05rem] bg-ashvi-white shadow-[0_18px_40px_rgba(2,19,54,0.32),0_6px_14px_rgba(2,19,54,0.18)] ring-1 ring-[#C5D0E2] sm:rounded-[1.2rem]">
                 <Image
                   src="/companies/wyz-revenue-margin.webp"
                   alt="WYZ Finance Revenue & Margin product interface showing primary financial metrics and workspace navigation"
                   width={1263}
                   height={863}
-                  className="h-auto w-full max-md:absolute max-md:inset-0 max-md:h-full max-md:w-full max-md:origin-[58%_72%] max-md:scale-[1.85] max-md:object-cover max-md:object-[58%_72%] md:static md:h-auto md:w-full md:origin-center md:scale-100 md:object-contain md:object-center"
-                  sizes="(max-width: 767px) 100vw, (max-width: 1024px) 100vw, 64vw"
+                  className="h-auto w-full"
+                  sizes="(max-width: 1024px) 100vw, 64vw"
                   quality={85}
                 />
               </div>
@@ -166,14 +162,16 @@ export function FeaturedWorkSection() {
                   href="https://financewyz.ai"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group mt-5 inline-flex items-center gap-2 border-b border-ashvi-teal/70 pb-0.5 text-[14.5px] font-medium tracking-[-0.01em] text-ashvi-white transition-colors hover:border-ashvi-teal hover:text-ashvi-teal md:text-[15px]"
+                  className="tap-target group mt-5 inline-flex text-[14.5px] font-medium tracking-[-0.01em] text-ashvi-white transition-colors hover:text-ashvi-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ashvi-teal md:text-[15px]"
                 >
-                  Explore WYZ Finance
-                  <span
-                    aria-hidden
-                    className="translate-y-px transition-transform duration-300 ease-calm group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                  >
-                    ↗
+                  <span className="inline-flex items-center gap-2 border-b border-ashvi-teal/70 pb-0.5 transition-colors group-hover:border-ashvi-teal">
+                    Explore WYZ Finance
+                    <span
+                      aria-hidden
+                      className="translate-y-px transition-transform duration-300 ease-calm group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                    >
+                      ↗
+                    </span>
                   </span>
                 </a>
               </div>

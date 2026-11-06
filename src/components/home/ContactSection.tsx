@@ -44,11 +44,13 @@ export function ContactSection() {
 
               <Link
                 href="/contact"
-                className="group relative z-20 mt-7 inline-flex items-center gap-2 border-b border-tide/80 pb-1 text-[15px] font-medium text-white transition-colors duration-300 hover:border-tide focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tide md:mt-8 md:text-[16px]"
+                className="tap-target group relative z-20 mt-7 inline-flex text-[15px] font-medium text-white transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tide md:mt-8 md:text-[16px]"
               >
-                Start a conversation
-                <span aria-hidden="true" className="text-tide">
-                  ↗
+                <span className="inline-flex items-center gap-2 border-b border-tide/80 pb-1 transition-colors group-hover:border-tide">
+                  Start a conversation
+                  <span aria-hidden="true" className="text-tide">
+                    ↗
+                  </span>
                 </span>
               </Link>
             </div>

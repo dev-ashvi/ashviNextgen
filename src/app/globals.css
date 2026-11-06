@@ -244,6 +244,12 @@ body {
   font-weight: 500;
 }
 
+/* ~44px minimum hit area for text links / controls; keep type scale unchanged. */
+.tap-target {
+  min-height: 2.75rem;
+  align-items: center;
+}
+
 .skip-link {
   position: absolute;
   left: 1rem;

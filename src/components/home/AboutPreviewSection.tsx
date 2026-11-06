@@ -72,14 +72,16 @@ export function AboutPreviewSection() {
 
         <Link
           href="/about"
-          className="group mt-6 inline-flex items-center gap-2 border-b border-tide/70 pb-1 text-[15px] font-medium text-ink-900 transition-colors duration-300 hover:border-tide md:mt-7"
+          className="tap-target group mt-6 inline-flex text-[15px] font-medium text-ink-900 transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tide md:mt-7"
         >
-          Read Our Story
-          <span
-            aria-hidden="true"
-            className="transition-transform duration-500 ease-calm group-hover:translate-x-1"
-          >
-            →
+          <span className="inline-flex items-center gap-2 border-b border-tide/70 pb-1 transition-colors group-hover:border-tide">
+            Read Our Story
+            <span
+              aria-hidden="true"
+              className="transition-transform duration-500 ease-calm group-hover:translate-x-1"
+            >
+              →
+            </span>
           </span>
         </Link>
       </div>

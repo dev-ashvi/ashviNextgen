@@ -10,7 +10,7 @@ const navLinks = [
 ];
 
 const linkClass =
-  "text-[14px] text-[color:var(--dark-text-secondary)] transition-colors hover:text-ashvi-teal focus-visible:outline-none focus-visible:text-ashvi-teal focus-visible:underline focus-visible:underline-offset-4";
+  "tap-target inline-flex text-[14px] text-[color:var(--dark-text-secondary)] transition-colors hover:text-ashvi-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ashvi-teal focus-visible:text-ashvi-teal";
 
 export function SiteFooter() {
   return (
@@ -25,7 +25,7 @@ export function SiteFooter() {
 
         <nav aria-label="Footer">
           <p className="label text-[color:var(--dark-text-muted)]">Navigate</p>
-          <ul className="mt-4 flex flex-col gap-2.5">
+          <ul className="mt-3 flex flex-col">
             {navLinks.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className={linkClass}>
@@ -45,7 +45,7 @@ export function SiteFooter() {
               href="https://financewyz.ai"
               target="_blank"
               rel="noopener noreferrer"
-              className={`mt-4 inline-flex items-center gap-1.5 ${linkClass}`}
+              className={`mt-3 gap-1.5 ${linkClass}`}
             >
               WYZ Finance
               <span aria-hidden="true" className="text-[12px] opacity-70">
@@ -58,7 +58,7 @@ export function SiteFooter() {
             <p className="label text-[color:var(--dark-text-muted)]">Contact</p>
             <a
               href="mailto:hello@ashvi.tech"
-              className={`mt-4 inline-block break-all ${linkClass}`}
+              className={`mt-3 break-all ${linkClass}`}
             >
               hello@ashvi.tech
             </a>
