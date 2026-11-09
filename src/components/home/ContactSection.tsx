@@ -49,7 +49,7 @@ export function ContactSection() {
                 <span className="inline-flex items-center gap-2 border-b border-tide/80 pb-1 transition-colors group-hover:border-tide">
                   Start a conversation
                   <span aria-hidden="true" className="text-tide">
-                    ↗
+                    →
                   </span>
                 </span>
               </Link>

@@ -63,7 +63,7 @@ export function AboutPreviewSection() {
           </div>
         </div>
 
-        <blockquote className="mt-8 max-w-[34rem] border-l-[2.5px] border-tide pl-5 md:mt-9 md:max-w-[36rem] md:pl-6 lg:mt-10">
+        <blockquote className="mx-auto mt-8 max-w-[34rem] border-l-[2.5px] border-tide pl-5 md:mt-9 md:max-w-[36rem] md:pl-6 lg:mt-10">
           <p className="font-serif text-[clamp(1.05rem,1.1vw,1.2rem)] font-medium leading-[1.35] tracking-[-0.015em] text-ink-900">
             What we build today should help make tomorrow&apos;s research
             possible.
@@ -137,14 +137,16 @@ function Watermark() {
       <source
         type="image/webp"
         srcSet="/brand/ashvi-mark-watermark-640.webp 614w, /brand/ashvi-mark-watermark.webp 1227w"
-        sizes="(min-width: 1024px) 52vw, 68vw"
+        sizes="(min-width: 1024px) 48vw, (min-width: 640px) 58vw, 68vw"
       />
       <img
-        src="/brand/ashvi-mark-watermark.png"
+        src="/brand/ashvi-mark-watermark-640.webp"
         alt=""
         width={1227}
         height={997}
         decoding="async"
+        loading="lazy"
+        fetchPriority="low"
         aria-hidden="true"
         className="about-watermark pointer-events-none absolute -right-[14%] top-0 w-[68vw] max-w-none select-none opacity-[0.045] sm:-right-[10%] sm:w-[58vw] lg:-right-[4%] lg:top-[-4%] lg:w-[48%] lg:opacity-[0.06] xl:w-[44%] 2xl:w-[40%]"
       />

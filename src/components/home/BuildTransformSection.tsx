@@ -40,7 +40,7 @@ function CardLink({
       aria-hidden
       className="translate-x-0 transition-transform duration-300 ease-calm group-hover:translate-x-0.5"
     >
-      →
+      {external ? "↗" : "→"}
     </span>
   );
 
