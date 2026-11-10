@@ -68,7 +68,10 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         ok: false,
-        error: "We couldn't send your message right now. Please try again or email hello@ashvi.tech.",
+        error:
+          result.code === 'misconfigured'
+            ? 'Online submission is currently unavailable. Please email hello@ashvi.tech.'
+            : "We couldn't send your message right now. Please try again or email hello@ashvi.tech.",
       },
       { status },
     )

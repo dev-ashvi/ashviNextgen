@@ -106,6 +106,16 @@ describe('POST /api/contact', () => {
     expect(data.error).toMatch(/couldn.t send/i)
   })
 
+  it('reports unavailable when email delivery is not configured', async () => {
+    sendContactEmail.mockResolvedValue({ ok: false, error: 'missing', code: 'misconfigured' })
+    const res = await post(valid)
+    expect(res.status).toBe(503)
+    const data = await res.json()
+    expect(data.ok).toBe(false)
+    expect(data.error).toMatch(/unavailable/i)
+    expect(data.error).toMatch(/hello@ashvi\.tech/)
+  })
+
   it('returns success only when the provider accepts the message', async () => {
     sendContactEmail.mockResolvedValue({ ok: true, id: 'msg_ok' })
     const res = await post(valid)
