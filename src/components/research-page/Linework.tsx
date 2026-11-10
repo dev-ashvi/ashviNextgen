@@ -6,7 +6,21 @@ import { HORIZON, TERRAIN } from './geometry.generated'
  */
 
 /** Hero: a mathematical terrain, brightest where it is highest, dissolving to the left and front. */
-export function Terrain({ className = '', idPrefix = 'rt', fadeLeft = true }: { className?: string; idPrefix?: string; fadeLeft?: boolean }) {
+export function Terrain({
+  className = '',
+  idPrefix = 'rt',
+  fadeLeft = true,
+  palette = 'dark',
+  highlights: showHighlights = true,
+}: {
+  className?: string
+  idPrefix?: string
+  fadeLeft?: boolean
+  /** 'light' = pale teal linework for off-white sections (no fill, no glow) */
+  palette?: 'dark' | 'light'
+  highlights?: boolean
+}) {
+  const light = palette === 'light'
   const { vb, rows, cols, crest, body, highlights } = TERRAIN
   const id = (s: string) => `${idPrefix}-${s}`
   const lit = highlights.filter((h) => h.p[0] > 40 && h.p[0] < vb.w - 40)
@@ -15,10 +29,10 @@ export function Terrain({ className = '', idPrefix = 'rt', fadeLeft = true }: { 
       <defs>
         {/* height colouring: higher on screen = brighter teal */}
         <linearGradient id={id('height')} gradientUnits="userSpaceOnUse" x1="0" y1="130" x2="0" y2="520">
-          <stop offset="0" stopColor="#7FF5E8" />
-          <stop offset="0.22" stopColor="#00CDB8" />
-          <stop offset="0.55" stopColor="#0C7C8E" />
-          <stop offset="1" stopColor="#0B3A66" />
+          <stop offset="0" stopColor={light ? '#4FC9BC' : '#7FF5E8'} />
+          <stop offset="0.22" stopColor={light ? '#7AD6CC' : '#00CDB8'} />
+          <stop offset="0.55" stopColor={light ? '#A9E3DC' : '#0C7C8E'} />
+          <stop offset="1" stopColor={light ? '#CFEFEA' : '#0B3A66'} />
         </linearGradient>
         <linearGradient id={id('crest')} gradientUnits="userSpaceOnUse" x1="0" y1="130" x2="0" y2="330">
           <stop offset="0" stopColor="#C9FFF8" />
@@ -58,11 +72,11 @@ export function Terrain({ className = '', idPrefix = 'rt', fadeLeft = true }: { 
         </mask>
       </defs>
 
-      {lit[0] && <ellipse cx={lit[0].p[0]} cy={lit[0].p[1] + 70} rx="260" ry="150" fill={`url(#${id('glow')})`} />}
+      {!light && lit[0] && <ellipse cx={lit[0].p[0]} cy={lit[0].p[1] + 70} rx="260" ry="150" fill={`url(#${id('glow')})`} />}
 
       <g mask={fadeLeft ? `url(#${id('mx')})` : undefined}>
         <g mask={`url(#${id('my')})`}>
-          <path d={body} fill={`url(#${id('body')})`} />
+          {!light && <path d={body} fill={`url(#${id('body')})`} />}
           <g fill="none" stroke={`url(#${id('height')})`} strokeWidth="0.55">
             {cols.map((c, i) => (
               <path key={i} d={c.d} strokeOpacity={0.26 + 0.22 * c.lateral} />
@@ -74,11 +88,11 @@ export function Terrain({ className = '', idPrefix = 'rt', fadeLeft = true }: { 
             ))}
           </g>
         </g>
-        <path d={crest} fill="none" stroke={`url(#${id('crest')})`} strokeWidth="5" strokeOpacity="0.14" strokeLinecap="round" />
-        <path d={crest} fill="none" stroke={`url(#${id('crest')})`} strokeWidth="1.4" strokeLinecap="round" />
+        {!light && <path d={crest} fill="none" stroke={`url(#${id('crest')})`} strokeWidth="5" strokeOpacity="0.14" strokeLinecap="round" />}
+        <path d={crest} fill="none" stroke={light ? '#5CCFC2' : `url(#${id('crest')})`} strokeWidth={light ? 1 : 1.4} strokeOpacity={light ? 0.7 : 1} strokeLinecap="round" />
       </g>
 
-      {lit.map((h, i) => (
+      {showHighlights && !light && lit.map((h, i) => (
         <g key={i} opacity={h.strength}>
           <circle cx={h.p[0]} cy={h.p[1]} r={i === 0 ? 22 : 14} fill={`url(#${id('dot')})`} />
           <circle cx={h.p[0]} cy={h.p[1]} r={i === 0 ? 3.4 : 2.6} fill="#F2FFFD" />

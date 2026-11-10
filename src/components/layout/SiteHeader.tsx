@@ -17,6 +17,8 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  // /transform: keep an opaque light bar so the hero never shows through the nav.
+  const solidLight = pathname === "/transform" || pathname.startsWith("/transform/");
 
   useEffect(() => {
     let raf = 0;
@@ -54,9 +56,11 @@ export function SiteHeader() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500 ease-calm",
-        scrolled || open
-          ? "border-b border-ink/[0.06] bg-paper/80 backdrop-blur-xl"
-          : "border-b border-transparent bg-transparent",
+        solidLight
+          ? "border-b border-ink/[0.06] bg-[#F8F9FD]"
+          : scrolled || open
+            ? "border-b border-ink/[0.06] bg-paper/80 backdrop-blur-xl"
+            : "border-b border-transparent bg-transparent",
       )}
     >
       <nav
@@ -101,6 +105,7 @@ export function SiteHeader() {
           </ul>
           <Link
             href="/contact"
+            aria-current={pathname === "/contact" || pathname.startsWith("/contact/") ? "page" : undefined}
             className="group inline-flex h-11 items-center gap-2 rounded-full bg-ink-900 px-6 text-[15px] font-medium text-white transition-colors duration-300 hover:bg-signal"
           >
             Contact
@@ -149,6 +154,12 @@ export function SiteHeader() {
               <li key={item.href} className="border-b border-paper-line">
                 <Link
                   href={item.href}
+                  aria-current={
+                    item.match === "/contact" &&
+                    (pathname === "/contact" || pathname.startsWith("/contact/"))
+                      ? "page"
+                      : undefined
+                  }
                   className="flex items-baseline justify-between py-5 text-[28px] tracking-tight text-ink"
                   onClick={() => setOpen(false)}
                 >
