@@ -1,0 +1,180 @@
+[
+  {
+    "name": "home-hero-card",
+    "path": "/",
+    "width": 375,
+    "h1Box": {
+      "t": 155,
+      "b": 331,
+      "lines": 1
+    },
+    "cards": [
+      {
+        "text": "Build × TransformCreate new. Reimagine existing.",
+        "t": 665,
+        "b": 730,
+        "l": 24,
+        "w": 224,
+        "z": "auto"
+      },
+      {
+        "text": "Build × TransformCreate new. Reimagine existing.",
+        "t": 678,
+        "b": 717,
+        "l": 53,
+        "w": 172,
+        "z": "auto"
+      },
+      {
+        "text": "Build × Transform",
+        "t": 678,
+        "b": 698,
+        "l": 53,
+        "w": 172,
+        "z": "auto"
+      }
+    ],
+    "ctas": [
+      {
+        "text": "See what we're building→",
+        "t": 497,
+        "b": 551,
+        "l": 24
+      },
+      {
+        "text": "What We Do",
+        "t": 563,
+        "b": 617,
+        "l": 24
+      }
+    ]
+  },
+  {
+    "name": "about-hero",
+    "path": "/about",
+    "width": 375,
+    "text": "Technology should go beyond the business it serves.",
+    "box": {
+      "t": 168,
+      "b": 273,
+      "w": 335,
+      "h": 105
+    },
+    "color": "rgb(2, 19, 54)",
+    "opacity": "1",
+    "fontSize": "31.2px",
+    "inViewport": true
+  },
+  {
+    "name": "about-long-view",
+    "path": "/about",
+    "width": 375,
+    "sectionH": 988,
+    "cols": [
+      {
+        "w": 375,
+        "text": "The Long ViewBuilding something that can"
+      },
+      {
+        "w": 335,
+        "text": "The Long ViewBuilding something that can"
+      },
+      {
+        "w": 335,
+        "text": "The Long View"
+      },
+      {
+        "w": 335,
+        "text": "Our ambition is to build enduring techni"
+      },
+      {
+        "w": 335,
+        "text": "BusinessesPractical value and durable pa"
+      },
+      {
+        "w": 335,
+        "text": "BusinessesPractical value and durable pa"
+      },
+      {
+        "w": 335,
+        "text": "Practical value and durable partnerships"
+      },
+      {
+        "w": 335,
+        "text": "ResearchIndependent inquiry and experime"
+      }
+    ]
+  },
+  {
+    "name": "build-partnership-768",
+    "path": "/build",
+    "width": 768,
+    "headerBottom": 85,
+    "titleTop": 224,
+    "covered": false,
+    "overlapPx": -139
+  },
+  {
+    "name": "transform-approach",
+    "path": "/transform",
+    "width": 375,
+    "ok": true
+  },
+  {
+    "name": "transform-hero-1024",
+    "path": "/transform",
+    "width": 1024,
+    "heroH": 540,
+    "h1": {
+      "t": 258,
+      "w": 576,
+      "text": "Reimagine how your business works."
+    },
+    "imgs": [
+      {
+        "display": "block",
+        "parentDisplay": "block",
+        "w": 676,
+        "h": 278,
+        "top": 346,
+        "left": 430
+      },
+      {
+        "display": "block",
+        "parentDisplay": "none",
+        "w": 0,
+        "h": 0,
+        "top": 0,
+        "left": 0
+      }
+    ]
+  },
+  {
+    "name": "research-memorial",
+    "path": "/research",
+    "width": 375,
+    "scrolled": {
+      "t": 96,
+      "h": 525,
+      "w": 375
+    }
+  },
+  {
+    "name": "home-hero-430",
+    "path": "/",
+    "width": 430,
+    "ok": true
+  },
+  {
+    "name": "home-nav-1024",
+    "path": "/",
+    "width": 1024,
+    "burgerDisplay": "none",
+    "navChildren": [
+      {
+        "cls": "hidden items-center gap-10 lg:flex",
+        "display": "flex"
+      }
+    ]
+  }
+]

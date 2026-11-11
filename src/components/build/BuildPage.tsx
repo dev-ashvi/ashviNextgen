@@ -10,7 +10,7 @@ import { BuildPartnership } from './BuildPartnership'
  * Header and footer come from the host layout.
  */
 
-const CONTACT_HREF = '/contact'
+const CONTACT_HREF = '/contact?interest=build'
 const WYZ_HREF = 'https://financewyz.ai/'
 const WYZ_LOGO = '/companies/wyz-logo.webp'
 const WYZ_SCREEN = '/companies/wyz-revenue-margin.webp'

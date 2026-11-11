@@ -1,0 +1,423 @@
+{
+  "failures": [],
+  "results": {
+    "base": "http://localhost:3140",
+    "c1": [
+      {
+        "id": "c1 / @375",
+        "missing": false,
+        "hidden": false,
+        "h": 728,
+        "w": 375,
+        "top": 84,
+        "bottom": 812,
+        "display": "block",
+        "opacity": "1",
+        "links": [
+          "Build01",
+          "Transform02",
+          "Our Work03",
+          "Research04",
+          "About05",
+          "Contact06"
+        ],
+        "inHeader": false,
+        "bodyOverflow": "hidden",
+        "parentTag": "BODY"
+      },
+      {
+        "id": "c1 /build @375",
+        "missing": false,
+        "hidden": false,
+        "h": 728,
+        "w": 375,
+        "top": 84,
+        "bottom": 812,
+        "display": "block",
+        "opacity": "1",
+        "links": [
+          "Build01",
+          "Transform02",
+          "Our Work03",
+          "Research04",
+          "About05",
+          "Contact06"
+        ],
+        "inHeader": false,
+        "bodyOverflow": "hidden",
+        "parentTag": "BODY"
+      },
+      {
+        "id": "c1 /transform @375",
+        "missing": false,
+        "hidden": false,
+        "h": 728,
+        "w": 375,
+        "top": 84,
+        "bottom": 812,
+        "display": "block",
+        "opacity": "1",
+        "links": [
+          "Build01",
+          "Transform02",
+          "Our Work03",
+          "Research04",
+          "About05",
+          "Contact06"
+        ],
+        "inHeader": false,
+        "bodyOverflow": "hidden",
+        "parentTag": "BODY"
+      },
+      {
+        "id": "c1 /contact @375",
+        "missing": false,
+        "hidden": false,
+        "h": 728,
+        "w": 375,
+        "top": 84,
+        "bottom": 812,
+        "display": "block",
+        "opacity": "1",
+        "links": [
+          "Build01",
+          "Transform02",
+          "Our Work03",
+          "Research04",
+          "About05",
+          "Contact06"
+        ],
+        "inHeader": false,
+        "bodyOverflow": "hidden",
+        "parentTag": "BODY"
+      },
+      {
+        "id": "c1 / @390",
+        "missing": false,
+        "hidden": false,
+        "h": 728,
+        "w": 390,
+        "top": 84,
+        "bottom": 812,
+        "display": "block",
+        "opacity": "1",
+        "links": [
+          "Build01",
+          "Transform02",
+          "Our Work03",
+          "Research04",
+          "About05",
+          "Contact06"
+        ],
+        "inHeader": false,
+        "bodyOverflow": "hidden",
+        "parentTag": "BODY"
+      },
+      {
+        "id": "c1 /build @390",
+        "missing": false,
+        "hidden": false,
+        "h": 728,
+        "w": 390,
+        "top": 84,
+        "bottom": 812,
+        "display": "block",
+        "opacity": "1",
+        "links": [
+          "Build01",
+          "Transform02",
+          "Our Work03",
+          "Research04",
+          "About05",
+          "Contact06"
+        ],
+        "inHeader": false,
+        "bodyOverflow": "hidden",
+        "parentTag": "BODY"
+      },
+      {
+        "id": "c1 /transform @390",
+        "missing": false,
+        "hidden": false,
+        "h": 728,
+        "w": 390,
+        "top": 84,
+        "bottom": 812,
+        "display": "block",
+        "opacity": "1",
+        "links": [
+          "Build01",
+          "Transform02",
+          "Our Work03",
+          "Research04",
+          "About05",
+          "Contact06"
+        ],
+        "inHeader": false,
+        "bodyOverflow": "hidden",
+        "parentTag": "BODY"
+      },
+      {
+        "id": "c1 /contact @390",
+        "missing": false,
+        "hidden": false,
+        "h": 728,
+        "w": 390,
+        "top": 84,
+        "bottom": 812,
+        "display": "block",
+        "opacity": "1",
+        "links": [
+          "Build01",
+          "Transform02",
+          "Our Work03",
+          "Research04",
+          "About05",
+          "Contact06"
+        ],
+        "inHeader": false,
+        "bodyOverflow": "hidden",
+        "parentTag": "BODY"
+      },
+      {
+        "id": "c1 / @430",
+        "missing": false,
+        "hidden": false,
+        "h": 728,
+        "w": 430,
+        "top": 84,
+        "bottom": 812,
+        "display": "block",
+        "opacity": "1",
+        "links": [
+          "Build01",
+          "Transform02",
+          "Our Work03",
+          "Research04",
+          "About05",
+          "Contact06"
+        ],
+        "inHeader": false,
+        "bodyOverflow": "hidden",
+        "parentTag": "BODY"
+      },
+      {
+        "id": "c1 /build @430",
+        "missing": false,
+        "hidden": false,
+        "h": 728,
+        "w": 430,
+        "top": 84,
+        "bottom": 812,
+        "display": "block",
+        "opacity": "1",
+        "links": [
+          "Build01",
+          "Transform02",
+          "Our Work03",
+          "Research04",
+          "About05",
+          "Contact06"
+        ],
+        "inHeader": false,
+        "bodyOverflow": "hidden",
+        "parentTag": "BODY"
+      },
+      {
+        "id": "c1 /transform @430",
+        "missing": false,
+        "hidden": false,
+        "h": 728,
+        "w": 430,
+        "top": 84,
+        "bottom": 812,
+        "display": "block",
+        "opacity": "1",
+        "links": [
+          "Build01",
+          "Transform02",
+          "Our Work03",
+          "Research04",
+          "About05",
+          "Contact06"
+        ],
+        "inHeader": false,
+        "bodyOverflow": "hidden",
+        "parentTag": "BODY"
+      },
+      {
+        "id": "c1 /contact @430",
+        "missing": false,
+        "hidden": false,
+        "h": 728,
+        "w": 430,
+        "top": 84,
+        "bottom": 812,
+        "display": "block",
+        "opacity": "1",
+        "links": [
+          "Build01",
+          "Transform02",
+          "Our Work03",
+          "Research04",
+          "About05",
+          "Contact06"
+        ],
+        "inHeader": false,
+        "bodyOverflow": "hidden",
+        "parentTag": "BODY"
+      },
+      {
+        "id": "c1 / @768",
+        "missing": false,
+        "hidden": false,
+        "h": 728,
+        "w": 768,
+        "top": 84,
+        "bottom": 812,
+        "display": "block",
+        "opacity": "1",
+        "links": [
+          "Build01",
+          "Transform02",
+          "Our Work03",
+          "Research04",
+          "About05",
+          "Contact06"
+        ],
+        "inHeader": false,
+        "bodyOverflow": "hidden",
+        "parentTag": "BODY"
+      },
+      {
+        "id": "c1 /build @768",
+        "missing": false,
+        "hidden": false,
+        "h": 728,
+        "w": 768,
+        "top": 84,
+        "bottom": 812,
+        "display": "block",
+        "opacity": "1",
+        "links": [
+          "Build01",
+          "Transform02",
+          "Our Work03",
+          "Research04",
+          "About05",
+          "Contact06"
+        ],
+        "inHeader": false,
+        "bodyOverflow": "hidden",
+        "parentTag": "BODY"
+      },
+      {
+        "id": "c1 /transform @768",
+        "missing": false,
+        "hidden": false,
+        "h": 728,
+        "w": 768,
+        "top": 84,
+        "bottom": 812,
+        "display": "block",
+        "opacity": "1",
+        "links": [
+          "Build01",
+          "Transform02",
+          "Our Work03",
+          "Research04",
+          "About05",
+          "Contact06"
+        ],
+        "inHeader": false,
+        "bodyOverflow": "hidden",
+        "parentTag": "BODY"
+      },
+      {
+        "id": "c1 /contact @768",
+        "missing": false,
+        "hidden": false,
+        "h": 728,
+        "w": 768,
+        "top": 84,
+        "bottom": 812,
+        "display": "block",
+        "opacity": "1",
+        "links": [
+          "Build01",
+          "Transform02",
+          "Our Work03",
+          "Research04",
+          "About05",
+          "Contact06"
+        ],
+        "inHeader": false,
+        "bodyOverflow": "hidden",
+        "parentTag": "BODY"
+      }
+    ],
+    "c2": [
+      {
+        "id": "c2 reduce /",
+        "mq": true,
+        "h1Text": "Businesses builtaround intelligence.Powered by human expertise.",
+        "h1Opacity": "1",
+        "ancestorHidden": false,
+        "revealCount": 14,
+        "hiddenRevealCount": 0,
+        "sampleHidden": []
+      },
+      {
+        "id": "c2 reduce /about",
+        "mq": true,
+        "h1Text": "Technology should go beyond the business it serves.",
+        "h1Opacity": "1",
+        "ancestorHidden": false,
+        "revealCount": 15,
+        "hiddenRevealCount": 0,
+        "sampleHidden": []
+      },
+      {
+        "id": "c2 reduce /research",
+        "mq": true,
+        "h1Text": "Exploring the foundations of intelligent systems.",
+        "h1Opacity": "1",
+        "ancestorHidden": false,
+        "revealCount": 0,
+        "hiddenRevealCount": 0,
+        "sampleHidden": []
+      },
+      {
+        "id": "c2 reduce /build",
+        "mq": true,
+        "h1Text": "Co-buildingAI-native ventures.",
+        "h1Opacity": "1",
+        "ancestorHidden": false,
+        "revealCount": 0,
+        "hiddenRevealCount": 0,
+        "sampleHidden": []
+      },
+      {
+        "id": "c2 reduce /transform",
+        "mq": true,
+        "h1Text": "Reimagine how your business works.",
+        "h1Opacity": "1",
+        "ancestorHidden": false,
+        "revealCount": 0,
+        "hiddenRevealCount": 0,
+        "sampleHidden": []
+      },
+      {
+        "id": "c2 motion about hero",
+        "opacity": "1",
+        "hasVisibleClass": true
+      }
+    ],
+    "desktop": {
+      "burgerDisplay": "none",
+      "desktopNavDisplay": "flex",
+      "menuHidden": true,
+      "hasWhatWeDo": true
+    }
+  }
+}

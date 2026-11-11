@@ -2,7 +2,8 @@ import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
 
 const navLinks = [
-  { href: "/#what-we-do", label: "What We Do" },
+  { href: "/build", label: "Build" },
+  { href: "/transform", label: "Transform" },
   { href: "/#our-work", label: "Our Work" },
   { href: "/research", label: "Research" },
   { href: "/about", label: "About" },
@@ -42,7 +43,7 @@ export function SiteFooter() {
               Our Collaboration
             </p>
             <a
-              href="https://financewyz.ai"
+              href="https://financewyz.ai/"
               target="_blank"
               rel="noopener noreferrer"
               className={`mt-3 gap-1.5 ${linkClass}`}

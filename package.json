@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:c1-c2": "node scripts/responsive-audit/c1-c2-regression.mjs"
   },
   "dependencies": {
     "@upstash/ratelimit": "^2.2.0",

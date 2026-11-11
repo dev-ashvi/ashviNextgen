@@ -9,7 +9,7 @@ export function FeaturedWorkSection() {
   return (
     <section
       id="our-work"
-      className="relative scroll-mt-24 overflow-x-clip bg-[#F8F9FD]"
+      className="relative scroll-mt-[6.5rem] overflow-x-clip bg-[#F8F9FD]"
     >
       {/* Light atmospheric base */}
       <div
@@ -159,7 +159,7 @@ export function FeaturedWorkSection() {
                   founders make better-informed decisions.
                 </p>
                 <a
-                  href="https://financewyz.ai"
+                  href="https://financewyz.ai/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="tap-target group mt-5 inline-flex text-[14.5px] font-medium tracking-[-0.01em] text-ashvi-white transition-colors hover:text-ashvi-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ashvi-teal md:text-[15px]"

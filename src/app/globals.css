@@ -67,6 +67,18 @@ html {
   scroll-padding-top: 6rem;
 }
 
+/*
+ * AnimatedReveal safety net — reduced-motion users must never wait on JS /
+ * IntersectionObserver for content to become visible.
+ * Scoped to .ashvi-reveal only (not a global opacity override).
+ */
+@media (prefers-reduced-motion: reduce) {
+  .ashvi-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 body {
   background: var(--page-bg);
   color: var(--text-primary);

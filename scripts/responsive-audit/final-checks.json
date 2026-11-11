@@ -1,0 +1,57 @@
+{
+  "aboutReduce": {
+    "mq": true,
+    "wrapOpacity": "0",
+    "wrapHasOpacity0": true,
+    "wrapHasOpacity100": false,
+    "errors": []
+  },
+  "aboutOk": {
+    "h1Opacity": "1",
+    "errors": []
+  },
+  "homeHeroGaps": {
+    "375": {
+      "ctaBottom": 617,
+      "cardTop": 665,
+      "gap": 47,
+      "overlap": false,
+      "errors": []
+    },
+    "390": {
+      "ctaBottom": 617,
+      "cardTop": 664,
+      "gap": 47,
+      "overlap": false,
+      "errors": []
+    },
+    "430": {
+      "ctaBottom": 506,
+      "cardTop": 554,
+      "gap": 47,
+      "overlap": false,
+      "errors": []
+    },
+    "768": {
+      "ctaBottom": 502,
+      "cardTop": 557,
+      "gap": 55,
+      "overlap": false,
+      "errors": []
+    }
+  },
+  "hashScroll": {
+    "headerBottom": 85,
+    "sectionTop": 200,
+    "covered": false,
+    "gap": 115,
+    "errors": []
+  },
+  "buildHash": {
+    "headerBottom": 85,
+    "titleTop": 198,
+    "covered": false,
+    "gap": 113,
+    "errors": []
+  }
+}

@@ -1,0 +1,2784 @@
+[
+  {
+    "slug": "home",
+    "vp": "375",
+    "scrollWidth": 375,
+    "innerWidth": 375,
+    "overflowX": false,
+    "bodyH": 10185,
+    "headerH": 85,
+    "wide": [
+      {
+        "tag": "svg",
+        "cls": "[object SVGAnimatedString]",
+        "w": 549,
+        "left": -75
+      },
+      {
+        "tag": "svg",
+        "cls": "[object SVGAnimatedString]",
+        "w": 549,
+        "left": -75
+      }
+    ],
+    "sections": [
+      {
+        "i": 0,
+        "id": "hero-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 1034,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": null,
+        "tag": "SECTION",
+        "w": 375,
+        "h": 1296,
+        "top": 1034,
+        "overflowVisible": false
+      },
+      {
+        "i": 2,
+        "id": "what-we-do",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 1583,
+        "top": 2329,
+        "overflowVisible": true
+      },
+      {
+        "i": 3,
+        "id": "our-work",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 1052,
+        "top": 3912,
+        "overflowVisible": false
+      },
+      {
+        "i": 4,
+        "id": null,
+        "tag": "SECTION",
+        "w": 375,
+        "h": 1337,
+        "top": 4964,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "_r_2_",
+        "tag": "svg",
+        "w": 335,
+        "h": 335,
+        "top": 5176,
+        "overflowVisible": false
+      },
+      {
+        "i": 6,
+        "id": "_r_3_-b-01",
+        "tag": "SPAN",
+        "w": 304,
+        "h": 82,
+        "top": 5834,
+        "overflowVisible": true
+      },
+      {
+        "i": 7,
+        "id": "_r_3_-b-02",
+        "tag": "SPAN",
+        "w": 302,
+        "h": 0,
+        "top": 5974,
+        "overflowVisible": true
+      },
+      {
+        "i": 8,
+        "id": "_r_3_-b-03",
+        "tag": "SPAN",
+        "w": 302,
+        "h": 0,
+        "top": 6032,
+        "overflowVisible": true
+      },
+      {
+        "i": 9,
+        "id": "_r_3_-b-04",
+        "tag": "SPAN",
+        "w": 301,
+        "h": 0,
+        "top": 6089,
+        "overflowVisible": true
+      },
+      {
+        "i": 10,
+        "id": "_r_3_-b-05",
+        "tag": "SPAN",
+        "w": 302,
+        "h": 0,
+        "top": 6147,
+        "overflowVisible": true
+      },
+      {
+        "i": 11,
+        "id": "_r_3_-b-06",
+        "tag": "SPAN",
+        "w": 302,
+        "h": 0,
+        "top": 6205,
+        "overflowVisible": true
+      },
+      {
+        "i": 12,
+        "id": "future-vision",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 760,
+        "top": 6302,
+        "overflowVisible": true
+      },
+      {
+        "i": 13,
+        "id": "research",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 980,
+        "top": 7062,
+        "overflowVisible": false
+      },
+      {
+        "i": 14,
+        "id": "rl-caption",
+        "tag": "FIGURE",
+        "w": 295,
+        "h": 134,
+        "top": 7655,
+        "overflowVisible": true
+      },
+      {
+        "i": 15,
+        "id": "rl-title rl-desc",
+        "tag": "svg",
+        "w": 215,
+        "h": 134,
+        "top": 7655,
+        "overflowVisible": false
+      }
+    ],
+    "title": "AshviTech — Building AI-Native Businesses",
+    "consoleErrors": [
+      "Error: Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "slug": "build",
+    "vp": "375",
+    "scrollWidth": 375,
+    "innerWidth": 375,
+    "overflowX": false,
+    "bodyH": 5827,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "build-hero-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 827,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "build-opportunity-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 627,
+        "top": 911,
+        "overflowVisible": false
+      },
+      {
+        "i": 2,
+        "id": "how-we-build-together",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 1196,
+        "top": 1538,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "build-journey-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 958,
+        "top": 2735,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "build-wyz-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 901,
+        "top": 3693,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "build-cta-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 447,
+        "top": 4594,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Build | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "transform",
+    "vp": "375",
+    "scrollWidth": 375,
+    "innerWidth": 375,
+    "overflowX": false,
+    "bodyH": 6472,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "tr-hero-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 765,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "tr-beyond-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 705,
+        "top": 849,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "tr-where-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 1085,
+        "top": 1554,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "our-approach",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 1388,
+        "top": 2638,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "tr-partner-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 1245,
+        "top": 4026,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "tr-cta-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 415,
+        "top": 5272,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Transform | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "research",
+    "vp": "375",
+    "scrollWidth": 375,
+    "innerWidth": 375,
+    "overflowX": false,
+    "bodyH": 4852,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "rp-hero-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 690,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "rp-why-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 611,
+        "top": 774,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "rp-approach-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 1064,
+        "top": 1385,
+        "overflowVisible": true
+      },
+      {
+        "i": 3,
+        "id": "rp-horizon-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 572,
+        "top": 2449,
+        "overflowVisible": false
+      },
+      {
+        "i": 4,
+        "id": "rp-memorial-name",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 525,
+        "top": 3021,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "rp-collab-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 520,
+        "top": 3547,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Research | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "about",
+    "vp": "375",
+    "scrollWidth": 375,
+    "innerWidth": 375,
+    "overflowX": false,
+    "bodyH": 5159,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "about-conviction-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 500,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "about-opportunity-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 960,
+        "top": 500,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "about-institution-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 1399,
+        "top": 1460,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "about-long-view-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 988,
+        "top": 2859,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "about-invitation-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 527,
+        "top": 3847,
+        "overflowVisible": false
+      }
+    ],
+    "title": "About | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "contact",
+    "vp": "375",
+    "scrollWidth": 375,
+    "innerWidth": 375,
+    "overflowX": false,
+    "bodyH": 2433,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "contact-title",
+        "tag": "SECTION",
+        "w": 375,
+        "h": 1648,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "_R_19bsnnb_-heading",
+        "tag": "FORM",
+        "w": 327,
+        "h": 911,
+        "top": 576,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Contact | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "home",
+    "vp": "390",
+    "scrollWidth": 390,
+    "innerWidth": 390,
+    "overflowX": false,
+    "bodyH": 10114,
+    "headerH": 85,
+    "wide": [
+      {
+        "tag": "svg",
+        "cls": "[object SVGAnimatedString]",
+        "w": 575,
+        "left": -79
+      },
+      {
+        "tag": "svg",
+        "cls": "[object SVGAnimatedString]",
+        "w": 575,
+        "left": -79
+      }
+    ],
+    "sections": [
+      {
+        "i": 0,
+        "id": "hero-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 1046,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": null,
+        "tag": "SECTION",
+        "w": 390,
+        "h": 1310,
+        "top": 1046,
+        "overflowVisible": false
+      },
+      {
+        "i": 2,
+        "id": "what-we-do",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 1542,
+        "top": 2356,
+        "overflowVisible": true
+      },
+      {
+        "i": 3,
+        "id": "our-work",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 1038,
+        "top": 3897,
+        "overflowVisible": false
+      },
+      {
+        "i": 4,
+        "id": null,
+        "tag": "SECTION",
+        "w": 390,
+        "h": 1352,
+        "top": 4935,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "_r_2_",
+        "tag": "svg",
+        "w": 350,
+        "h": 350,
+        "top": 5147,
+        "overflowVisible": false
+      },
+      {
+        "i": 6,
+        "id": "_r_3_-b-01",
+        "tag": "SPAN",
+        "w": 319,
+        "h": 82,
+        "top": 5820,
+        "overflowVisible": true
+      },
+      {
+        "i": 7,
+        "id": "_r_3_-b-02",
+        "tag": "SPAN",
+        "w": 317,
+        "h": 0,
+        "top": 5960,
+        "overflowVisible": true
+      },
+      {
+        "i": 8,
+        "id": "_r_3_-b-03",
+        "tag": "SPAN",
+        "w": 317,
+        "h": 0,
+        "top": 6017,
+        "overflowVisible": true
+      },
+      {
+        "i": 9,
+        "id": "_r_3_-b-04",
+        "tag": "SPAN",
+        "w": 316,
+        "h": 0,
+        "top": 6075,
+        "overflowVisible": true
+      },
+      {
+        "i": 10,
+        "id": "_r_3_-b-05",
+        "tag": "SPAN",
+        "w": 317,
+        "h": 0,
+        "top": 6133,
+        "overflowVisible": true
+      },
+      {
+        "i": 11,
+        "id": "_r_3_-b-06",
+        "tag": "SPAN",
+        "w": 317,
+        "h": 0,
+        "top": 6191,
+        "overflowVisible": true
+      },
+      {
+        "i": 12,
+        "id": "future-vision",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 768,
+        "top": 6288,
+        "overflowVisible": true
+      },
+      {
+        "i": 13,
+        "id": "research",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 943,
+        "top": 7056,
+        "overflowVisible": false
+      },
+      {
+        "i": 14,
+        "id": "rl-caption",
+        "tag": "FIGURE",
+        "w": 308,
+        "h": 142,
+        "top": 7604,
+        "overflowVisible": true
+      },
+      {
+        "i": 15,
+        "id": "rl-title rl-desc",
+        "tag": "svg",
+        "w": 228,
+        "h": 142,
+        "top": 7604,
+        "overflowVisible": false
+      }
+    ],
+    "title": "AshviTech — Building AI-Native Businesses",
+    "consoleErrors": [
+      "Error: Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "slug": "build",
+    "vp": "390",
+    "scrollWidth": 390,
+    "innerWidth": 390,
+    "overflowX": false,
+    "bodyH": 5732,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "build-hero-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 805,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "build-opportunity-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 599,
+        "top": 889,
+        "overflowVisible": false
+      },
+      {
+        "i": 2,
+        "id": "how-we-build-together",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 1196,
+        "top": 1488,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "build-journey-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 934,
+        "top": 2684,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "build-wyz-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 880,
+        "top": 3618,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "build-cta-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 447,
+        "top": 4499,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Build | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "transform",
+    "vp": "390",
+    "scrollWidth": 390,
+    "innerWidth": 390,
+    "overflowX": false,
+    "bodyH": 6428,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "tr-hero-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 730,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "tr-beyond-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 705,
+        "top": 814,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "tr-where-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 1100,
+        "top": 1518,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "our-approach",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 1363,
+        "top": 2618,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "tr-partner-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 1245,
+        "top": 3982,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "tr-cta-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 415,
+        "top": 5227,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Transform | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "research",
+    "vp": "390",
+    "scrollWidth": 390,
+    "innerWidth": 390,
+    "overflowX": false,
+    "bodyH": 4793,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "rp-hero-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 690,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "rp-why-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 611,
+        "top": 774,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "rp-approach-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 1034,
+        "top": 1385,
+        "overflowVisible": true
+      },
+      {
+        "i": 3,
+        "id": "rp-horizon-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 572,
+        "top": 2419,
+        "overflowVisible": false
+      },
+      {
+        "i": 4,
+        "id": "rp-memorial-name",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 525,
+        "top": 2992,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "rp-collab-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 491,
+        "top": 3517,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Research | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "about",
+    "vp": "390",
+    "scrollWidth": 390,
+    "innerWidth": 390,
+    "overflowX": false,
+    "bodyH": 5045,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "about-conviction-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 500,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "about-opportunity-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 933,
+        "top": 500,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "about-institution-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 1372,
+        "top": 1433,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "about-long-view-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 961,
+        "top": 2805,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "about-invitation-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 494,
+        "top": 3766,
+        "overflowVisible": false
+      }
+    ],
+    "title": "About | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "contact",
+    "vp": "390",
+    "scrollWidth": 390,
+    "innerWidth": 390,
+    "overflowX": false,
+    "bodyH": 2414,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "contact-title",
+        "tag": "SECTION",
+        "w": 390,
+        "h": 1629,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "_R_19bsnnb_-heading",
+        "tag": "FORM",
+        "w": 342,
+        "h": 892,
+        "top": 576,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Contact | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "home",
+    "vp": "430",
+    "scrollWidth": 430,
+    "innerWidth": 430,
+    "overflowX": false,
+    "bodyH": 9983,
+    "headerH": 85,
+    "wide": [
+      {
+        "tag": "svg",
+        "cls": "[object SVGAnimatedString]",
+        "w": 642,
+        "left": -92
+      },
+      {
+        "tag": "svg",
+        "cls": "[object SVGAnimatedString]",
+        "w": 642,
+        "left": -92
+      }
+    ],
+    "sections": [
+      {
+        "i": 0,
+        "id": "hero-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 969,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": null,
+        "tag": "SECTION",
+        "w": 430,
+        "h": 1269,
+        "top": 969,
+        "overflowVisible": false
+      },
+      {
+        "i": 2,
+        "id": "what-we-do",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 1519,
+        "top": 2238,
+        "overflowVisible": true
+      },
+      {
+        "i": 3,
+        "id": "our-work",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 1040,
+        "top": 3757,
+        "overflowVisible": false
+      },
+      {
+        "i": 4,
+        "id": null,
+        "tag": "SECTION",
+        "w": 430,
+        "h": 1362,
+        "top": 4797,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "_r_2_",
+        "tag": "svg",
+        "w": 360,
+        "h": 360,
+        "top": 5009,
+        "overflowVisible": false
+      },
+      {
+        "i": 6,
+        "id": "_r_3_-b-01",
+        "tag": "SPAN",
+        "w": 359,
+        "h": 82,
+        "top": 5692,
+        "overflowVisible": true
+      },
+      {
+        "i": 7,
+        "id": "_r_3_-b-02",
+        "tag": "SPAN",
+        "w": 357,
+        "h": 0,
+        "top": 5831,
+        "overflowVisible": true
+      },
+      {
+        "i": 8,
+        "id": "_r_3_-b-03",
+        "tag": "SPAN",
+        "w": 357,
+        "h": 0,
+        "top": 5889,
+        "overflowVisible": true
+      },
+      {
+        "i": 9,
+        "id": "_r_3_-b-04",
+        "tag": "SPAN",
+        "w": 356,
+        "h": 0,
+        "top": 5947,
+        "overflowVisible": true
+      },
+      {
+        "i": 10,
+        "id": "_r_3_-b-05",
+        "tag": "SPAN",
+        "w": 357,
+        "h": 0,
+        "top": 6004,
+        "overflowVisible": true
+      },
+      {
+        "i": 11,
+        "id": "_r_3_-b-06",
+        "tag": "SPAN",
+        "w": 357,
+        "h": 0,
+        "top": 6062,
+        "overflowVisible": true
+      },
+      {
+        "i": 12,
+        "id": "future-vision",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 789,
+        "top": 6159,
+        "overflowVisible": true
+      },
+      {
+        "i": 13,
+        "id": "research",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 941,
+        "top": 6949,
+        "overflowVisible": false
+      },
+      {
+        "i": 14,
+        "id": "rl-caption",
+        "tag": "FIGURE",
+        "w": 343,
+        "h": 164,
+        "top": 7497,
+        "overflowVisible": true
+      },
+      {
+        "i": 15,
+        "id": "rl-title rl-desc",
+        "tag": "svg",
+        "w": 263,
+        "h": 164,
+        "top": 7497,
+        "overflowVisible": false
+      }
+    ],
+    "title": "AshviTech — Building AI-Native Businesses",
+    "consoleErrors": [
+      "Error: Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "slug": "build",
+    "vp": "430",
+    "scrollWidth": 430,
+    "innerWidth": 430,
+    "overflowX": false,
+    "bodyH": 5575,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "build-hero-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 790,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "build-opportunity-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 571,
+        "top": 874,
+        "overflowVisible": false
+      },
+      {
+        "i": 2,
+        "id": "how-we-build-together",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 1121,
+        "top": 1445,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "build-journey-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 910,
+        "top": 2566,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "build-wyz-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 866,
+        "top": 3477,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "build-cta-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 447,
+        "top": 4342,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Build | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "transform",
+    "vp": "430",
+    "scrollWidth": 430,
+    "innerWidth": 430,
+    "overflowX": false,
+    "bodyH": 6241,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "tr-hero-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 746,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "tr-beyond-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 649,
+        "top": 830,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "tr-where-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 1117,
+        "top": 1479,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "our-approach",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 1314,
+        "top": 2596,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "tr-partner-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 1131,
+        "top": 3909,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "tr-cta-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 415,
+        "top": 5040,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Transform | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "research",
+    "vp": "430",
+    "scrollWidth": 430,
+    "innerWidth": 430,
+    "overflowX": false,
+    "bodyH": 4591,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "rp-hero-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 662,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "rp-why-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 546,
+        "top": 746,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "rp-approach-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 953,
+        "top": 1292,
+        "overflowVisible": true
+      },
+      {
+        "i": 3,
+        "id": "rp-horizon-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 543,
+        "top": 2245,
+        "overflowVisible": false
+      },
+      {
+        "i": 4,
+        "id": "rp-memorial-name",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 525,
+        "top": 2789,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "rp-collab-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 491,
+        "top": 3314,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Research | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "about",
+    "vp": "430",
+    "scrollWidth": 430,
+    "innerWidth": 430,
+    "overflowX": false,
+    "bodyH": 4878,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "about-conviction-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 465,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "about-opportunity-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 908,
+        "top": 465,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "about-institution-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 1265,
+        "top": 1372,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "about-long-view-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 962,
+        "top": 2637,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "about-invitation-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 494,
+        "top": 3599,
+        "overflowVisible": false
+      }
+    ],
+    "title": "About | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "contact",
+    "vp": "430",
+    "scrollWidth": 430,
+    "innerWidth": 430,
+    "overflowX": false,
+    "bodyH": 2389,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "contact-title",
+        "tag": "SECTION",
+        "w": 430,
+        "h": 1604,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "_R_19bsnnb_-heading",
+        "tag": "FORM",
+        "w": 382,
+        "h": 867,
+        "top": 576,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Contact | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "home",
+    "vp": "768",
+    "scrollWidth": 768,
+    "innerWidth": 768,
+    "overflowX": false,
+    "bodyH": 10420,
+    "headerH": 85,
+    "wide": [
+      {
+        "tag": "svg",
+        "cls": "[object SVGAnimatedString]",
+        "w": 960,
+        "left": -96
+      },
+      {
+        "tag": "svg",
+        "cls": "[object SVGAnimatedString]",
+        "w": 960,
+        "left": -96
+      }
+    ],
+    "sections": [
+      {
+        "i": 0,
+        "id": "hero-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 1146,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": null,
+        "tag": "SECTION",
+        "w": 768,
+        "h": 1280,
+        "top": 1146,
+        "overflowVisible": false
+      },
+      {
+        "i": 2,
+        "id": "what-we-do",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 1448,
+        "top": 2426,
+        "overflowVisible": true
+      },
+      {
+        "i": 3,
+        "id": "our-work",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 1245,
+        "top": 3874,
+        "overflowVisible": false
+      },
+      {
+        "i": 4,
+        "id": null,
+        "tag": "SECTION",
+        "w": 768,
+        "h": 1384,
+        "top": 5120,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "_r_2_",
+        "tag": "svg",
+        "w": 350,
+        "h": 350,
+        "top": 5366,
+        "overflowVisible": false
+      },
+      {
+        "i": 6,
+        "id": "_r_3_-b-01",
+        "tag": "SPAN",
+        "w": 673,
+        "h": 60,
+        "top": 6026,
+        "overflowVisible": true
+      },
+      {
+        "i": 7,
+        "id": "_r_3_-b-02",
+        "tag": "SPAN",
+        "w": 671,
+        "h": 0,
+        "top": 6147,
+        "overflowVisible": true
+      },
+      {
+        "i": 8,
+        "id": "_r_3_-b-03",
+        "tag": "SPAN",
+        "w": 671,
+        "h": 0,
+        "top": 6208,
+        "overflowVisible": true
+      },
+      {
+        "i": 9,
+        "id": "_r_3_-b-04",
+        "tag": "SPAN",
+        "w": 670,
+        "h": 0,
+        "top": 6268,
+        "overflowVisible": true
+      },
+      {
+        "i": 10,
+        "id": "_r_3_-b-05",
+        "tag": "SPAN",
+        "w": 671,
+        "h": 0,
+        "top": 6329,
+        "overflowVisible": true
+      },
+      {
+        "i": 11,
+        "id": "_r_3_-b-06",
+        "tag": "SPAN",
+        "w": 671,
+        "h": 0,
+        "top": 6390,
+        "overflowVisible": true
+      },
+      {
+        "i": 12,
+        "id": "future-vision",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 957,
+        "top": 6504,
+        "overflowVisible": true
+      },
+      {
+        "i": 13,
+        "id": "research",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 1085,
+        "top": 7461,
+        "overflowVisible": false
+      },
+      {
+        "i": 14,
+        "id": "rl-caption",
+        "tag": "FIGURE",
+        "w": 634,
+        "h": 335,
+        "top": 7992,
+        "overflowVisible": true
+      },
+      {
+        "i": 15,
+        "id": "rl-title rl-desc",
+        "tag": "svg",
+        "w": 538,
+        "h": 335,
+        "top": 7992,
+        "overflowVisible": false
+      }
+    ],
+    "title": "AshviTech — Building AI-Native Businesses",
+    "consoleErrors": [
+      "Error: Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "slug": "build",
+    "vp": "768",
+    "scrollWidth": 768,
+    "innerWidth": 768,
+    "overflowX": false,
+    "bodyH": 4664,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "build-hero-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 841,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "build-opportunity-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 461,
+        "top": 925,
+        "overflowVisible": false
+      },
+      {
+        "i": 2,
+        "id": "how-we-build-together",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 910,
+        "top": 1386,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "build-journey-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 556,
+        "top": 2296,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "build-wyz-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 921,
+        "top": 2852,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "build-cta-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 420,
+        "top": 3773,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Build | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "transform",
+    "vp": "768",
+    "scrollWidth": 768,
+    "innerWidth": 768,
+    "overflowX": false,
+    "bodyH": 4959,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "tr-hero-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 803,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "tr-beyond-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 536,
+        "top": 887,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "tr-where-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 937,
+        "top": 1423,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "our-approach",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 936,
+        "top": 2361,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "tr-partner-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 803,
+        "top": 3297,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "tr-cta-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 388,
+        "top": 4100,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Transform | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "research",
+    "vp": "768",
+    "scrollWidth": 768,
+    "innerWidth": 768,
+    "overflowX": false,
+    "bodyH": 3975,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "rp-hero-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 694,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "rp-why-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 484,
+        "top": 778,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "rp-approach-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 865,
+        "top": 1262,
+        "overflowVisible": true
+      },
+      {
+        "i": 3,
+        "id": "rp-horizon-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 509,
+        "top": 2128,
+        "overflowVisible": false
+      },
+      {
+        "i": 4,
+        "id": "rp-memorial-name",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 439,
+        "top": 2637,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "rp-collab-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 428,
+        "top": 3076,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Research | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "about",
+    "vp": "768",
+    "scrollWidth": 768,
+    "innerWidth": 768,
+    "overflowX": false,
+    "bodyH": 4426,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "about-conviction-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 488,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "about-opportunity-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 849,
+        "top": 488,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "about-institution-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 1183,
+        "top": 1337,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "about-long-view-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 973,
+        "top": 2520,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "about-invitation-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 461,
+        "top": 3493,
+        "overflowVisible": false
+      }
+    ],
+    "title": "About | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "contact",
+    "vp": "768",
+    "scrollWidth": 768,
+    "innerWidth": 768,
+    "overflowX": false,
+    "bodyH": 1853,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "contact-title",
+        "tag": "SECTION",
+        "w": 768,
+        "h": 1382,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "_R_19bsnnb_-heading",
+        "tag": "FORM",
+        "w": 688,
+        "h": 669,
+        "top": 552,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Contact | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "home",
+    "vp": "1024",
+    "scrollWidth": 1024,
+    "innerWidth": 1024,
+    "overflowX": false,
+    "bodyH": 7237,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "hero-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 768,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": null,
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 815,
+        "top": 768,
+        "overflowVisible": false
+      },
+      {
+        "i": 2,
+        "id": "what-we-do",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 988,
+        "top": 1583,
+        "overflowVisible": true
+      },
+      {
+        "i": 3,
+        "id": "our-work",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 782,
+        "top": 2571,
+        "overflowVisible": false
+      },
+      {
+        "i": 4,
+        "id": null,
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 850,
+        "top": 3353,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "_r_2_",
+        "tag": "svg",
+        "w": 380,
+        "h": 380,
+        "top": 3625,
+        "overflowVisible": false
+      },
+      {
+        "i": 6,
+        "id": "_r_3_-b-01",
+        "tag": "SPAN",
+        "w": 444,
+        "h": 60,
+        "top": 3709,
+        "overflowVisible": true
+      },
+      {
+        "i": 7,
+        "id": "_r_3_-b-02",
+        "tag": "SPAN",
+        "w": 441,
+        "h": 0,
+        "top": 3830,
+        "overflowVisible": true
+      },
+      {
+        "i": 8,
+        "id": "_r_3_-b-03",
+        "tag": "SPAN",
+        "w": 441,
+        "h": 0,
+        "top": 3891,
+        "overflowVisible": true
+      },
+      {
+        "i": 9,
+        "id": "_r_3_-b-04",
+        "tag": "SPAN",
+        "w": 441,
+        "h": 0,
+        "top": 3951,
+        "overflowVisible": true
+      },
+      {
+        "i": 10,
+        "id": "_r_3_-b-05",
+        "tag": "SPAN",
+        "w": 441,
+        "h": 0,
+        "top": 4012,
+        "overflowVisible": true
+      },
+      {
+        "i": 11,
+        "id": "_r_3_-b-06",
+        "tag": "SPAN",
+        "w": 441,
+        "h": 0,
+        "top": 4073,
+        "overflowVisible": true
+      },
+      {
+        "i": 12,
+        "id": "future-vision",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 604,
+        "top": 4203,
+        "overflowVisible": true
+      },
+      {
+        "i": 13,
+        "id": "research",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 667,
+        "top": 4807,
+        "overflowVisible": false
+      },
+      {
+        "i": 14,
+        "id": "rl-caption",
+        "tag": "FIGURE",
+        "w": 465,
+        "h": 290,
+        "top": 4903,
+        "overflowVisible": true
+      },
+      {
+        "i": 15,
+        "id": "rl-title rl-desc",
+        "tag": "svg",
+        "w": 465,
+        "h": 290,
+        "top": 4903,
+        "overflowVisible": false
+      }
+    ],
+    "title": "AshviTech — Building AI-Native Businesses",
+    "consoleErrors": [
+      "Error: Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "slug": "build",
+    "vp": "1024",
+    "scrollWidth": 1024,
+    "innerWidth": 1024,
+    "overflowX": false,
+    "bodyH": 3857,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "build-hero-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 580,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "build-opportunity-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 415,
+        "top": 664,
+        "overflowVisible": false
+      },
+      {
+        "i": 2,
+        "id": "how-we-build-together",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 853,
+        "top": 1079,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "build-journey-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 515,
+        "top": 1933,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "build-wyz-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 509,
+        "top": 2448,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "build-cta-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 428,
+        "top": 2957,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Build | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "transform",
+    "vp": "1024",
+    "scrollWidth": 1024,
+    "innerWidth": 1024,
+    "overflowX": false,
+    "bodyH": 4235,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "tr-hero-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 540,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "tr-beyond-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 547,
+        "top": 624,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "tr-where-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 556,
+        "top": 1171,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "our-approach",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 937,
+        "top": 1727,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "tr-partner-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 704,
+        "top": 2663,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "tr-cta-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 396,
+        "top": 3367,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Transform | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "research",
+    "vp": "1024",
+    "scrollWidth": 1024,
+    "innerWidth": 1024,
+    "overflowX": false,
+    "bodyH": 3586,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "rp-hero-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 549,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "rp-why-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 482,
+        "top": 633,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "rp-approach-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 697,
+        "top": 1115,
+        "overflowVisible": true
+      },
+      {
+        "i": 3,
+        "id": "rp-horizon-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 431,
+        "top": 1812,
+        "overflowVisible": false
+      },
+      {
+        "i": 4,
+        "id": "rp-memorial-name",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 402,
+        "top": 2243,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "rp-collab-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 470,
+        "top": 2645,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Research | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "about",
+    "vp": "1024",
+    "scrollWidth": 1024,
+    "innerWidth": 1024,
+    "overflowX": false,
+    "bodyH": 3907,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "about-conviction-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 526,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "about-opportunity-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 716,
+        "top": 526,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "about-institution-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 937,
+        "top": 1242,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "about-long-view-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 750,
+        "top": 2179,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "about-invitation-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 506,
+        "top": 2929,
+        "overflowVisible": false
+      }
+    ],
+    "title": "About | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "contact",
+    "vp": "1024",
+    "scrollWidth": 1024,
+    "innerWidth": 1024,
+    "overflowX": false,
+    "bodyH": 1414,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "contact-title",
+        "tag": "SECTION",
+        "w": 1024,
+        "h": 943,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "_R_19bsnnb_-heading",
+        "tag": "FORM",
+        "w": 467,
+        "h": 707,
+        "top": 140,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Contact | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "home",
+    "vp": "1440",
+    "scrollWidth": 1440,
+    "innerWidth": 1440,
+    "overflowX": false,
+    "bodyH": 7413,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "hero-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 900,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": null,
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 823,
+        "top": 900,
+        "overflowVisible": false
+      },
+      {
+        "i": 2,
+        "id": "what-we-do",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 988,
+        "top": 1723,
+        "overflowVisible": true
+      },
+      {
+        "i": 3,
+        "id": "our-work",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 815,
+        "top": 2711,
+        "overflowVisible": false
+      },
+      {
+        "i": 4,
+        "id": null,
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 850,
+        "top": 3526,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "_r_2_",
+        "tag": "svg",
+        "w": 410,
+        "h": 410,
+        "top": 3806,
+        "overflowVisible": false
+      },
+      {
+        "i": 6,
+        "id": "_r_3_-b-01",
+        "tag": "SPAN",
+        "w": 506,
+        "h": 60,
+        "top": 3882,
+        "overflowVisible": true
+      },
+      {
+        "i": 7,
+        "id": "_r_3_-b-02",
+        "tag": "SPAN",
+        "w": 504,
+        "h": 0,
+        "top": 4003,
+        "overflowVisible": true
+      },
+      {
+        "i": 8,
+        "id": "_r_3_-b-03",
+        "tag": "SPAN",
+        "w": 503,
+        "h": 0,
+        "top": 4064,
+        "overflowVisible": true
+      },
+      {
+        "i": 9,
+        "id": "_r_3_-b-04",
+        "tag": "SPAN",
+        "w": 503,
+        "h": 0,
+        "top": 4124,
+        "overflowVisible": true
+      },
+      {
+        "i": 10,
+        "id": "_r_3_-b-05",
+        "tag": "SPAN",
+        "w": 504,
+        "h": 0,
+        "top": 4185,
+        "overflowVisible": true
+      },
+      {
+        "i": 11,
+        "id": "_r_3_-b-06",
+        "tag": "SPAN",
+        "w": 503,
+        "h": 0,
+        "top": 4246,
+        "overflowVisible": true
+      },
+      {
+        "i": 12,
+        "id": "future-vision",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 586,
+        "top": 4376,
+        "overflowVisible": true
+      },
+      {
+        "i": 13,
+        "id": "research",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 678,
+        "top": 4962,
+        "overflowVisible": false
+      },
+      {
+        "i": 14,
+        "id": "rl-caption",
+        "tag": "FIGURE",
+        "w": 515,
+        "h": 320,
+        "top": 5058,
+        "overflowVisible": true
+      },
+      {
+        "i": 15,
+        "id": "rl-title rl-desc",
+        "tag": "svg",
+        "w": 515,
+        "h": 320,
+        "top": 5058,
+        "overflowVisible": false
+      }
+    ],
+    "title": "AshviTech — Building AI-Native Businesses",
+    "consoleErrors": [
+      "Error: Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+    ]
+  },
+  {
+    "slug": "build",
+    "vp": "1440",
+    "scrollWidth": 1440,
+    "innerWidth": 1440,
+    "overflowX": false,
+    "bodyH": 3734,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "build-hero-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 530,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "build-opportunity-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 386,
+        "top": 614,
+        "overflowVisible": false
+      },
+      {
+        "i": 2,
+        "id": "how-we-build-together",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 818,
+        "top": 1000,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "build-journey-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 506,
+        "top": 1818,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "build-wyz-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 499,
+        "top": 2324,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "build-cta-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 440,
+        "top": 2823,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Build | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "transform",
+    "vp": "1440",
+    "scrollWidth": 1440,
+    "innerWidth": 1440,
+    "overflowX": false,
+    "bodyH": 4075,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "tr-hero-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 553,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "tr-beyond-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 462,
+        "top": 637,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "tr-where-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 658,
+        "top": 1099,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "our-approach",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 788,
+        "top": 1757,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "tr-partner-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 651,
+        "top": 2545,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "tr-cta-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 408,
+        "top": 3196,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Transform | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "research",
+    "vp": "1440",
+    "scrollWidth": 1440,
+    "innerWidth": 1440,
+    "overflowX": false,
+    "bodyH": 3680,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "rp-hero-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 655,
+        "top": 84,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "rp-why-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 457,
+        "top": 739,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "rp-approach-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 673,
+        "top": 1195,
+        "overflowVisible": true
+      },
+      {
+        "i": 3,
+        "id": "rp-horizon-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 516,
+        "top": 1869,
+        "overflowVisible": false
+      },
+      {
+        "i": 4,
+        "id": "rp-memorial-name",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 339,
+        "top": 2385,
+        "overflowVisible": true
+      },
+      {
+        "i": 5,
+        "id": "rp-collab-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 485,
+        "top": 2724,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Research | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "about",
+    "vp": "1440",
+    "scrollWidth": 1440,
+    "innerWidth": 1440,
+    "overflowX": false,
+    "bodyH": 3943,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "about-conviction-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 536,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "about-opportunity-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 732,
+        "top": 536,
+        "overflowVisible": true
+      },
+      {
+        "i": 2,
+        "id": "about-institution-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 921,
+        "top": 1268,
+        "overflowVisible": false
+      },
+      {
+        "i": 3,
+        "id": "about-long-view-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 766,
+        "top": 2189,
+        "overflowVisible": true
+      },
+      {
+        "i": 4,
+        "id": "about-invitation-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 516,
+        "top": 2955,
+        "overflowVisible": false
+      }
+    ],
+    "title": "About | AshviTech",
+    "consoleErrors": []
+  },
+  {
+    "slug": "contact",
+    "vp": "1440",
+    "scrollWidth": 1440,
+    "innerWidth": 1440,
+    "overflowX": false,
+    "bodyH": 1395,
+    "headerH": 85,
+    "wide": [],
+    "sections": [
+      {
+        "i": 0,
+        "id": "contact-title",
+        "tag": "SECTION",
+        "w": 1440,
+        "h": 924,
+        "top": 0,
+        "overflowVisible": false
+      },
+      {
+        "i": 1,
+        "id": "_R_19bsnnb_-heading",
+        "tag": "FORM",
+        "w": 583,
+        "h": 688,
+        "top": 140,
+        "overflowVisible": false
+      }
+    ],
+    "title": "Contact | AshviTech",
+    "consoleErrors": []
+  }
+]

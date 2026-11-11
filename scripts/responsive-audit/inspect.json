@@ -1,0 +1,190 @@
+[
+  {
+    "name": "home-hero-overlap",
+    "path": "/",
+    "width": 375,
+    "h1": "Businesses builtaround intelligence.Powered by human expertise.",
+    "overlaps": [
+      {
+        "button": "See what we're building→",
+        "card": "Technology. Business. Possibility.Busine",
+        "buttonBottom": 551,
+        "cardTop": 0
+      },
+      {
+        "button": "What We Do",
+        "card": "Technology. Business. Possibility.Busine",
+        "buttonBottom": 617,
+        "cardTop": 0
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "name": "build-partnership-header",
+    "path": "/build",
+    "width": 375,
+    "headerBottom": 85,
+    "titleTop": -42,
+    "titleCovered": true,
+    "overlapPx": 127,
+    "titleText": "Different strengths. Shared ambition."
+  },
+  {
+    "name": "build-hero-annotations",
+    "path": "/build",
+    "width": 375,
+    "labels": [
+      {
+        "text": "AshviTech / BuildCo-buildingAI",
+        "w": 375,
+        "left": 0,
+        "font": "16px"
+      },
+      {
+        "text": "AshviTech / BuildCo-buildingAI",
+        "w": 327,
+        "left": 24,
+        "font": "16px"
+      },
+      {
+        "text": "Domain ExpertiseEngineering Ca",
+        "w": 327,
+        "left": 24,
+        "font": "16px"
+      }
+    ],
+    "heroH": 827
+  },
+  {
+    "name": "transform-hero-mobile",
+    "path": "/transform",
+    "width": 375,
+    "heroH": 765,
+    "imgs": [
+      {
+        "w": 0,
+        "h": 0,
+        "top": 0,
+        "natural": "876x360",
+        "display": "none"
+      },
+      {
+        "w": 375,
+        "h": 154,
+        "top": 695,
+        "natural": "876x360",
+        "display": "block"
+      }
+    ],
+    "ctas": [
+      "Discuss a transformation →",
+      "Explore our approach ↓"
+    ]
+  },
+  {
+    "name": "contact-form-mobile",
+    "path": "/contact",
+    "width": 375,
+    "inputLayout": [
+      {
+        "name": "name",
+        "w": 279,
+        "top": 685
+      },
+      {
+        "name": "email",
+        "w": 279,
+        "top": 788
+      },
+      {
+        "name": "message",
+        "w": 279,
+        "top": 1220
+      }
+    ],
+    "radioCount": 4,
+    "radioWidths": [
+      279,
+      279,
+      279,
+      279
+    ],
+    "formW": 327
+  },
+  {
+    "name": "about-mobile-content",
+    "path": "/about",
+    "width": 375,
+    "h1": "Technology should go beyond the business it serves.",
+    "h1Visible": "rgb(2, 19, 54)",
+    "h2s": [
+      "A different relationship between technology and business.",
+      "Two pursuits. One institution.",
+      "Building something that can outlast individual projects.",
+      "Some ideas need more than a conventional partnership."
+    ],
+    "sections": [
+      {
+        "id": "about-conviction-title",
+        "h": 500,
+        "textLen": 257
+      },
+      {
+        "id": "about-opportunity-title",
+        "h": 960,
+        "textLen": 904
+      },
+      {
+        "id": "about-institution-title",
+        "h": 1399,
+        "textLen": 940
+      },
+      {
+        "id": "about-long-view-title",
+        "h": 988,
+        "textLen": 526
+      },
+      {
+        "id": "about-invitation-title",
+        "h": 527,
+        "textLen": 281
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "name": "mobile-menu-coverage",
+    "path": "/",
+    "width": 375,
+    "hiddenAttr": false,
+    "display": "block",
+    "visibility": "visible",
+    "opacity": "1",
+    "bg": "rgb(248, 249, 253)",
+    "h": 0,
+    "w": 375,
+    "links": [
+      "Build01",
+      "Transform02",
+      "Our Work03",
+      "Research04",
+      "About05",
+      "Contact06"
+    ],
+    "z": "40"
+  },
+  {
+    "name": "transform-where-tablet",
+    "path": "/transform",
+    "width": 768,
+    "desktopDisplay": "none",
+    "mobileDisplay": "block"
+  },
+  {
+    "name": "build-journey-tablet",
+    "path": "/build",
+    "width": 768,
+    "ok": true
+  }
+]

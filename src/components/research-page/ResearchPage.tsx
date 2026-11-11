@@ -11,7 +11,7 @@ import { Horizon, Terrain } from './Linework'
  * from the host theme, no other dependencies. Header and footer come from the host layout.
  */
 
-const CONTACT_HREF = '/contact' // the site's existing contact route
+const CONTACT_HREF = '/contact?interest=research'
 
 export function ResearchPage() {
   return (
