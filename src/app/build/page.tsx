@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import { BuildPage } from "@/components/build/BuildPage";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const description =
+  "Co-building AI-native ventures with founders and domain experts.";
+
+export const metadata: Metadata = buildPageMetadata({
   title: "Build",
-  description: "Co-building AI-native ventures with founders and domain experts.",
-  alternates: { canonical: "https://ashvi.tech/build" },
-};
+  description,
+  path: "/build",
+  ogTitle: "Build | AshviTech",
+});
 
 export default function Page() {
   return (

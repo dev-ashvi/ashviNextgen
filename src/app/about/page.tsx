@@ -4,19 +4,17 @@ import { AboutInvitation } from "@/components/about/AboutInvitation";
 import { AboutInstitution } from "@/components/about/AboutInstitution";
 import { AboutLongView } from "@/components/about/AboutLongView";
 import { AboutOpportunity } from "@/components/about/AboutOpportunity";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const description =
+  "AshviTech is building toward a technology institution where commercial ventures and independent research develop as equally meaningful pursuits.";
+
+export const metadata: Metadata = buildPageMetadata({
   title: "About",
-  description:
-    "AshviTech is building toward a technology institution where commercial ventures and independent research develop as equally meaningful pursuits.",
-  alternates: { canonical: "/about" },
-  openGraph: {
-    title: "About AshviTech",
-    description:
-      "Building businesses. Advancing technology. Two pursuits, one institution.",
-    url: "/about",
-  },
-};
+  description,
+  path: "/about",
+  ogTitle: "About AshviTech",
+});
 
 export default function AboutPage() {
   return (

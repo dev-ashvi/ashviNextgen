@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import { ResearchPage } from "@/components/research-page/ResearchPage";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const description =
+  "Ashvi Research — independent inquiry into intelligent systems, emerging technologies and the fundamental questions that shape technological progress.";
+
+export const metadata: Metadata = buildPageMetadata({
   title: "Research",
-  description:
-    "Ashvi Research — independent inquiry into intelligent systems, emerging technologies and the fundamental questions that shape technological progress.",
-  alternates: { canonical: "https://ashvi.tech/research" },
-};
+  description,
+  path: "/research",
+  ogTitle: "Research | AshviTech",
+});
 
 export default function Page() {
   return (

@@ -2,7 +2,18 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Newsreader, JetBrains_Mono } from "next/font/google";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { cn } from "@/lib/utils";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_TITLE,
+  OG_IMAGE,
+  SITE_NAME,
+  SITE_ORIGIN,
+  absoluteUrl,
+  organizationJsonLd,
+  websiteJsonLd,
+} from "@/lib/seo";
 import "./globals.css";
 
 const inter = Inter({
@@ -36,38 +47,35 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ashvi.tech"),
+  metadataBase: new URL(SITE_ORIGIN),
   title: {
-    default: "AshviTech — Building AI-Native Businesses",
+    default: DEFAULT_TITLE,
     template: "%s | AshviTech",
   },
-  description:
-    "AshviTech is an AI-native technology company building new businesses with domain experts and exploring how intelligent systems can transform existing operations.",
+  description: DEFAULT_DESCRIPTION,
   alternates: {
-    canonical: "https://ashvi.tech",
+    canonical: absoluteUrl("/"),
   },
   openGraph: {
     type: "website",
-    url: "https://ashvi.tech",
-    siteName: "AshviTech",
-    title: "AshviTech — Building AI-Native Businesses",
-    description:
-      "AshviTech is an AI-native technology company building new businesses with domain experts and exploring how intelligent systems can transform existing operations.",
+    url: absoluteUrl("/"),
+    siteName: SITE_NAME,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
     images: [
       {
-        url: "/brand/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "AshviTech",
+        url: OG_IMAGE.url,
+        width: OG_IMAGE.width,
+        height: OG_IMAGE.height,
+        alt: OG_IMAGE.alt,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AshviTech — Building AI-Native Businesses",
-    description:
-      "AshviTech is an AI-native technology company building new businesses with domain experts and exploring how intelligent systems can transform existing operations.",
-    images: ["/brand/og-image.png"],
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: [absoluteUrl(OG_IMAGE.url)],
   },
   icons: {
     icon: [
@@ -95,6 +103,8 @@ export default function RootLayout({
       className={cn(inter.variable, newsreader.variable, jetbrains.variable)}
     >
       <body className="min-h-screen font-sans antialiased">
+        <JsonLd data={organizationJsonLd()} />
+        <JsonLd data={websiteJsonLd()} />
         <a href="#main" className="skip-link">
           Skip to content
         </a>
