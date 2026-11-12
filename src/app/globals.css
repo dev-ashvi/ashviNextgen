@@ -314,25 +314,6 @@ body {
   background-size: 48px 48px;
 }
 
-/* About watermark: dissolve the edge nearest the text and the lower-left corner. */
-.about-watermark {
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 38%),
-    linear-gradient(to top, transparent 0%, #000 22%);
-  -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(to right, transparent 0%, #000 38%),
-    linear-gradient(to top, transparent 0%, #000 22%);
-  mask-composite: intersect;
-}
-@media (min-width: 1024px) {
-  .about-watermark {
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 32%),
-      linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, #000 18%);
-    mask-image: linear-gradient(to right, transparent 0%, #000 32%),
-      linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, #000 18%);
-  }
-}
-
-
 /* About Institution — once-on-load line reveal (pathLength="1" on SVG paths) */
 .institution-line {
   stroke-dasharray: 1;

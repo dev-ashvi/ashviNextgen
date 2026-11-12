@@ -81,7 +81,8 @@ for (const width of mobileWidths) {
       if (m.parentTag !== "BODY") fail(`${id}: expected portal parent BODY, got ${m.parentTag}`);
       if (m.hidden) fail(`${id}: menu still hidden`);
       if (m.h < 200) fail(`${id}: menu height ${m.h} < 200`);
-      if (m.top !== 84) fail(`${id}: menu top ${m.top} (expected 84)`);
+      // Claude mobile menu is a full-viewport dialog (portaled to body), not a panel under the 84px bar.
+      if (m.top !== 0) fail(`${id}: menu top ${m.top} (expected 0 for full-screen dialog)`);
       if (!m.links.some((l) => /Build/i.test(l))) fail(`${id}: missing Build link`);
       if (!m.links.some((l) => /Transform/i.test(l))) fail(`${id}: missing Transform link`);
       if (m.bodyOverflow !== "hidden") fail(`${id}: body overflow not locked`);
@@ -91,7 +92,7 @@ for (const width of mobileWidths) {
     await page.keyboard.press("Escape");
     await page.waitForTimeout(150);
     const after = await menuMetrics(page);
-    if (!after.hidden && after.h > 0) fail(`${id}: Escape did not close menu`);
+    if (!after.missing && !after.hidden && after.h > 0) fail(`${id}: Escape did not close menu`);
     if (after.bodyOverflow === "hidden") fail(`${id}: body scroll still locked after Escape`);
 
     if (width === 375 && route === "/") {
@@ -170,7 +171,7 @@ for (const route of revealRoutes) {
   console.log("ok", id, `reveals=${probe.revealCount} hidden=${probe.hiddenRevealCount}`);
 }
 
-// Normal motion: reveals may start hidden offscreen; above-fold should become visible after IO
+// About hero is now a static Server Component (no ashvi-reveal); confirm H1 is visible with motion on.
 {
   const context = await browser.newContext({
     viewport: { width: 375, height: 812 },
@@ -178,17 +179,18 @@ for (const route of revealRoutes) {
   });
   const page = await context.newPage();
   await page.goto(`${base}/about`, { waitUntil: "networkidle", timeout: 90000 });
-  await page.waitForTimeout(1200);
+  await page.waitForTimeout(400);
   const motion = await page.evaluate(() => {
-    const wrap = document.querySelector("h1")?.closest(".ashvi-reveal");
+    const h1 = document.querySelector("h1");
     return {
-      opacity: wrap ? getComputedStyle(wrap).opacity : null,
-      hasVisibleClass: wrap?.classList.contains("ashvi-reveal--visible") ?? false,
+      opacity: h1 ? getComputedStyle(h1).opacity : null,
+      text: h1?.textContent?.trim()?.slice(0, 60) ?? null,
     };
   });
   results.c2.push({ id: "c2 motion about hero", ...motion });
+  if (!motion.text) fail("c2 motion: about hero missing h1");
   if (Number.parseFloat(motion.opacity || "0") < 0.9) {
-    fail(`c2 motion: about hero reveal opacity ${motion.opacity}`);
+    fail(`c2 motion: about hero opacity ${motion.opacity}`);
   }
   await context.close();
   console.log("ok c2 motion about hero", motion);
@@ -205,19 +207,23 @@ for (const route of revealRoutes) {
   await page.waitForTimeout(400);
   const desk = await page.evaluate(() => {
     const burger = document.querySelector('button[aria-controls="mobile-menu"]');
-    const desktopNav = document.querySelector('nav[aria-label="Primary"] .hidden.lg\\:flex, nav[aria-label="Primary"] > div');
+    const desktopNav = document.querySelector('nav[aria-label="Primary"]');
     const menu = document.getElementById("mobile-menu");
+    const wwd = [...document.querySelectorAll("button")].find((b) =>
+      /What We Do/i.test(b.textContent || ""),
+    );
     return {
       burgerDisplay: burger ? getComputedStyle(burger).display : null,
       desktopNavDisplay: desktopNav ? getComputedStyle(desktopNav).display : null,
-      menuHidden: menu?.hidden ?? null,
-      hasWhatWeDo: !!document.querySelector('button[aria-haspopup="menu"]'),
+      menuPresent: !!menu,
+      hasWhatWeDo: !!wwd,
+      wwdExpanded: wwd?.getAttribute("aria-expanded") ?? null,
     };
   });
   results.desktop = desk;
   if (desk.burgerDisplay !== "none") fail("desktop: burger should be hidden at 1440");
   if (desk.desktopNavDisplay !== "flex") fail("desktop: primary nav should be flex at 1440");
-  if (desk.menuHidden !== true) fail("desktop: mobile menu should remain hidden");
+  if (desk.menuPresent) fail("desktop: mobile menu should not be mounted when closed");
   if (!desk.hasWhatWeDo) fail("desktop: What We Do control missing");
 
   await page.screenshot({

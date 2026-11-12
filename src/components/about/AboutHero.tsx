@@ -86,7 +86,7 @@ const MARK_AT = { x: 960, y: 180 }
  */
 export function AboutHero({ id = 'about-hero', sculpture = 'image' }: { id?: string; sculpture?: 'image' | 'svg' }) {
   return (
-    <section aria-labelledby={`${id}-title`} className="ah relative isolate overflow-hidden bg-[#02162E] text-[#F8F9FD]">
+    <section aria-labelledby={`${id}-title`} className="ah relative isolate overflow-hidden bg-[#021336] text-[#F8F9FD]">
       {/* desktop: one artwork layer behind the whole hero — sculpture on the right, light traces across the lower half */}
       <Artwork sculpture={sculpture} className="pointer-events-none absolute inset-0 -z-10 hidden h-full w-full lg:block" />
       {/* small screens: background traces only; the sculpture follows the copy */}
@@ -239,15 +239,15 @@ function Mark({ prefix: p }: { prefix: string }) {
 function Defs({ prefix: p }: { prefix: string }) {
   return (
     <defs>
-      {/* tone sampled from the approved reference, so the extracted sculpture blends without an edge */}
+      {/* Brand navy base (#021336) — no near-black edges; blue lift is a separate restrained ellipse */}
       <radialGradient id={`${p}-room`} cx="68%" cy="42%" r="78%">
-        <stop offset="0" stopColor="#031B35" />
-        <stop offset="0.55" stopColor="#02162E" />
-        <stop offset="1" stopColor="#011226" />
+        <stop offset="0" stopColor="#021336" />
+        <stop offset="0.55" stopColor="#021336" />
+        <stop offset="1" stopColor="#021336" />
       </radialGradient>
       <radialGradient id={`${p}-lift`} cx="50%" cy="50%" r="50%">
-        <stop offset="0" stopColor="#0A3A5C" stopOpacity="0.18" />
-        <stop offset="1" stopColor="#0A3A5C" stopOpacity="0" />
+        <stop offset="0" stopColor="#003876" stopOpacity="0.16" />
+        <stop offset="1" stopColor="#003876" stopOpacity="0" />
       </radialGradient>
       {/* feathered edges for the extracted sculpture (left, top, bottom; the right edge is the artwork edge) */}
       <linearGradient id={`${p}-fx`} x1="0" x2="1" y1="0" y2="0">

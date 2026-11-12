@@ -6,10 +6,10 @@ type LogoVariant = "horizontal-light" | "horizontal-dark" | "stacked" | "symbol"
 
 const sources: Record<LogoVariant, { src: string; width: number; height: number; alt: string }> = {
   "horizontal-light": {
-    // Intrinsic 900×223 — keep exact ratio; size only via CSS height + w-auto
+    // Cropped navy-on-light lockup; height-only CSS sizing matches dark header (never stretch)
     src: "/brand/logo-horizontal-light.png",
-    width: 900,
-    height: 223,
+    width: 892,
+    height: 218,
     alt: "AshviTech",
   },
   "horizontal-dark": {

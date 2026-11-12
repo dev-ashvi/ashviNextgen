@@ -16,6 +16,7 @@ import {
   websiteJsonLd,
 } from "@/lib/seo";
 import "./globals.css";
+import "@/components/layout/nav/nav.css";
 
 const inter = Inter({
   subsets: ["latin"],

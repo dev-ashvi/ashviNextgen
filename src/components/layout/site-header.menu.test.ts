@@ -10,13 +10,22 @@ describe("SiteHeader mobile menu containing-block fix (C1)", () => {
       path.join(root, "src/components/layout/SiteHeader.tsx"),
       "utf8",
     );
+    const theme = readFileSync(
+      path.join(root, "src/components/layout/nav/navTheme.ts"),
+      "utf8",
+    );
+    const mobile = readFileSync(
+      path.join(root, "src/components/layout/nav/MobileMenu.tsx"),
+      "utf8",
+    );
     expect(source).toContain("createPortal");
-    expect(source).toContain('createPortal(mobileMenu, document.body)');
-    expect(source).toContain('id="mobile-menu"');
-    // Menu markup must not be nested inside the <header> JSX tree as a child
-    // of the backdrop-blur element — portal is the containment break.
-    expect(source).toMatch(/backdrop-blur-xl/);
-    expect(source).toMatch(/\{portalReady \? createPortal\(mobileMenu, document\.body\) : null\}/);
+    expect(source).toContain("createPortal(mobileMenu, document.body)");
+    expect(mobile).toContain('id="mobile-menu"');
+    // Light theme still uses backdrop blur; portal remains the containment break.
+    expect(theme).toMatch(/backdrop-blur-xl/);
+    expect(source).toMatch(
+      /\{portalReady \? createPortal\(mobileMenu, document\.body\) : null\}/,
+    );
   });
 
   it("restores body overflow on close and unmount", () => {
@@ -24,7 +33,9 @@ describe("SiteHeader mobile menu containing-block fix (C1)", () => {
       path.join(root, "src/components/layout/SiteHeader.tsx"),
       "utf8",
     );
-    expect(source).toMatch(/document\.body\.style\.overflow\s*=\s*open\s*\?\s*"hidden"\s*:\s*""/);
+    expect(source).toMatch(
+      /document\.body\.style\.overflow\s*=\s*menuOpen\s*\?\s*"hidden"\s*:\s*""/,
+    );
     expect(source).toMatch(/document\.body\.style\.overflow\s*=\s*""/);
   });
 });
