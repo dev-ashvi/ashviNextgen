@@ -80,10 +80,16 @@ export const metadata: Metadata = {
     images: [absoluteUrl(OG_IMAGE.url)],
   },
   icons: {
+    // Google recommends a square favicon larger than 48×48 (prefer 96+).
+    // Keep smaller PNGs for browser tabs; apple-touch unchanged.
     icon: [
-      { url: "/brand/icon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/brand/icon-96.png", sizes: "96x96", type: "image/png" },
+      { url: "/brand/icon-192.png", sizes: "192x192", type: "image/png" },
       { url: "/brand/icon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/brand/icon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any", type: "image/x-icon" },
     ],
+    shortcut: [{ url: "/brand/icon-96.png", type: "image/png" }],
     apple: [{ url: "/brand/icon-180.png", sizes: "180x180", type: "image/png" }],
   },
 };
