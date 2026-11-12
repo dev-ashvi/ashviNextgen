@@ -1,0 +1,27 @@
+/* AboutHero — optional, very slow motion. The static composition is complete without it. */
+
+/* the light at the notch breathes */
+.ah .ah-breathe {
+  animation: ah-breathe 7s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes ah-breathe {
+  0%, 100% { opacity: 0.75; }
+  50% { opacity: 1; }
+}
+
+/* a soft pulse of light travels along the principal trace */
+.ah .ah-trace {
+  stroke-dasharray: 160 2400;
+  stroke-dashoffset: 2560;
+  animation: ah-travel 14s linear infinite;
+}
+@keyframes ah-travel {
+  to { stroke-dashoffset: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ah .ah-breathe { animation: none; opacity: 0.9; }
+  .ah .ah-trace { animation: none; display: none; }
+}

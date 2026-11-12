@@ -332,18 +332,6 @@ body {
   }
 }
 
-/* About page hero watermark — softer left dissolve, keep lower-right present. */
-.about-page-watermark {
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 28%);
-  -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(to right, transparent 0%, #000 28%);
-}
-@media (min-width: 1024px) {
-  .about-page-watermark {
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 24%);
-    mask-image: linear-gradient(to right, transparent 0%, #000 24%);
-  }
-}
 
 /* About Institution — once-on-load line reveal (pathLength="1" on SVG paths) */
 .institution-line {

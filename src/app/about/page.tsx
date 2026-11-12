@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { AboutConviction } from "@/components/about/AboutConviction";
+import { AboutHero } from "@/components/about/AboutHero";
 import { AboutInvitation } from "@/components/about/AboutInvitation";
 import { AboutInstitution } from "@/components/about/AboutInstitution";
 import { AboutLongView } from "@/components/about/AboutLongView";
@@ -19,7 +19,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function AboutPage() {
   return (
     <>
-      <AboutConviction />
+      <AboutHero />
       <AboutOpportunity />
       <AboutInstitution />
       <AboutLongView />

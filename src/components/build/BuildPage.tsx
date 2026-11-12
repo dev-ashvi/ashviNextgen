@@ -74,7 +74,7 @@ function BuildHero() {
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-[radial-gradient(ellipse_36%_70%_at_70%_100%,rgba(0,205,184,0.10)_0%,transparent_70%)]" />
       </div>
 
-      <Shell className="grid items-center gap-y-8 pb-14 pt-14 sm:gap-y-10 sm:pt-16 lg:grid-cols-[0.86fr_1.14fr] lg:gap-x-4 lg:gap-y-16 lg:pb-16 lg:pt-16">
+      <Shell className="grid items-center gap-y-8 pb-14 pt-[calc(84px+3.5rem)] sm:gap-y-10 sm:pt-[calc(84px+4rem)] lg:grid-cols-[0.86fr_1.14fr] lg:gap-x-4 lg:gap-y-16 lg:pb-16 lg:pt-[calc(84px+4rem)]">
         <div className="relative z-10 max-w-[38rem]">
           <Eyebrow tone="dark">AshviTech / Build</Eyebrow>
           <h1 id="build-hero-title" className={`${serif} mt-6 whitespace-nowrap text-[clamp(2.4rem,4.6vw,4.1rem)] leading-[1.04]`}>

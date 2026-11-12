@@ -14,7 +14,7 @@ export const metadata: Metadata = buildPageMetadata({
 
 export default function Page() {
   return (
-    <div className="bg-paper pt-[84px]">
+    <div className="bg-paper">
       <ResearchPage />
     </div>
   );

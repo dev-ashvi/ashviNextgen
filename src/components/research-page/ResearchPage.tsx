@@ -56,7 +56,7 @@ function Hero() {
       {/* desktop: the terrain occupies the lower right, behind nothing */}
       <Terrain idPrefix="rph" className="pointer-events-none absolute bottom-0 right-0 hidden h-full w-[70%] lg:block" />
 
-      <Shell className="relative pb-2 pt-16 sm:pt-20 lg:pb-28 lg:pt-28">
+      <Shell className="relative pb-2 pt-[calc(84px+4rem)] sm:pt-[calc(84px+5rem)] lg:pb-28 lg:pt-[calc(84px+7rem)]">
         <div className="max-w-[36rem]">
           <Eyebrow tone="dark">Ashvi Research</Eyebrow>
           <h1 id="rp-hero-title" className={`${h2} mt-6 text-[clamp(2.5rem,5vw,4.25rem)] leading-[1.04]`}>

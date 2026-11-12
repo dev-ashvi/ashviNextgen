@@ -66,7 +66,7 @@ function TransformHero() {
 
       <TransformHeroVisual className="absolute bottom-0 right-[-8%] hidden w-[66%] lg:block" />
 
-      <Shell className="relative pb-12 pt-[120px] max-md:pb-6 lg:min-h-[540px] lg:pb-14 lg:pt-[132px]">
+      <Shell className="relative pb-12 pt-[44px] max-md:pb-6 lg:min-h-[480px] lg:pb-14 lg:pt-[52px]">
         <div className="max-w-[32rem] lg:max-w-[31rem]">
           <Eyebrow>AshviTech / Transform</Eyebrow>
           <h1 id="tr-hero-title" className={`${serif} mt-6 text-[clamp(2.5rem,4.3vw,3.85rem)] leading-[1.04] text-[#021336] lg:w-[36rem]`}>

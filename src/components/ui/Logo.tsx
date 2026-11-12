@@ -13,9 +13,10 @@ const sources: Record<LogoVariant, { src: string; width: number; height: number;
     alt: "AshviTech",
   },
   "horizontal-dark": {
+    // Cropped white-on-dark mark; height-only CSS sizing matches light header (never stretch)
     src: "/brand/logo-horizontal-dark.png",
-    width: 346,
-    height: 105,
+    width: 874,
+    height: 194,
     alt: "AshviTech",
   },
   stacked: {

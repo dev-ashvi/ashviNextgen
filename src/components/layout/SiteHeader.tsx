@@ -41,8 +41,13 @@ export function SiteHeader() {
   const onTransform = pathname === "/transform" || pathname.startsWith("/transform/");
   const onWhatWeDo = onBuild || onTransform;
   const onContact = pathname === "/contact" || pathname.startsWith("/contact/");
+  const onAbout = pathname === "/about" || pathname.startsWith("/about/");
+  const onResearch = pathname === "/research" || pathname.startsWith("/research/");
   // Light page tops where a transparent header would sit on page content.
   const solidLight = onTransform || onContact;
+  // Dark heroes (About / Build / Research): inverted chrome while transparent; solid light after scroll / menu.
+  const darkChrome =
+    (onAbout || onBuild || onResearch) && !solidLight && !scrolled && !open;
 
   useEffect(() => {
     setPortalReady(true);
@@ -195,7 +200,7 @@ export function SiteHeader() {
           className="mx-auto flex h-[84px] w-full max-w-[1400px] items-center justify-between px-6 sm:px-10 lg:px-16 xl:px-20 min-[1500px]:max-w-[1480px]"
         >
           <Logo
-            variant="horizontal-light"
+            variant={darkChrome ? "horizontal-dark" : "horizontal-light"}
             // Avoid competing with homepage hero LCP preload (logo is tiny; eager still fine).
             priority={false}
             className="h-9 w-auto md:h-11"
@@ -209,7 +214,13 @@ export function SiteHeader() {
                   type="button"
                   className={cn(
                     "relative inline-flex items-center gap-1.5 py-2 text-[15px] tracking-[-0.005em] transition-colors duration-300 outline-none focus-visible:ring-2 focus-visible:ring-tide focus-visible:ring-offset-2",
-                    onWhatWeDo || wwdOpen ? "text-ink" : "text-ink/80 hover:text-ink",
+                    darkChrome
+                      ? onWhatWeDo || wwdOpen
+                        ? "text-white focus-visible:ring-offset-[#02162E]"
+                        : "text-white/85 hover:text-white focus-visible:ring-offset-[#02162E]"
+                      : onWhatWeDo || wwdOpen
+                        ? "text-ink"
+                        : "text-ink/80 hover:text-ink",
                   )}
                   aria-expanded={wwdOpen}
                   aria-haspopup="menu"
@@ -303,7 +314,13 @@ export function SiteHeader() {
                       aria-current={active ? "page" : undefined}
                       className={cn(
                         "relative py-2 text-[15px] tracking-[-0.005em] transition-colors duration-300 outline-none focus-visible:ring-2 focus-visible:ring-tide focus-visible:ring-offset-2",
-                        active ? "text-ink" : "text-ink/80 hover:text-ink",
+                        darkChrome
+                          ? active
+                            ? "text-white focus-visible:ring-offset-[#02162E]"
+                            : "text-white/85 hover:text-white focus-visible:ring-offset-[#02162E]"
+                          : active
+                            ? "text-ink"
+                            : "text-ink/80 hover:text-ink",
                       )}
                     >
                       {item.label}
@@ -322,7 +339,12 @@ export function SiteHeader() {
             <Link
               href="/contact"
               aria-current={onContact ? "page" : undefined}
-              className="group inline-flex h-11 items-center gap-2 rounded-full bg-ink-900 px-6 text-[15px] font-medium text-white transition-colors duration-300 hover:bg-signal focus-visible:ring-2 focus-visible:ring-tide focus-visible:ring-offset-2"
+              className={cn(
+                "group inline-flex h-11 items-center gap-2 rounded-full px-6 text-[15px] font-medium transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-tide focus-visible:ring-offset-2",
+                darkChrome
+                  ? "bg-[#F8F9FD] text-ink-900 hover:bg-white focus-visible:ring-offset-[#02162E]"
+                  : "bg-ink-900 text-white hover:bg-signal",
+              )}
             >
               Contact
               <span
@@ -337,7 +359,10 @@ export function SiteHeader() {
           <button
             ref={menuButtonRef}
             type="button"
-            className="relative z-50 -mr-2 grid h-11 w-11 place-items-center text-ink outline-none focus-visible:ring-2 focus-visible:ring-tide lg:hidden"
+            className={cn(
+              "relative z-50 -mr-2 grid h-11 w-11 place-items-center outline-none focus-visible:ring-2 focus-visible:ring-tide lg:hidden",
+              darkChrome ? "text-white focus-visible:ring-offset-[#02162E]" : "text-ink",
+            )}
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((o) => !o)}
