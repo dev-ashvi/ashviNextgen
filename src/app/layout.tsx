@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Newsreader, JetBrains_Mono } from "next/font/google";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
+import { VercelAnalytics } from "@/components/analytics/VercelAnalytics";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { cn } from "@/lib/utils";
 import {
@@ -111,6 +112,8 @@ export default function RootLayout({
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
+        {/* Vercel Web Analytics: deferred client script; same-origin on Vercel. */}
+        <VercelAnalytics />
       </body>
     </html>
   );

@@ -1,0 +1,41 @@
+{
+  "base": "http://127.0.0.1:3210",
+  "home": {
+    "hasVaQueue": true,
+    "scriptTags": [
+      "http://127.0.0.1:3210/_next/static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "http://127.0.0.1:3210/_next/static/chunks/255-73938ce8a8eac1ad.js",
+      "http://127.0.0.1:3210/_next/static/chunks/main-app-3b82939ab9716c01.js",
+      "http://127.0.0.1:3210/_next/static/chunks/619-ba102abea3e3d0e4.js",
+      "http://127.0.0.1:3210/_next/static/chunks/909-9eb9e001d16de97f.js",
+      "http://127.0.0.1:3210/_next/static/chunks/356-ad1afcfca620a302.js",
+      "http://127.0.0.1:3210/_next/static/chunks/app/layout-cb71dfa2d593f06d.js",
+      "http://127.0.0.1:3210/_next/static/chunks/app/page-0118684d33876db7.js",
+      "http://127.0.0.1:3210/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "http://127.0.0.1:3210/_vercel/insights/script.js",
+      "http://127.0.0.1:3210/_next/static/chunks/webpack-510b9b252898196f.js"
+    ],
+    "mentionsAnalytics": true,
+    "cookieNames": []
+  },
+  "afterNav": {
+    "path": "/contact",
+    "cookieNames": []
+  },
+  "analyticsNetwork": [
+    {
+      "url": "http://127.0.0.1:3210/_vercel/insights/script.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:3210/_vercel/insights/script.js",
+      "method": "GET"
+    }
+  ],
+  "cspConnectSelf": true,
+  "cspNoThirdPartyAnalytics": true,
+  "notes": [
+    "Local/production next start typically does not emit Vercel intake requests; collection is confirmed in the Vercel dashboard after deploy + enabling Web Analytics.",
+    "Duplicate Analytics components: only root layout mounts VercelAnalytics once."
+  ]
+}

@@ -19,13 +19,15 @@ const cspReportOnly = [
   "object-src 'none'",
   "frame-ancestors 'none'",
   "form-action 'self'",
-  // Next.js hydration + framework chunks; no third-party scripts today.
+  // Next.js hydration + framework chunks. Vercel Analytics loads from same-origin
+  // `/_vercel/insights/*` (or resilient same-deployment intake) when hosted on Vercel.
   "script-src 'self' 'unsafe-inline'",
   // Tailwind / next/font inject style attributes; avoid 'unsafe-eval'.
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob:",
   "font-src 'self' data:",
-  // Contact POST + same-origin navigations; no Resend/Upstash from the browser.
+  // Contact POST + same-origin navigations + same-origin Vercel Analytics intake.
+  // No third-party analytics hosts added (do not weaken CSP for GA/etc.).
   "connect-src 'self'",
   "worker-src 'self' blob:",
   "media-src 'self'",
