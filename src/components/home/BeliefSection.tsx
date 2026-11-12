@@ -1,6 +1,6 @@
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
-import { DualIntelligenceNetwork } from "./DualIntelligenceNetwork";
+import { DualIntelligenceDeferred } from "./DualIntelligenceDeferred";
 
 /** Perf A/B: NEXT_PUBLIC_DISABLE_DIN=1 skips mounting the network (module may still ship). */
 const DIN_DISABLED = process.env.NEXT_PUBLIC_DISABLE_DIN === "1";
@@ -52,7 +52,7 @@ export function BeliefSection() {
           <AnimatedReveal delay={0.08} className="relative min-w-0 lg:pt-1">
             {/* Shared width: diagram+legend module, then belief — ~18% smaller footprint */}
             <div className="mx-auto w-full max-w-[22.5rem] sm:max-w-[24.5rem] lg:mx-0 lg:max-w-[25.5rem]">
-              <DualIntelligenceNetwork className="w-full" />
+              <DualIntelligenceDeferred />
 
               <blockquote className="mt-6 border-l-[2.5px] border-ink-900 pl-5 sm:mt-7 sm:pl-6">
                 <p className="font-serif text-[1.05rem] font-medium leading-[1.35] tracking-[-0.018em] text-ink sm:text-[1.15rem] md:text-[1.2rem]">

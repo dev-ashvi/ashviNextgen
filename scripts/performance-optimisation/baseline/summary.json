@@ -1,0 +1,281 @@
+{
+  "label": "baseline",
+  "base": "http://localhost:3160",
+  "formFactor": "mobile",
+  "viewport": "390x844",
+  "throttling": "Lighthouse default mobile (simulated slow 4G + 4x CPU)",
+  "lighthouse": "12.2.1",
+  "runs": [
+    {
+      "run": 1,
+      "performance": 43,
+      "lcpMs": 5217.213,
+      "lcp": "5.2 s",
+      "fcpMs": 3642.2129999999997,
+      "fcp": "3.6 s",
+      "cls": 0,
+      "clsDisplay": "0",
+      "tbtMs": 3240.929,
+      "tbt": "3,240 ms",
+      "totalByteWeight": 737021,
+      "totalByteWeightDisplay": "Total size was 720 KiB",
+      "networkRequests": 21,
+      "jsTransferBytes": 153195,
+      "jsTransferKB": 150,
+      "bootup": [
+        {
+          "url": "http://localhost:3160/_next/static/chunks/255-38b49df12a94ee57.js",
+          "total": 4051.6679999999997,
+          "scripting": 4023.7279999999996,
+          "scriptParseCompile": 3.456
+        },
+        {
+          "url": "http://localhost:3160/",
+          "total": 1288.8920000000003,
+          "scripting": 57.96400000000001,
+          "scriptParseCompile": 77.33599999999997
+        },
+        {
+          "url": "Unattributable",
+          "total": 785.7199999999997,
+          "scripting": 11.120000000000001,
+          "scriptParseCompile": 0
+        },
+        {
+          "url": "http://localhost:3160/_next/static/chunks/4bd1b696-c023c6e3521b1417.js",
+          "total": 285.3800000000001,
+          "scripting": 200.66400000000013,
+          "scriptParseCompile": 3.216
+        }
+      ],
+      "mainthread": [
+        {
+          "group": "scriptEvaluation",
+          "groupLabel": "Script Evaluation",
+          "duration": 4389.144
+        },
+        {
+          "group": "other",
+          "groupLabel": "Other",
+          "duration": 961.5479999999991
+        },
+        {
+          "group": "styleLayout",
+          "groupLabel": "Style & Layout",
+          "duration": 931.2000000000002
+        },
+        {
+          "group": "parseHTML",
+          "groupLabel": "Parse HTML & CSS",
+          "duration": 108.81600000000003
+        },
+        {
+          "group": "scriptParseCompile",
+          "groupLabel": "Script Parsing & Compilation",
+          "duration": 90.96799999999996
+        },
+        {
+          "group": "paintCompositeRender",
+          "groupLabel": "Rendering",
+          "duration": 69.36400000000002
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "performance": 43,
+      "lcpMs": 5217.40095,
+      "lcp": "5.2 s",
+      "fcpMs": 3642.40095,
+      "fcp": "3.6 s",
+      "cls": 0,
+      "clsDisplay": "0",
+      "tbtMs": 2856.8663500000002,
+      "tbt": "2,860 ms",
+      "totalByteWeight": 737019,
+      "totalByteWeightDisplay": "Total size was 720 KiB",
+      "networkRequests": 21,
+      "jsTransferBytes": 153195,
+      "jsTransferKB": 150,
+      "bootup": [
+        {
+          "url": "http://localhost:3160/_next/static/chunks/255-38b49df12a94ee57.js",
+          "total": 3873.2880000000005,
+          "scripting": 3837.0760000000005,
+          "scriptParseCompile": 3.284
+        },
+        {
+          "url": "http://localhost:3160/",
+          "total": 1571.2759999999996,
+          "scripting": 77.18800000000002,
+          "scriptParseCompile": 98.38799999999999
+        },
+        {
+          "url": "Unattributable",
+          "total": 864.2279999999993,
+          "scripting": 6.327999999999999,
+          "scriptParseCompile": 0
+        },
+        {
+          "url": "http://localhost:3160/_next/static/chunks/4bd1b696-c023c6e3521b1417.js",
+          "total": 126.91599999999997,
+          "scripting": 24.76799999999998,
+          "scriptParseCompile": 4.18
+        }
+      ],
+      "mainthread": [
+        {
+          "group": "scriptEvaluation",
+          "groupLabel": "Script Evaluation",
+          "duration": 4037.7840000000056
+        },
+        {
+          "group": "styleLayout",
+          "groupLabel": "Style & Layout",
+          "duration": 1130.6839999999997
+        },
+        {
+          "group": "other",
+          "groupLabel": "Other",
+          "duration": 1085.7319999999993
+        },
+        {
+          "group": "parseHTML",
+          "groupLabel": "Parse HTML & CSS",
+          "duration": 128.892
+        },
+        {
+          "group": "scriptParseCompile",
+          "groupLabel": "Script Parsing & Compilation",
+          "duration": 123.50800000000001
+        },
+        {
+          "group": "paintCompositeRender",
+          "groupLabel": "Rendering",
+          "duration": 78.30800000000009
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "performance": 42,
+      "lcpMs": 5222.7411,
+      "lcp": "5.2 s",
+      "fcpMs": 3647.7411,
+      "fcp": "3.6 s",
+      "cls": 0,
+      "clsDisplay": "0",
+      "tbtMs": 3092.04315,
+      "tbt": "3,090 ms",
+      "totalByteWeight": 737019,
+      "totalByteWeightDisplay": "Total size was 720 KiB",
+      "networkRequests": 21,
+      "jsTransferBytes": 153195,
+      "jsTransferKB": 150,
+      "bootup": [
+        {
+          "url": "http://localhost:3160/_next/static/chunks/255-38b49df12a94ee57.js",
+          "total": 3779.292000000001,
+          "scripting": 3750.848000000001,
+          "scriptParseCompile": 3.42
+        },
+        {
+          "url": "http://localhost:3160/",
+          "total": 1243.0039999999997,
+          "scripting": 26.8999999999999,
+          "scriptParseCompile": 50.90399999999995
+        },
+        {
+          "url": "Unattributable",
+          "total": 887.8199999999995,
+          "scripting": 6.720000000000001,
+          "scriptParseCompile": 0
+        },
+        {
+          "url": "http://localhost:3160/_next/static/chunks/4bd1b696-c023c6e3521b1417.js",
+          "total": 127.57999999999996,
+          "scripting": 21.183999999999962,
+          "scriptParseCompile": 3.748
+        }
+      ],
+      "mainthread": [
+        {
+          "group": "scriptEvaluation",
+          "groupLabel": "Script Evaluation",
+          "duration": 3910.291999999997
+        },
+        {
+          "group": "other",
+          "groupLabel": "Other",
+          "duration": 1075.1399999999994
+        },
+        {
+          "group": "styleLayout",
+          "groupLabel": "Style & Layout",
+          "duration": 973.2559999999996
+        },
+        {
+          "group": "parseHTML",
+          "groupLabel": "Parse HTML & CSS",
+          "duration": 87.452
+        },
+        {
+          "group": "scriptParseCompile",
+          "groupLabel": "Script Parsing & Compilation",
+          "duration": 65.03599999999996
+        },
+        {
+          "group": "paintCompositeRender",
+          "groupLabel": "Rendering",
+          "duration": 63.19999999999996
+        },
+        {
+          "group": "garbageCollection",
+          "groupLabel": "Garbage Collection",
+          "duration": 6.479999999999999
+        }
+      ]
+    }
+  ],
+  "median": {
+    "performance": 43,
+    "lcpMs": 5217.40095,
+    "fcpMs": 3642.40095,
+    "tbtMs": 3092.04315,
+    "cls": 0,
+    "totalByteWeight": 737019,
+    "jsTransferKB": 150,
+    "networkRequests": 21
+  },
+  "lcpElementProbe": {
+    "entries": [
+      {
+        "startTime": 485.3000000715256,
+        "size": 5220,
+        "url": "http://localhost:3160/_next/image?url=%2Fbrand%2Flogo-horizontal-light.png&w=1920&q=75",
+        "tag": "IMG",
+        "id": null,
+        "className": "max-w-none object-contain object-left h-9 w-auto md:h-11",
+        "text": ""
+      },
+      {
+        "startTime": 683.8000000715256,
+        "size": 61942,
+        "url": "http://localhost:3160/art/sculpture-900.webp",
+        "tag": "IMG",
+        "id": null,
+        "className": "sculpt-float relative block h-full w-full select-none object-contain",
+        "text": ""
+      }
+    ],
+    "lcpElement": {
+      "startTime": 683.8000000715256,
+      "size": 61942,
+      "url": "http://localhost:3160/art/sculpture-900.webp",
+      "tag": "IMG",
+      "id": null,
+      "className": "sculpt-float relative block h-full w-full select-none object-contain",
+      "text": ""
+    }
+  }
+}

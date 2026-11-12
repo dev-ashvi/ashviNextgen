@@ -9,6 +9,10 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  // Phase 3C: do not preload Inter — sculpture LCP preload must win on slow mobile.
+  // display:swap + adjustFontFallback keep text readable with fallback metrics.
+  preload: false,
+  adjustFontFallback: true,
 });
 
 const newsreader = Newsreader({
@@ -17,6 +21,9 @@ const newsreader = Newsreader({
   display: "swap",
   axes: ["opsz"],
   style: ["normal", "italic"],
+  // Same approved family/axes; no preload (LCP is the hero image).
+  preload: false,
+  adjustFontFallback: true,
 });
 
 const jetbrains = JetBrains_Mono({
@@ -24,6 +31,8 @@ const jetbrains = JetBrains_Mono({
   variable: "--font-mono",
   display: "swap",
   weight: ["400", "500"],
+  preload: false,
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {

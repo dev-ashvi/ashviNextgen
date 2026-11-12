@@ -10,7 +10,7 @@ export function ResearchPreviewSection() {
     <section
       id="research"
       aria-labelledby="ashvi-research-title"
-      className="relative isolate scroll-mt-24 overflow-hidden bg-ink-900 text-white"
+      className="relative isolate scroll-anchor overflow-hidden bg-ink-900 text-white"
     >
       <ResearchAtmosphere />
 

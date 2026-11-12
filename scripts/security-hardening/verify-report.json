@@ -1,0 +1,178 @@
+{
+  "base": "http://127.0.0.1:3190",
+  "startedAt": "2026-11-12T15:50:39.438Z",
+  "headers": {
+    "/": {
+      "status": 200,
+      "missing": [],
+      "sample": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; media-src 'self'; manifest-src 'self'",
+        "strict-transport-security": "max-age=63072000"
+      },
+      "link": "</art/sculpture-900.webp>; rel=preload; as=image; type=image/webp"
+    },
+    "/build": {
+      "status": 200,
+      "missing": [],
+      "sample": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; media-src 'self'; manifest-src 'self'",
+        "strict-transport-security": "max-age=63072000"
+      },
+      "link": null
+    },
+    "/transform": {
+      "status": 200,
+      "missing": [],
+      "sample": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; media-src 'self'; manifest-src 'self'",
+        "strict-transport-security": "max-age=63072000"
+      },
+      "link": null
+    },
+    "/research": {
+      "status": 200,
+      "missing": [],
+      "sample": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; media-src 'self'; manifest-src 'self'",
+        "strict-transport-security": "max-age=63072000"
+      },
+      "link": null
+    },
+    "/about": {
+      "status": 200,
+      "missing": [],
+      "sample": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; media-src 'self'; manifest-src 'self'",
+        "strict-transport-security": "max-age=63072000"
+      },
+      "link": null
+    },
+    "/contact": {
+      "status": 200,
+      "missing": [],
+      "sample": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-frame-options": "DENY",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+        "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; media-src 'self'; manifest-src 'self'",
+        "strict-transport-security": "max-age=63072000"
+      },
+      "link": null
+    }
+  },
+  "pages": {
+    "/": {
+      "ok": true,
+      "title": "AshviTech — Building AI-Native Businesses",
+      "mainVisible": true,
+      "homeLink": 2,
+      "menuOpened": true
+    },
+    "/build": {
+      "ok": true,
+      "title": "Build | AshviTech",
+      "mainVisible": true,
+      "homeLink": 2,
+      "menuOpened": true
+    },
+    "/transform": {
+      "ok": true,
+      "title": "Transform | AshviTech",
+      "mainVisible": true,
+      "homeLink": 2,
+      "menuOpened": true
+    },
+    "/research": {
+      "ok": true,
+      "title": "Research | AshviTech",
+      "mainVisible": true,
+      "homeLink": 2,
+      "menuOpened": true
+    },
+    "/about": {
+      "ok": true,
+      "title": "About | AshviTech",
+      "mainVisible": true,
+      "homeLink": 2,
+      "menuOpened": true
+    },
+    "/contact": {
+      "ok": true,
+      "title": "Contact | AshviTech",
+      "mainVisible": true,
+      "homeLink": 2,
+      "menuOpened": true
+    },
+    "desktopNav": {
+      "build": 1,
+      "transform": 1,
+      "research": 1,
+      "about": 1,
+      "contact": 1
+    }
+  },
+  "contact": {
+    "apiInvalid": {
+      "status": 400,
+      "body": {
+        "ok": false,
+        "errors": {
+          "name": "Please add your name.",
+          "email": "Please add a valid email address.",
+          "message": "Please tell us a little more — a sentence or two is enough."
+        }
+      }
+    },
+    "honeypot": {
+      "status": 200,
+      "body": {
+        "ok": true
+      }
+    }
+  },
+  "interactive": {
+    "dinNear": 0,
+    "engAccordionButtons": 8,
+    "landscape": 1,
+    "connectHeading": 0,
+    "reducedMotionHiddenReveals": 0,
+    "aboutCanvas": 0
+  },
+  "consoleErrors": [
+    {
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    }
+  ],
+  "secrets": {
+    "htmlHasResendKey": false,
+    "htmlHasUpstash": false
+  },
+  "finishedAt": "2026-11-12T15:50:51.780Z",
+  "summary": {
+    "allPagesOk": true,
+    "allHeadersPresent": true,
+    "consoleErrorCount": 1
+  }
+}

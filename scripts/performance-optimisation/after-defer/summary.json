@@ -1,0 +1,277 @@
+{
+  "label": "after-defer",
+  "base": "http://localhost:3160",
+  "formFactor": "mobile",
+  "viewport": "390x844",
+  "throttling": "Lighthouse default mobile (simulated slow 4G + 4x CPU)",
+  "lighthouse": "12.2.1",
+  "runs": [
+    {
+      "run": 1,
+      "performance": 65,
+      "lcpMs": 4963.18525,
+      "lcp": "5.0 s",
+      "fcpMs": 3654.18525,
+      "fcp": "3.7 s",
+      "cls": 0.0009989928744527316,
+      "clsDisplay": "0.001",
+      "tbtMs": 362,
+      "tbt": "360 ms",
+      "totalByteWeight": 710751,
+      "totalByteWeightDisplay": "Total size was 694 KiB",
+      "networkRequests": 19,
+      "jsTransferBytes": 129990,
+      "jsTransferKB": 127,
+      "bootup": [
+        {
+          "url": "Unattributable",
+          "total": 1928.115999999998,
+          "scripting": 7.084,
+          "scriptParseCompile": 0
+        },
+        {
+          "url": "http://localhost:3160/",
+          "total": 1575.9280000000008,
+          "scripting": 127.08000000000014,
+          "scriptParseCompile": 116.57199999999999
+        },
+        {
+          "url": "http://localhost:3160/_next/static/chunks/255-38b49df12a94ee57.js",
+          "total": 663.6640000000009,
+          "scripting": 645.5160000000009,
+          "scriptParseCompile": 4.644
+        },
+        {
+          "url": "http://localhost:3160/_next/static/chunks/4bd1b696-c023c6e3521b1417.js",
+          "total": 119.4639999999999,
+          "scripting": 24.819999999999947,
+          "scriptParseCompile": 2.904
+        }
+      ],
+      "mainthread": [
+        {
+          "group": "other",
+          "groupLabel": "Other",
+          "duration": 2149.8840000000014
+        },
+        {
+          "group": "styleLayout",
+          "groupLabel": "Style & Layout",
+          "duration": 1070.9920000000006
+        },
+        {
+          "group": "scriptEvaluation",
+          "groupLabel": "Script Evaluation",
+          "duration": 858.5680000000006
+        },
+        {
+          "group": "parseHTML",
+          "groupLabel": "Parse HTML & CSS",
+          "duration": 134.38799999999998
+        },
+        {
+          "group": "scriptParseCompile",
+          "groupLabel": "Script Parsing & Compilation",
+          "duration": 129.34400000000002
+        },
+        {
+          "group": "paintCompositeRender",
+          "groupLabel": "Rendering",
+          "duration": 47.263999999999896
+        },
+        {
+          "group": "garbageCollection",
+          "groupLabel": "Garbage Collection",
+          "duration": 5.147999999999999
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "performance": 66,
+      "lcpMs": 4856.3769,
+      "lcp": "4.9 s",
+      "fcpMs": 3656.3769,
+      "fcp": "3.7 s",
+      "cls": 0.0009989928744527316,
+      "clsDisplay": "0.001",
+      "tbtMs": 328.10384999999997,
+      "tbt": "330 ms",
+      "totalByteWeight": 710749,
+      "totalByteWeightDisplay": "Total size was 694 KiB",
+      "networkRequests": 19,
+      "jsTransferBytes": 129990,
+      "jsTransferKB": 127,
+      "bootup": [
+        {
+          "url": "Unattributable",
+          "total": 1927.7719999999981,
+          "scripting": 7.324000000000001,
+          "scriptParseCompile": 0
+        },
+        {
+          "url": "http://localhost:3160/",
+          "total": 1363.7719999999995,
+          "scripting": 28.315999999999896,
+          "scriptParseCompile": 65.02799999999999
+        },
+        {
+          "url": "http://localhost:3160/_next/static/chunks/255-38b49df12a94ee57.js",
+          "total": 591.864000000001,
+          "scripting": 567.244000000001,
+          "scriptParseCompile": 2.888
+        },
+        {
+          "url": "http://localhost:3160/_next/static/chunks/4bd1b696-c023c6e3521b1417.js",
+          "total": 99.19599999999997,
+          "scripting": 26.72399999999998,
+          "scriptParseCompile": 3.56
+        }
+      ],
+      "mainthread": [
+        {
+          "group": "other",
+          "groupLabel": "Other",
+          "duration": 2144.2879999999946
+        },
+        {
+          "group": "styleLayout",
+          "groupLabel": "Style & Layout",
+          "duration": 1062.7479999999996
+        },
+        {
+          "group": "scriptEvaluation",
+          "groupLabel": "Script Evaluation",
+          "duration": 690.067999999999
+        },
+        {
+          "group": "parseHTML",
+          "groupLabel": "Parse HTML & CSS",
+          "duration": 93.564
+        },
+        {
+          "group": "scriptParseCompile",
+          "groupLabel": "Script Parsing & Compilation",
+          "duration": 88.944
+        },
+        {
+          "group": "paintCompositeRender",
+          "groupLabel": "Rendering",
+          "duration": 50.41599999999997
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "performance": 67,
+      "lcpMs": 4919.16735,
+      "lcp": "4.9 s",
+      "fcpMs": 3644.1673499999997,
+      "fcp": "3.6 s",
+      "cls": 0.0009989928744527316,
+      "clsDisplay": "0.001",
+      "tbtMs": 297.6387749999999,
+      "tbt": "300 ms",
+      "totalByteWeight": 710749,
+      "totalByteWeightDisplay": "Total size was 694 KiB",
+      "networkRequests": 19,
+      "jsTransferBytes": 129990,
+      "jsTransferKB": 127,
+      "bootup": [
+        {
+          "url": "Unattributable",
+          "total": 1390.5239999999983,
+          "scripting": 6.64,
+          "scriptParseCompile": 0
+        },
+        {
+          "url": "http://localhost:3160/",
+          "total": 1249.1599999999999,
+          "scripting": 25.659999999999943,
+          "scriptParseCompile": 57.095999999999975
+        },
+        {
+          "url": "http://localhost:3160/_next/static/chunks/255-38b49df12a94ee57.js",
+          "total": 525.6160000000025,
+          "scripting": 499.8960000000025,
+          "scriptParseCompile": 3.1
+        },
+        {
+          "url": "http://localhost:3160/_next/static/chunks/4bd1b696-c023c6e3521b1417.js",
+          "total": 88.36799999999992,
+          "scripting": 21.347999999999956,
+          "scriptParseCompile": 3.504
+        }
+      ],
+      "mainthread": [
+        {
+          "group": "other",
+          "groupLabel": "Other",
+          "duration": 1569.6439999999984
+        },
+        {
+          "group": "styleLayout",
+          "groupLabel": "Style & Layout",
+          "duration": 964.468
+        },
+        {
+          "group": "scriptEvaluation",
+          "groupLabel": "Script Evaluation",
+          "duration": 614.920000000001
+        },
+        {
+          "group": "parseHTML",
+          "groupLabel": "Parse HTML & CSS",
+          "duration": 72.008
+        },
+        {
+          "group": "scriptParseCompile",
+          "groupLabel": "Script Parsing & Compilation",
+          "duration": 69.00399999999999
+        },
+        {
+          "group": "paintCompositeRender",
+          "groupLabel": "Rendering",
+          "duration": 56.5399999999999
+        },
+        {
+          "group": "garbageCollection",
+          "groupLabel": "Garbage Collection",
+          "duration": 5.411999999999998
+        }
+      ]
+    }
+  ],
+  "median": {
+    "performance": 66,
+    "lcpMs": 4919.16735,
+    "fcpMs": 3654.18525,
+    "tbtMs": 328.10384999999997,
+    "cls": 0.0009989928744527316,
+    "totalByteWeight": 710749,
+    "jsTransferKB": 127,
+    "networkRequests": 19
+  },
+  "lcpElementProbe": {
+    "entries": [
+      {
+        "startTime": 467.39999997615814,
+        "size": 61654,
+        "url": "http://localhost:3160/art/sculpture-900.webp",
+        "tag": "IMG",
+        "id": null,
+        "className": "sculpt-float relative block h-full w-full select-none object-contain",
+        "text": ""
+      }
+    ],
+    "lcpElement": {
+      "startTime": 467.39999997615814,
+      "size": 61654,
+      "url": "http://localhost:3160/art/sculpture-900.webp",
+      "tag": "IMG",
+      "id": null,
+      "className": "sculpt-float relative block h-full w-full select-none object-contain",
+      "text": ""
+    }
+  }
+}

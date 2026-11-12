@@ -10,7 +10,7 @@ export function AboutInvitation() {
   return (
     <section
       aria-labelledby="about-invitation-title"
-      className="relative scroll-mt-24 overflow-hidden bg-ink-900 text-[color:var(--dark-text)]"
+      className="relative scroll-anchor overflow-hidden bg-ink-900 text-[color:var(--dark-text)]"
     >
       <div
         aria-hidden

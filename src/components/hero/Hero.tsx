@@ -14,6 +14,11 @@ export function Hero() {
       aria-labelledby="hero-title"
       className="relative isolate overflow-x-clip bg-paper"
     >
+      {/*
+        Single-URL preload (no imageSrcSet): Chrome was assigning Low priority to the
+        responsive preload, while fonts stayed VeryHigh and delayed LCP paint.
+      */}
+      <link rel="preload" as="image" type="image/webp" href="/art/sculpture-900.webp" />
       <HeroAtmosphere />
 
       <div

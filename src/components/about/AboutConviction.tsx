@@ -8,7 +8,7 @@ export function AboutConviction() {
   return (
     <section
       aria-labelledby="about-conviction-title"
-      className="relative scroll-mt-24 overflow-x-clip border-b border-paper-line bg-paper"
+      className="relative scroll-anchor overflow-x-clip border-b border-paper-line bg-paper"
     >
       <div className="shell relative pb-12 pt-28 md:pb-14 md:pt-32 lg:pb-16 lg:pt-36">
         <Watermark />

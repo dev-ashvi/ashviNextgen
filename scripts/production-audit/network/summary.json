@@ -1,0 +1,710 @@
+[
+  {
+    "page": "/",
+    "viewport": "mobile",
+    "status": 200,
+    "requestCount": 20,
+    "totalKB": 1435,
+    "jsKB": 464,
+    "imageKB": 64,
+    "largest": [
+      {
+        "kb": 416,
+        "type": "document",
+        "status": 200,
+        "url": "/"
+      },
+      {
+        "kb": 169,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/4bd1b696-c023c6e3521b1417.js"
+      },
+      {
+        "kb": 168,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/255-38b49df12a94ee57.js"
+      },
+      {
+        "kb": 144,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/8edf6d3506a17285-s.p.woff2"
+      },
+      {
+        "kb": 133,
+        "type": "stylesheet",
+        "status": 200,
+        "url": "/_next/static/css/3c4ab93dd9bb6152.css"
+      },
+      {
+        "kb": 129,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/84adbee2f2a7cb50-s.p.woff2"
+      },
+      {
+        "kb": 58,
+        "type": "image",
+        "status": 200,
+        "url": "/art/sculpture-900.webp"
+      },
+      {
+        "kb": 47,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/e4af272ccee01ff0-s.p.woff2"
+      }
+    ]
+  },
+  {
+    "page": "/build",
+    "viewport": "mobile",
+    "status": 200,
+    "requestCount": 22,
+    "totalKB": 1868,
+    "jsKB": 435,
+    "imageKB": 100,
+    "largest": [
+      {
+        "kb": 797,
+        "type": "document",
+        "status": 200,
+        "url": "/build"
+      },
+      {
+        "kb": 188,
+        "type": "fetch",
+        "status": 200,
+        "url": "/?_rsc=j4g18"
+      },
+      {
+        "kb": 169,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/4bd1b696-c023c6e3521b1417.js"
+      },
+      {
+        "kb": 168,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/255-38b49df12a94ee57.js"
+      },
+      {
+        "kb": 133,
+        "type": "stylesheet",
+        "status": 200,
+        "url": "/_next/static/css/3c4ab93dd9bb6152.css"
+      },
+      {
+        "kb": 129,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/84adbee2f2a7cb50-s.p.woff2"
+      },
+      {
+        "kb": 47,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/e4af272ccee01ff0-s.p.woff2"
+      },
+      {
+        "kb": 46,
+        "type": "image",
+        "status": 200,
+        "url": "/companies/wyz-revenue-margin.webp"
+      }
+    ]
+  },
+  {
+    "page": "/transform",
+    "viewport": "mobile",
+    "status": 200,
+    "requestCount": 18,
+    "totalKB": 1114,
+    "jsKB": 422,
+    "imageKB": 40,
+    "largest": [
+      {
+        "kb": 188,
+        "type": "fetch",
+        "status": 200,
+        "url": "/?_rsc=g2vh5"
+      },
+      {
+        "kb": 169,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/4bd1b696-c023c6e3521b1417.js"
+      },
+      {
+        "kb": 168,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/255-38b49df12a94ee57.js"
+      },
+      {
+        "kb": 133,
+        "type": "stylesheet",
+        "status": 200,
+        "url": "/_next/static/css/3c4ab93dd9bb6152.css"
+      },
+      {
+        "kb": 129,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/84adbee2f2a7cb50-s.p.woff2"
+      },
+      {
+        "kb": 117,
+        "type": "document",
+        "status": 200,
+        "url": "/transform"
+      },
+      {
+        "kb": 47,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/e4af272ccee01ff0-s.p.woff2"
+      },
+      {
+        "kb": 33,
+        "type": "image",
+        "status": 200,
+        "url": "/transform/hero-sculpture-reference.webp"
+      }
+    ]
+  },
+  {
+    "page": "/research",
+    "viewport": "mobile",
+    "status": 200,
+    "requestCount": 18,
+    "totalKB": 1559,
+    "jsKB": 423,
+    "imageKB": 6,
+    "largest": [
+      {
+        "kb": 594,
+        "type": "document",
+        "status": 200,
+        "url": "/research"
+      },
+      {
+        "kb": 188,
+        "type": "fetch",
+        "status": 200,
+        "url": "/?_rsc=yefiq"
+      },
+      {
+        "kb": 169,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/4bd1b696-c023c6e3521b1417.js"
+      },
+      {
+        "kb": 168,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/255-38b49df12a94ee57.js"
+      },
+      {
+        "kb": 133,
+        "type": "stylesheet",
+        "status": 200,
+        "url": "/_next/static/css/3c4ab93dd9bb6152.css"
+      },
+      {
+        "kb": 129,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/84adbee2f2a7cb50-s.p.woff2"
+      },
+      {
+        "kb": 47,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/e4af272ccee01ff0-s.p.woff2"
+      },
+      {
+        "kb": 31,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/558ca1a6aa3cb55e-s.p.woff2"
+      }
+    ]
+  },
+  {
+    "page": "/about",
+    "viewport": "mobile",
+    "status": 200,
+    "requestCount": 19,
+    "totalKB": 1086,
+    "jsKB": 431,
+    "imageKB": 59,
+    "largest": [
+      {
+        "kb": 188,
+        "type": "fetch",
+        "status": 200,
+        "url": "/?_rsc=19od4"
+      },
+      {
+        "kb": 169,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/4bd1b696-c023c6e3521b1417.js"
+      },
+      {
+        "kb": 168,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/255-38b49df12a94ee57.js"
+      },
+      {
+        "kb": 133,
+        "type": "stylesheet",
+        "status": 200,
+        "url": "/_next/static/css/3c4ab93dd9bb6152.css"
+      },
+      {
+        "kb": 129,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/84adbee2f2a7cb50-s.p.woff2"
+      },
+      {
+        "kb": 61,
+        "type": "document",
+        "status": 200,
+        "url": "/about"
+      },
+      {
+        "kb": 53,
+        "type": "image",
+        "status": 200,
+        "url": "/brand/ashvi-mark-watermark-640.webp"
+      },
+      {
+        "kb": 47,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/e4af272ccee01ff0-s.p.woff2"
+      }
+    ]
+  },
+  {
+    "page": "/contact",
+    "viewport": "mobile",
+    "status": 500,
+    "requestCount": 8,
+    "totalKB": 140,
+    "jsKB": 138,
+    "imageKB": 0,
+    "largest": [
+      {
+        "kb": 138,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/webpack.js"
+      },
+      {
+        "kb": 2,
+        "type": "document",
+        "status": 500,
+        "url": "/contact"
+      },
+      {
+        "kb": 0,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/development/_buildManifest.js"
+      },
+      {
+        "kb": 0,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/development/_ssgManifest.js"
+      },
+      {
+        "kb": 0,
+        "type": "script",
+        "status": 404,
+        "url": "/_next/static/chunks/main.js"
+      },
+      {
+        "kb": 0,
+        "type": "script",
+        "status": 404,
+        "url": "/_next/static/chunks/react-refresh.js"
+      },
+      {
+        "kb": 0,
+        "type": "script",
+        "status": 404,
+        "url": "/_next/static/chunks/pages/_app.js"
+      },
+      {
+        "kb": 0,
+        "type": "script",
+        "status": 404,
+        "url": "/_next/static/chunks/pages/_error.js"
+      }
+    ]
+  },
+  {
+    "page": "/",
+    "viewport": "desktop",
+    "status": 200,
+    "requestCount": 27,
+    "totalKB": 1800,
+    "jsKB": 473,
+    "imageKB": 100,
+    "largest": [
+      {
+        "kb": 416,
+        "type": "document",
+        "status": 200,
+        "url": "/"
+      },
+      {
+        "kb": 291,
+        "type": "fetch",
+        "status": 200,
+        "url": "/research?_rsc=3lb4g"
+      },
+      {
+        "kb": 169,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/4bd1b696-c023c6e3521b1417.js"
+      },
+      {
+        "kb": 168,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/255-38b49df12a94ee57.js"
+      },
+      {
+        "kb": 144,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/8edf6d3506a17285-s.p.woff2"
+      },
+      {
+        "kb": 133,
+        "type": "stylesheet",
+        "status": 200,
+        "url": "/_next/static/css/3c4ab93dd9bb6152.css"
+      },
+      {
+        "kb": 129,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/84adbee2f2a7cb50-s.p.woff2"
+      },
+      {
+        "kb": 58,
+        "type": "image",
+        "status": 200,
+        "url": "/art/sculpture-900.webp"
+      }
+    ]
+  },
+  {
+    "page": "/build",
+    "viewport": "desktop",
+    "status": 200,
+    "requestCount": 27,
+    "totalKB": 2199,
+    "jsKB": 444,
+    "imageKB": 103,
+    "largest": [
+      {
+        "kb": 797,
+        "type": "document",
+        "status": 200,
+        "url": "/build"
+      },
+      {
+        "kb": 291,
+        "type": "fetch",
+        "status": 200,
+        "url": "/research?_rsc=j4g18"
+      },
+      {
+        "kb": 188,
+        "type": "fetch",
+        "status": 200,
+        "url": "/?_rsc=j4g18"
+      },
+      {
+        "kb": 169,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/4bd1b696-c023c6e3521b1417.js"
+      },
+      {
+        "kb": 168,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/255-38b49df12a94ee57.js"
+      },
+      {
+        "kb": 133,
+        "type": "stylesheet",
+        "status": 200,
+        "url": "/_next/static/css/3c4ab93dd9bb6152.css"
+      },
+      {
+        "kb": 129,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/84adbee2f2a7cb50-s.p.woff2"
+      },
+      {
+        "kb": 47,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/e4af272ccee01ff0-s.p.woff2"
+      }
+    ]
+  },
+  {
+    "page": "/transform",
+    "viewport": "desktop",
+    "status": 200,
+    "requestCount": 24,
+    "totalKB": 1446,
+    "jsKB": 431,
+    "imageKB": 42,
+    "largest": [
+      {
+        "kb": 291,
+        "type": "fetch",
+        "status": 200,
+        "url": "/research?_rsc=g2vh5"
+      },
+      {
+        "kb": 188,
+        "type": "fetch",
+        "status": 200,
+        "url": "/?_rsc=g2vh5"
+      },
+      {
+        "kb": 169,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/4bd1b696-c023c6e3521b1417.js"
+      },
+      {
+        "kb": 168,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/255-38b49df12a94ee57.js"
+      },
+      {
+        "kb": 133,
+        "type": "stylesheet",
+        "status": 200,
+        "url": "/_next/static/css/3c4ab93dd9bb6152.css"
+      },
+      {
+        "kb": 129,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/84adbee2f2a7cb50-s.p.woff2"
+      },
+      {
+        "kb": 117,
+        "type": "document",
+        "status": 200,
+        "url": "/transform"
+      },
+      {
+        "kb": 47,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/e4af272ccee01ff0-s.p.woff2"
+      }
+    ]
+  },
+  {
+    "page": "/research",
+    "viewport": "desktop",
+    "status": 200,
+    "requestCount": 22,
+    "totalKB": 1599,
+    "jsKB": 431,
+    "imageKB": 9,
+    "largest": [
+      {
+        "kb": 594,
+        "type": "document",
+        "status": 200,
+        "url": "/research"
+      },
+      {
+        "kb": 188,
+        "type": "fetch",
+        "status": 200,
+        "url": "/?_rsc=yefiq"
+      },
+      {
+        "kb": 169,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/4bd1b696-c023c6e3521b1417.js"
+      },
+      {
+        "kb": 168,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/255-38b49df12a94ee57.js"
+      },
+      {
+        "kb": 133,
+        "type": "stylesheet",
+        "status": 200,
+        "url": "/_next/static/css/3c4ab93dd9bb6152.css"
+      },
+      {
+        "kb": 129,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/84adbee2f2a7cb50-s.p.woff2"
+      },
+      {
+        "kb": 47,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/e4af272ccee01ff0-s.p.woff2"
+      },
+      {
+        "kb": 31,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/558ca1a6aa3cb55e-s.p.woff2"
+      }
+    ]
+  },
+  {
+    "page": "/about",
+    "viewport": "desktop",
+    "status": 200,
+    "requestCount": 23,
+    "totalKB": 1381,
+    "jsKB": 431,
+    "imageKB": 62,
+    "largest": [
+      {
+        "kb": 291,
+        "type": "fetch",
+        "status": 200,
+        "url": "/research?_rsc=19od4"
+      },
+      {
+        "kb": 188,
+        "type": "fetch",
+        "status": 200,
+        "url": "/?_rsc=19od4"
+      },
+      {
+        "kb": 169,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/4bd1b696-c023c6e3521b1417.js"
+      },
+      {
+        "kb": 168,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/255-38b49df12a94ee57.js"
+      },
+      {
+        "kb": 133,
+        "type": "stylesheet",
+        "status": 200,
+        "url": "/_next/static/css/3c4ab93dd9bb6152.css"
+      },
+      {
+        "kb": 129,
+        "type": "font",
+        "status": 200,
+        "url": "/_next/static/media/84adbee2f2a7cb50-s.p.woff2"
+      },
+      {
+        "kb": 61,
+        "type": "document",
+        "status": 200,
+        "url": "/about"
+      },
+      {
+        "kb": 53,
+        "type": "image",
+        "status": 200,
+        "url": "/brand/ashvi-mark-watermark-640.webp"
+      }
+    ]
+  },
+  {
+    "page": "/contact",
+    "viewport": "desktop",
+    "status": 500,
+    "requestCount": 8,
+    "totalKB": 140,
+    "jsKB": 138,
+    "imageKB": 0,
+    "largest": [
+      {
+        "kb": 138,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/chunks/webpack.js"
+      },
+      {
+        "kb": 2,
+        "type": "document",
+        "status": 500,
+        "url": "/contact"
+      },
+      {
+        "kb": 0,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/development/_buildManifest.js"
+      },
+      {
+        "kb": 0,
+        "type": "script",
+        "status": 200,
+        "url": "/_next/static/development/_ssgManifest.js"
+      },
+      {
+        "kb": 0,
+        "type": "script",
+        "status": 404,
+        "url": "/_next/static/chunks/main.js"
+      },
+      {
+        "kb": 0,
+        "type": "script",
+        "status": 404,
+        "url": "/_next/static/chunks/react-refresh.js"
+      },
+      {
+        "kb": 0,
+        "type": "script",
+        "status": 404,
+        "url": "/_next/static/chunks/pages/_app.js"
+      },
+      {
+        "kb": 0,
+        "type": "script",
+        "status": 404,
+        "url": "/_next/static/chunks/pages/_error.js"
+      }
+    ]
+  }
+]

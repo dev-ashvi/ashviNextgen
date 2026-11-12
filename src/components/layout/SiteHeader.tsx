@@ -186,7 +186,7 @@ export function SiteHeader() {
           solidLight
             ? "border-b border-ink/[0.06] bg-[#F8F9FD]"
             : scrolled || open
-              ? "border-b border-ink/[0.06] bg-paper/80 backdrop-blur-xl"
+              ? "border-b border-ink/[0.06] bg-paper backdrop-blur-xl"
               : "border-b border-transparent bg-transparent",
         )}
       >
@@ -196,7 +196,8 @@ export function SiteHeader() {
         >
           <Logo
             variant="horizontal-light"
-            priority
+            // Avoid competing with homepage hero LCP preload (logo is tiny; eager still fine).
+            priority={false}
             className="h-9 w-auto md:h-11"
           />
 

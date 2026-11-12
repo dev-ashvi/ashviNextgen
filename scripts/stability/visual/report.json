@@ -1,0 +1,56 @@
+{
+  "base": "http://localhost:3180",
+  "checks": [
+    {
+      "name": "hero-visible",
+      "ok": true,
+      "detail": {
+        "sculpture": true
+      }
+    },
+    {
+      "name": "din-mounts-on-scroll",
+      "ok": true,
+      "detail": {
+        "beliefVisualNodes": 1
+      }
+    },
+    {
+      "name": "engineering-philosophy",
+      "ok": true,
+      "detail": {
+        "accordion": true
+      }
+    },
+    {
+      "name": "research-landscape",
+      "ok": true,
+      "detail": {
+        "count": 1,
+        "height": 141.859375
+      }
+    },
+    {
+      "name": "connect-globe-area",
+      "ok": true,
+      "detail": {
+        "headingVisible": true
+      }
+    },
+    {
+      "name": "reduced-motion-reveals",
+      "ok": true,
+      "detail": {
+        "hidden": 0
+      }
+    },
+    {
+      "name": "content-visibility-text-accessible",
+      "ok": true,
+      "detail": {
+        "researchHasAshvi": true,
+        "connectHasBuild": true
+      }
+    }
+  ]
+}

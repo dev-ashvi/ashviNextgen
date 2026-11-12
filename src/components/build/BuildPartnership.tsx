@@ -125,7 +125,7 @@ export function BuildPartnership() {
       id="how-we-build-together"
       aria-labelledby="build-partnership-title"
       data-state={state}
-      className="group/bp relative isolate scroll-mt-24 overflow-hidden bg-[#021336] text-white"
+      className="group/bp relative isolate scroll-anchor overflow-hidden bg-[#021336] text-white"
     >
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_30%_55%_at_18%_58%,rgba(0,56,118,0.45)_0%,transparent_72%)]" />

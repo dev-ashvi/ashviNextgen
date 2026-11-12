@@ -1,16 +1,23 @@
 "use client";
 
-import dynamic from "next/dynamic";
+import { HomeNearViewport } from "@/components/home/HomeNearViewport";
 
-const ConnectGlobeStage = dynamic(
-  () =>
-    import("@/components/home/ConnectGlobeStage").then(
-      (m) => m.ConnectGlobeStage,
-    ),
-  { ssr: false, loading: () => null },
-);
+function loadGlobe() {
+  return import("@/components/home/ConnectGlobeStage").then((m) => ({
+    default: m.ConnectGlobeStage,
+  }));
+}
 
-/** Client boundary so next/dynamic({ ssr: false }) is valid. */
+/**
+ * Client boundary: COBE/motion only download when the Connect panel nears the viewport.
+ * Fallback keeps the navy panel atmosphere (parent) — no blank content flash.
+ */
 export function ConnectGlobeLazy() {
-  return <ConnectGlobeStage />;
+  return (
+    <HomeNearViewport
+      rootMargin="240px 0px"
+      load={loadGlobe}
+      fallback={null}
+    />
+  );
 }

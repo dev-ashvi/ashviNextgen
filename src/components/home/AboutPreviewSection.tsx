@@ -9,7 +9,7 @@ export function AboutPreviewSection() {
     <section
       id="about"
       aria-labelledby="about-ashvi-title"
-      className="relative scroll-mt-24 overflow-x-clip bg-paper text-ink-900"
+      className="relative scroll-anchor overflow-x-clip bg-paper text-ink-900"
     >
       <div className="shell py-16 md:py-20 lg:py-24">
         <div className="relative overflow-x-clip">

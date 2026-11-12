@@ -8,7 +8,7 @@ export function AboutOpportunity() {
   return (
     <section
       aria-labelledby="about-opportunity-title"
-      className="scroll-mt-24 bg-ashvi-white"
+      className="scroll-anchor bg-ashvi-white"
     >
       <div className="shell py-12 md:py-14 lg:py-16">
         <AnimatedReveal className="max-w-[40rem]">

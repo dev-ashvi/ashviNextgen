@@ -74,7 +74,7 @@ function BuildHero() {
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-[radial-gradient(ellipse_36%_70%_at_70%_100%,rgba(0,205,184,0.10)_0%,transparent_70%)]" />
       </div>
 
-      <Shell className="grid items-center gap-y-16 pb-14 pt-14 sm:pt-16 lg:grid-cols-[0.86fr_1.14fr] lg:gap-x-4 lg:pb-16 lg:pt-16">
+      <Shell className="grid items-center gap-y-8 pb-14 pt-14 sm:gap-y-10 sm:pt-16 lg:grid-cols-[0.86fr_1.14fr] lg:gap-x-4 lg:gap-y-16 lg:pb-16 lg:pt-16">
         <div className="relative z-10 max-w-[38rem]">
           <Eyebrow tone="dark">AshviTech / Build</Eyebrow>
           <h1 id="build-hero-title" className={`${serif} mt-6 whitespace-nowrap text-[clamp(2.4rem,4.6vw,4.1rem)] leading-[1.04]`}>
@@ -101,7 +101,7 @@ function BuildHero() {
         </div>
 
         {/* the sculpture is its own component and can be replaced independently */}
-        <BuildHeroVisual className="mx-auto mb-10 mt-14 w-full max-w-[760px] lg:-mr-[4%] lg:mb-6 lg:mt-14" />
+        <BuildHeroVisual className="mx-auto mb-8 mt-2 w-full max-w-[760px] sm:mt-4 lg:-mr-[4%] lg:mb-6 lg:mt-14" />
       </Shell>
     </section>
   )
@@ -254,8 +254,8 @@ function BuildJourney() {
           A structured path from an insight to a business.
         </h2>
 
-        {/* desktop / tablet */}
-        <div className="relative mt-16 hidden md:block">
+        {/* Desktop (≥1024): approved five-column path. Tablet keeps the vertical stack. */}
+        <div className="relative mt-16 hidden lg:block">
           <JourneyConnector />
           {/* mid-path nodes, tinted along the blue→teal progression */}
           {[200, 400, 600, 800].map((x, k) => (
@@ -286,8 +286,8 @@ function BuildJourney() {
           </ol>
         </div>
 
-        {/* mobile: vertical connected timeline with the same colour progression */}
-        <ol className="mt-12 md:hidden">
+        {/* Mobile + tablet portrait: vertical connected timeline */}
+        <ol className="mt-12 lg:hidden">
           {STAGES.map((s, i) => (
             <li key={s.d} className="relative flex gap-5 pb-9 last:pb-0">
               {i < STAGES.length - 1 && (
@@ -365,7 +365,7 @@ function BuildWyzShowcase() {
               <img src={WYZ_SCREEN} alt="WYZ Finance product interface: Revenue and Margin workspace" className="block h-auto w-full rounded-[6px]" />
             </div>
             <div className="mx-[-5%] h-[10px] rounded-b-[10px] bg-[linear-gradient(180deg,#C9CED8,#9AA1AE)]" aria-hidden="true" />
-            <figcaption className="mt-3 text-center font-mono text-[10.5px] uppercase tracking-[0.14em] text-[#021336]/55">
+            <figcaption className="mt-3 text-center font-mono text-[10.5px] uppercase tracking-[0.14em] text-[#021336]/60">
               Product interface · Illustrative demo data
             </figcaption>
           </figure>

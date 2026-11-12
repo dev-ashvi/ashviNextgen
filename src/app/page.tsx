@@ -2,7 +2,7 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { BeliefSection } from "@/components/home/BeliefSection";
 import { BuildTransformSection } from "@/components/home/BuildTransformSection";
 import { FeaturedWorkSection } from "@/components/home/FeaturedWorkSection";
-import { EngineeringPhilosophySection } from "@/components/home/EngineeringPhilosophySection";
+import { EngineeringPhilosophyDeferred } from "@/components/home/EngineeringPhilosophyDeferred";
 import { FutureVisionSection } from "@/components/home/FutureVisionSection";
 import { ResearchPreviewSection } from "@/components/home/ResearchPreviewSection";
 import { AboutPreviewSection } from "@/components/home/AboutPreviewSection";
@@ -15,7 +15,7 @@ export default function HomePage() {
       <BeliefSection />
       <BuildTransformSection />
       <FeaturedWorkSection />
-      <EngineeringPhilosophySection />
+      <EngineeringPhilosophyDeferred />
       <FutureVisionSection />
       <ResearchPreviewSection />
       <AboutPreviewSection />

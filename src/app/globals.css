@@ -62,9 +62,19 @@
   --dark-border: rgba(255, 255, 255, 0.1);
 }
 
+:root {
+  /* Fixed header is 84px; keep ~24px air so hash targets clear the bar. */
+  --site-header-scroll-margin: calc(84px + 1.5rem);
+}
+
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
+  scroll-padding-top: var(--site-header-scroll-margin);
+}
+
+/* Shared scroll-margin for in-page / cross-route hash destinations. */
+.scroll-anchor {
+  scroll-margin-top: var(--site-header-scroll-margin);
 }
 
 /*
@@ -134,18 +144,19 @@ body {
   }
 }
 
-/* —— Approved Claude hero motion —— */
+/* —— Approved Claude hero motion ——
+ * Transform-only entrance: opacity:0 delayed LCP for the hero sculpture under
+ * mobile CPU/network throttling (Phase 3B). Motion concept + duration preserved.
+ */
 .hero-in {
   animation: hero-in 1100ms cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-delay: var(--d, 0ms);
 }
 @keyframes hero-in {
   from {
-    opacity: 0;
     transform: translateY(14px);
   }
   to {
-    opacity: 1;
     transform: none;
   }
 }
@@ -254,6 +265,17 @@ body {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+/*
+ * Phase 3C: skip layout/paint for far below-fold homepage bands until near view.
+ * Intrinsic size approximates typical section height to limit CLS.
+ */
+#future-vision,
+#research,
+#connect {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
 }
 
 /* ~44px minimum hit area for text links / controls; keep type scale unchanged. */

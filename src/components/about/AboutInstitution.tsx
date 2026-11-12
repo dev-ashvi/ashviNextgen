@@ -10,13 +10,13 @@ export function AboutInstitution() {
   return (
     <section
       aria-labelledby="about-institution-title"
-      className="relative scroll-mt-24 overflow-hidden bg-ink-900 text-[color:var(--dark-text)]"
+      className="relative scroll-anchor overflow-hidden bg-ink-900 text-[color:var(--dark-text)]"
     >
       <InstitutionAtmosphere />
       {/* Experimental WebGL layer — SVG connectors retained pending review */}
       <InstitutionFlowShaderHost />
 
-      <div className="shell relative z-10 py-14 md:py-16 lg:py-20">
+      <div className="shell relative z-10 py-12 md:py-16 lg:py-20">
         <AnimatedReveal className="mx-auto max-w-[40rem] text-center">
           <p className="label flex items-center justify-center gap-2.5 text-white/65">
             <span
@@ -37,7 +37,7 @@ export function AboutInstitution() {
           </p>
         </AnimatedReveal>
 
-        <div className="relative mt-10 md:mt-11 lg:mt-12">
+        <div className="relative mt-8 md:mt-11 lg:mt-12">
           <div className="relative z-10 grid items-stretch gap-0 lg:grid-cols-[1fr_minmax(4.5rem,5.5rem)_1fr]">
             <PursuitField
               title="Build"
@@ -60,7 +60,7 @@ export function AboutInstitution() {
           </div>
         </div>
 
-        <AnimatedReveal delay={0.12} className="mt-7 md:mt-8">
+        <AnimatedReveal delay={0.12} className="mt-6 md:mt-8">
           <p className="flex items-center justify-center gap-4 text-center font-mono text-[11px] uppercase tracking-[0.18em] text-tide">
             <span aria-hidden className="hidden h-px w-10 bg-tide/55 sm:block" />
             Connected by a shared engineering foundation
@@ -70,7 +70,7 @@ export function AboutInstitution() {
 
         <AnimatedReveal
           delay={0.14}
-          className="mx-auto mt-7 max-w-[40rem] space-y-3.5 text-[15.5px] leading-[1.7] text-white/65 md:mt-8 md:space-y-4 md:text-[16px]"
+          className="mx-auto mt-6 max-w-[40rem] space-y-3.5 text-[15.5px] leading-[1.7] text-white/65 md:mt-8 md:space-y-4 md:text-[16px]"
         >
           <p>
             We want to develop an institution where the discipline of building

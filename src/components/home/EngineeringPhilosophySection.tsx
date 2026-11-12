@@ -5,38 +5,7 @@ import { SectionContainer } from "@/components/ui/SectionContainer";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { cn } from "@/lib/utils";
 
-const PRINCIPLES = [
-  {
-    id: "01",
-    title: "Understand the Work",
-    body: "We study how a business actually operates—its processes, challenges, decisions and the expertise behind them.",
-  },
-  {
-    id: "02",
-    title: "Design for Impact",
-    body: "We define the outcomes that matter, then design intelligent systems around measurable business value.",
-  },
-  {
-    id: "03",
-    title: "Engineer for Reality",
-    body: "We build reliable systems that work beyond demonstrations—with robust architecture, data integration and operational resilience.",
-  },
-  {
-    id: "04",
-    title: "Measure What Matters",
-    body: "We continuously evaluate quality, reliability, cost and real-world performance to understand what works and what needs improvement.",
-  },
-  {
-    id: "05",
-    title: "Keep Humans in Control",
-    body: "Intelligence should extend human capability, not remove accountability. We design clear roles for human judgement, oversight and intervention.",
-  },
-  {
-    id: "06",
-    title: "Evolve Continuously",
-    body: "Intelligent systems improve through feedback, evidence and iteration. Every deployment creates opportunities to learn and refine.",
-  },
-] as const;
+import { ENGINEERING_PRINCIPLES as PRINCIPLES } from "@/components/home/engineering-philosophy-data";
 
 const CX = 200;
 const CY = 200;
@@ -316,7 +285,7 @@ export function EngineeringPhilosophySection() {
                       }
                     }}
                     className={cn(
-                      "group flex min-h-[3.25rem] w-full items-start gap-4 py-4 text-left outline-none transition-colors focus-visible:ring-2 focus-visible:ring-[color:var(--focus-ring)] focus-visible:ring-offset-2 md:py-[1.05rem]",
+                      "group flex min-h-[3.25rem] w-full scroll-mt-[var(--site-header-scroll-margin)] items-start gap-4 py-4 text-left outline-none transition-colors focus-visible:ring-2 focus-visible:ring-[color:var(--focus-ring)] focus-visible:ring-offset-2 md:py-[1.05rem]",
                       TRANSITION,
                       open ? "text-ink-900" : "text-[#5A6B86]",
                     )}

@@ -1,7 +1,7 @@
 {
   "failures": [],
   "results": {
-    "base": "http://localhost:3140",
+    "base": "http://localhost:3160",
     "c1": [
       {
         "id": "c1 / @375",
@@ -363,7 +363,7 @@
         "h1Text": "Businesses builtaround intelligence.Powered by human expertise.",
         "h1Opacity": "1",
         "ancestorHidden": false,
-        "revealCount": 14,
+        "revealCount": 11,
         "hiddenRevealCount": 0,
         "sampleHidden": []
       },

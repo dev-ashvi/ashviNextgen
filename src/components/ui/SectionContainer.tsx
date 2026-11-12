@@ -23,7 +23,7 @@ export function SectionContainer({
   as: Tag = "section",
 }: SectionContainerProps) {
   return (
-    <Tag id={id} className={cn("relative scroll-mt-24", tones[tone], className)}>
+    <Tag id={id} className={cn("relative scroll-anchor", tones[tone], className)}>
       <div className="shell">{children}</div>
     </Tag>
   );

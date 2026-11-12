@@ -10,7 +10,7 @@ export function ContactSection() {
     <section
       id="connect"
       aria-labelledby="connect-title"
-      className="relative scroll-mt-24 bg-paper"
+      className="relative scroll-anchor bg-paper"
     >
       <div className="shell pb-16 pt-6 md:pb-20 md:pt-8 lg:pb-24 lg:pt-10">
         <div className="relative min-h-[360px] overflow-hidden rounded-[22px] bg-ink-900 text-white md:min-h-[400px] md:rounded-[26px] lg:min-h-[420px] lg:rounded-[28px]">

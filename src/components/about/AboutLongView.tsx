@@ -23,7 +23,7 @@ export function AboutLongView() {
   return (
     <section
       aria-labelledby="about-long-view-title"
-      className="scroll-mt-24 border-t border-paper-line bg-paper"
+      className="scroll-anchor border-t border-paper-line bg-paper"
     >
       <div className="shell py-14 md:py-16 lg:py-20">
         <AnimatedReveal className="max-w-[40rem]">

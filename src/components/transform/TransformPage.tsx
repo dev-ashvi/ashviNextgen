@@ -66,7 +66,7 @@ function TransformHero() {
 
       <TransformHeroVisual className="absolute bottom-0 right-[-8%] hidden w-[66%] lg:block" />
 
-      <Shell className="relative pb-12 pt-[120px] lg:min-h-[540px] lg:pb-14 lg:pt-[132px]">
+      <Shell className="relative pb-12 pt-[120px] max-md:pb-6 lg:min-h-[540px] lg:pb-14 lg:pt-[132px]">
         <div className="max-w-[32rem] lg:max-w-[31rem]">
           <Eyebrow>AshviTech / Transform</Eyebrow>
           <h1 id="tr-hero-title" className={`${serif} mt-6 text-[clamp(2.5rem,4.3vw,3.85rem)] leading-[1.04] text-[#021336] lg:w-[36rem]`}>
@@ -93,8 +93,21 @@ function TransformHero() {
         </div>
       </Shell>
 
-      {/* small screens: the sculpture follows the content, never behind it */}
-      <TransformHeroVisual className="block w-full lg:hidden" />
+      {/*
+        < lg: sculpture stacks under CTAs — never behind copy.
+        Phones: taller framed cover-crop for architectural presence.
+        Tablet (md–lg): natural wide aspect (already substantial at ~768).
+        Desktop absolute branch above is untouched.
+      */}
+      <div className="relative mt-1 block h-[248px] w-full overflow-hidden sm:h-[268px] md:hidden">
+        <TransformHeroVisual
+          presentation="mobileHero"
+          className="absolute inset-0 h-full w-full"
+        />
+      </div>
+      <div className="relative mt-2 hidden w-full overflow-hidden md:block lg:hidden">
+        <TransformHeroVisual className="block w-full" />
+      </div>
     </section>
   )
 }
@@ -281,7 +294,7 @@ function BlueprintLayer({ i, className = '' }: { i: number; className?: string }
 
 function TransformApproach() {
   return (
-    <section id="our-approach" aria-labelledby="tr-approach-title" className="scroll-mt-24 border-b border-[#021336]/[0.08] bg-[#F8F9FD]">
+    <section id="our-approach" aria-labelledby="tr-approach-title" className="scroll-anchor border-b border-[#021336]/[0.08] bg-[#F8F9FD]">
       <Shell className="grid gap-10 py-16 sm:py-20 lg:grid-cols-[0.78fr_1.22fr] lg:gap-14">
         <div className="lg:sticky lg:top-28 lg:self-start lg:pt-2">
           <Eyebrow>Our approach</Eyebrow>
@@ -324,7 +337,11 @@ const PRINCIPLES = [
 
 function PartnershipApproach() {
   return (
-    <section aria-labelledby="tr-partner-title" className="bg-[#F8F9FD]">
+    <section
+      id="our-partnership"
+      aria-labelledby="tr-partner-title"
+      className="scroll-anchor bg-[#F8F9FD]"
+    >
       <Shell className="py-16 sm:py-20">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1px_1.1fr] lg:gap-14">
           <div>

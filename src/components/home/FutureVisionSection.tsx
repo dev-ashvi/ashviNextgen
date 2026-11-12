@@ -53,14 +53,15 @@ export function FutureVisionSection() {
         >
           <figure className="relative w-full">
             <Image
-              src="/sculptures/emerging-enterprise-stage.png"
+              src="/sculptures/emerging-enterprise-stage.webp"
               alt="Emerging Enterprise sculpture: a Domain Expertise sphere connected by flowing intelligence arcs to a translucent glass enterprise building"
               width={691}
               height={366}
               className="h-auto w-full select-none"
               sizes="(max-width: 1024px) 100vw, 58vw"
-              quality={93}
+              quality={90}
               priority={false}
+              loading="lazy"
             />
 
             {/*

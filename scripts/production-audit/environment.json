@@ -1,0 +1,47 @@
+{
+  "measuredAt": "2026-11-12T11:07:21.245Z",
+  "next": "15.5.14",
+  "react": "19.2.4",
+  "reactDom": "19.2.4",
+  "node": "v22.14.0",
+  "routes": {
+    "static": [
+      "/",
+      "/about",
+      "/build",
+      "/research",
+      "/transform",
+      "/robots.txt",
+      "/sitemap.xml"
+    ],
+    "dynamic": [
+      "/contact",
+      "/api/contact"
+    ]
+  },
+  "deps": {
+    "cobe": "^2.0.1",
+    "motion": "^12.38.0",
+    "resend": "^6.38.0",
+    "upstashRatelimit": "^2.2.0",
+    "lucide": "^0.511.0"
+  },
+  "npmAudit": {
+    "critical": 3,
+    "high": 8,
+    "moderate": 10,
+    "total": 21
+  },
+  "tests": "30 passed",
+  "lighthouse": "12.2.1 lab",
+  "fieldData": "not available",
+  "browsersTested": [
+    "Chromium headless (Lighthouse + Playwright)"
+  ],
+  "physicalDevices": false,
+  "envFiles": [
+    ".env.example only — no .env.local"
+  ],
+  "resendConfigured": false,
+  "upstashConfigured": false
+}

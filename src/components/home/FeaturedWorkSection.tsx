@@ -9,7 +9,7 @@ export function FeaturedWorkSection() {
   return (
     <section
       id="our-work"
-      className="relative scroll-mt-[6.5rem] overflow-x-clip bg-[#F8F9FD]"
+      className="relative scroll-anchor overflow-x-clip bg-[#F8F9FD]"
     >
       {/* Light atmospheric base */}
       <div

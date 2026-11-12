@@ -22,15 +22,15 @@ export function Sculpture({
         <source
           type="image/webp"
           srcSet="/art/sculpture-900.webp 900w, /art/sculpture-1600.webp 1600w"
-          sizes="(min-width: 1500px) 42vw, (min-width: 1024px) min(46vw, 720px), 110vw"
+          sizes="(min-width: 1500px) 42vw, (min-width: 1024px) min(46vw, 720px), 92vw"
         />
         <img
-          src="/art/sculpture-1600.png"
+          src="/art/sculpture-900.webp"
           alt="Dual Intelligence: a navy architectural form and a translucent teal ribbon interlocking — human expertise and artificial intelligence working together."
           width={1698}
           height={1266}
           fetchPriority="high"
-          decoding="async"
+          decoding="sync"
           className="sculpt-float relative block h-full w-full select-none object-contain"
           draggable={false}
         />

@@ -1,0 +1,521 @@
+{
+  "base": "http://localhost:3150",
+  "startedAt": "2026-11-12T11:01:50.293Z",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "path": "/build",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "path": "/transform",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "path": "/research",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "path": "/contact",
+      "status": 500,
+      "ok": false
+    }
+  ],
+  "navigation": [
+    {
+      "test": "mobile-menu-open-escape",
+      "menuVisible": true,
+      "firstFocus": "A:/build",
+      "menuHiddenAfterEscape": true
+    },
+    {
+      "test": "wwd-build",
+      "url": "http://localhost:3150/build"
+    },
+    {
+      "test": "wwd-transform",
+      "url": "http://localhost:3150/transform"
+    },
+    {
+      "test": "our-work-anchor",
+      "url": "http://localhost:3150/#our-work",
+      "hash": "#our-work"
+    },
+    {
+      "test": "nav-/research",
+      "url": "http://localhost:3150/research",
+      "statusOk": true
+    },
+    {
+      "test": "nav-/about",
+      "url": "http://localhost:3150/about",
+      "statusOk": true
+    },
+    {
+      "test": "nav-/contact",
+      "url": "http://localhost:3150/contact",
+      "statusOk": true
+    }
+  ],
+  "contact": {
+    "skipped": true,
+    "reason": "contact route not healthy",
+    "status": 500
+  },
+  "a11yManual": {
+    "/": {
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Businesses builtaround intelligence.Powered by human expertise."
+        },
+        {
+          "tag": "H2",
+          "text": "Technology is changing what a business can be."
+        },
+        {
+          "tag": "H2",
+          "text": "Two paths. One ambition."
+        },
+        {
+          "tag": "H3",
+          "text": "Creating AI-native businesses"
+        },
+        {
+          "tag": "H3",
+          "text": "Reimagining existing businesses with AI"
+        },
+        {
+          "tag": "H2",
+          "text": "WYZ Finance"
+        },
+        {
+          "tag": "H2",
+          "text": "Build for how the business works."
+        },
+        {
+          "tag": "H2",
+          "text": "Making entrepreneurship more accessible."
+        },
+        {
+          "tag": "H2",
+          "text": "Ashvi Research"
+        },
+        {
+          "tag": "H2",
+          "text": "Technology should go beyond the business it serves."
+        },
+        {
+          "tag": "H3",
+          "text": "Solve what matters now."
+        },
+        {
+          "tag": "H3",
+          "text": "Pursue questions worth exploring."
+        },
+        {
+          "tag": "H2",
+          "text": "Let's build what comes next."
+        }
+      ],
+      "mains": 1,
+      "navs": 2,
+      "skip": true,
+      "h1": 1
+    },
+    "/build": {
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Co-buildingAI-native ventures."
+        },
+        {
+          "tag": "H2",
+          "text": "Deep expertise can become the foundation of a new business."
+        },
+        {
+          "tag": "H2",
+          "text": "Different strengths. Shared ambition."
+        },
+        {
+          "tag": "H3",
+          "text": "The Domain Partner"
+        },
+        {
+          "tag": "H3",
+          "text": "AshviTech"
+        },
+        {
+          "tag": "H3",
+          "text": "The Domain Partner"
+        },
+        {
+          "tag": "H3",
+          "text": "AshviTech"
+        },
+        {
+          "tag": "H2",
+          "text": "A structured path from an insight to a business."
+        },
+        {
+          "tag": "H3",
+          "text": "Understandthe opportunity"
+        },
+        {
+          "tag": "H3",
+          "text": "Validatewhat matters"
+        },
+        {
+          "tag": "H3",
+          "text": "Design theoperating model"
+        },
+        {
+          "tag": "H3",
+          "text": "Buildand learn"
+        },
+        {
+          "tag": "H3",
+          "text": "Grow withthe business"
+        },
+        {
+          "tag": "H3",
+          "text": "Understand the opportunity"
+        },
+        {
+          "tag": "H3",
+          "text": "Validate what matters"
+        },
+        {
+          "tag": "H3",
+          "text": "Design the operating model"
+        },
+        {
+          "tag": "H3",
+          "text": "Build and learn"
+        },
+        {
+          "tag": "H3",
+          "text": "Grow with the business"
+        },
+        {
+          "tag": "H2",
+          "text": "WYZ Finance — Building financial intelligence with domain expertise."
+        },
+        {
+          "tag": "H2",
+          "text": "What could we build together?"
+        }
+      ],
+      "mains": 1,
+      "navs": 2,
+      "skip": true,
+      "h1": 1
+    },
+    "/transform": {
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Reimagine how your business works."
+        },
+        {
+          "tag": "H2",
+          "text": "The biggest opportunity may not be doing the same work faster."
+        },
+        {
+          "tag": "H2",
+          "text": "Intelligence across the way a business operates."
+        },
+        {
+          "tag": "H3",
+          "text": "01Workflows"
+        },
+        {
+          "tag": "H3",
+          "text": "02Decisions"
+        },
+        {
+          "tag": "H3",
+          "text": "03Knowledge"
+        },
+        {
+          "tag": "H3",
+          "text": "04Operations"
+        },
+        {
+          "tag": "H3",
+          "text": "01Workflows"
+        },
+        {
+          "tag": "H3",
+          "text": "02Decisions"
+        },
+        {
+          "tag": "H3",
+          "text": "03Knowledge"
+        },
+        {
+          "tag": "H3",
+          "text": "04Operations"
+        },
+        {
+          "tag": "H2",
+          "text": "Understand the work.Redesign the system."
+        },
+        {
+          "tag": "H3",
+          "text": "Discover"
+        },
+        {
+          "tag": "H3",
+          "text": "Identify"
+        },
+        {
+          "tag": "H3",
+          "text": "Redesign"
+        },
+        {
+          "tag": "H3",
+          "text": "Engineer"
+        },
+        {
+          "tag": "H3",
+          "text": "Evolve"
+        },
+        {
+          "tag": "H2",
+          "text": "Technology has to work in the business you already have."
+        },
+        {
+          "tag": "H3",
+          "text": "Operational Continuity"
+        },
+        {
+          "tag": "H3",
+          "text": "Human Oversight"
+        },
+        {
+          "tag": "H3",
+          "text": "Measurable Improvement"
+        },
+        {
+          "tag": "H2",
+          "text": "What could your business become?"
+        }
+      ],
+      "mains": 1,
+      "navs": 2,
+      "skip": true,
+      "h1": 1
+    },
+    "/research": {
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Exploring the foundations of intelligent systems."
+        },
+        {
+          "tag": "H2",
+          "text": "Not every important technical question begins with a business requirement."
+        },
+        {
+          "tag": "H2",
+          "text": "A disciplined, iterative approach to inquiry."
+        },
+        {
+          "tag": "H3",
+          "text": "Question"
+        },
+        {
+          "tag": "H3",
+          "text": "Hypothesis"
+        },
+        {
+          "tag": "H3",
+          "text": "Experiment"
+        },
+        {
+          "tag": "H3",
+          "text": "Evaluation"
+        },
+        {
+          "tag": "H3",
+          "text": "New Questions"
+        },
+        {
+          "tag": "H3",
+          "text": "Question"
+        },
+        {
+          "tag": "H3",
+          "text": "Hypothesis"
+        },
+        {
+          "tag": "H3",
+          "text": "Experiment"
+        },
+        {
+          "tag": "H3",
+          "text": "Evaluation"
+        },
+        {
+          "tag": "H3",
+          "text": "New Questions"
+        },
+        {
+          "tag": "H2",
+          "text": "Meaningful technical progress rarely follows a predictable path."
+        },
+        {
+          "tag": "H2",
+          "text": "Prateesh Goyal"
+        },
+        {
+          "tag": "H2",
+          "text": "Open to meaningful collaboration."
+        }
+      ],
+      "mains": 1,
+      "navs": 2,
+      "skip": true,
+      "h1": 1
+    },
+    "/about": {
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Technology should go beyond the business it serves."
+        },
+        {
+          "tag": "H2",
+          "text": "A different relationship between technology and business."
+        },
+        {
+          "tag": "H3",
+          "text": "Built around immediate needs."
+        },
+        {
+          "tag": "H3",
+          "text": "Knowledge that extends further."
+        },
+        {
+          "tag": "H2",
+          "text": "Two pursuits. One institution."
+        },
+        {
+          "tag": "H3",
+          "text": "Build"
+        },
+        {
+          "tag": "H3",
+          "text": "Explore"
+        },
+        {
+          "tag": "H2",
+          "text": "Building something that can outlast individual projects."
+        },
+        {
+          "tag": "H3",
+          "text": "Businesses"
+        },
+        {
+          "tag": "H3",
+          "text": "Research"
+        },
+        {
+          "tag": "H3",
+          "text": "People"
+        },
+        {
+          "tag": "H2",
+          "text": "Some ideas need more than a conventional partnership."
+        }
+      ],
+      "mains": 1,
+      "navs": 2,
+      "skip": true,
+      "h1": 1
+    },
+    "reducedMotionReveal": []
+  },
+  "links": [
+    {
+      "href": "#main",
+      "kind": "hash"
+    },
+    {
+      "href": "/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/build",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/transform",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/#our-work",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/research",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/about",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/contact",
+      "status": 500,
+      "ok": false
+    },
+    {
+      "href": "/#what-we-do",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "https://financewyz.ai/",
+      "kind": "external"
+    },
+    {
+      "href": "mailto:hello@ashvi.tech",
+      "kind": "mailto"
+    }
+  ],
+  "errors": [
+    {
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "pageerror",
+      "message": "ChunkLoadError: Loading chunk app-pages-internals failed.\n(error: http://localhost:3150/_next/static/chunks/app-pages-internals.js)"
+    }
+  ],
+  "finishedAt": "2026-11-12T11:02:09.985Z"
+}

@@ -1,0 +1,173 @@
+{
+  "reveal": {
+    "count": 14,
+    "sample": [
+      {
+        "opacity": "1",
+        "transform": "none",
+        "visibleClass": true,
+        "text": "What We BelieveTechnology is changing what a busin"
+      },
+      {
+        "opacity": "1",
+        "transform": "none",
+        "visibleClass": true,
+        "text": "Expertise × intelligent systemsDomain ExpertsHuman"
+      },
+      {
+        "opacity": "1",
+        "transform": "none",
+        "visibleClass": true,
+        "text": "01 — BuildFor founders & domain expertsCreating AI"
+      },
+      {
+        "opacity": "1",
+        "transform": "none",
+        "visibleClass": true,
+        "text": "02 — TransformFor existing businessesReimagining e"
+      },
+      {
+        "opacity": "1",
+        "transform": "none",
+        "visibleClass": true,
+        "text": "What We're Building"
+      },
+      {
+        "opacity": "1",
+        "transform": "none",
+        "visibleClass": true,
+        "text": "Current collaboration"
+      },
+      {
+        "opacity": "1",
+        "transform": "none",
+        "visibleClass": true,
+        "text": "WYZ FinanceAI-native financial intelligence and CF"
+      },
+      {
+        "opacity": "1",
+        "transform": "none",
+        "visibleClass": true,
+        "text": "Product interface · Illustrative demo data"
+      },
+      {
+        "opacity": "1",
+        "transform": "none",
+        "visibleClass": true,
+        "text": "AI Decision Intelligence for FoundersConnecting fi"
+      },
+      {
+        "opacity": "1",
+        "transform": "none",
+        "visibleClass": true,
+        "text": "Our Engineering PhilosophyBuild for how the busine"
+      }
+    ]
+  },
+  "focusSample": [
+    {
+      "tag": "A",
+      "name": "Skip to content",
+      "outline": "solid 0px rgb(255, 255, 255)"
+    },
+    {
+      "tag": "A",
+      "name": "AshviTech home",
+      "outline": "solid 0px rgb(6, 24, 61)"
+    },
+    {
+      "tag": "BUTTON",
+      "name": "What We Do▾",
+      "outline": "solid 2px rgba(6, 24, 61, 0.8)"
+    },
+    {
+      "tag": "A",
+      "name": "BuildCo-create AI-native ventures",
+      "outline": "none 0px oklab(0.220589 -0.0103107 -0.0746161 / 0.85)"
+    },
+    {
+      "tag": "A",
+      "name": "TransformRethink existing operations",
+      "outline": "none 0px oklab(0.220589 -0.0103107 -0.0746161 / 0.85)"
+    },
+    {
+      "tag": "A",
+      "name": "Our Work",
+      "outline": "solid 2px rgba(6, 24, 61, 0.8)"
+    },
+    {
+      "tag": "A",
+      "name": "Research",
+      "outline": "solid 2px rgba(6, 24, 61, 0.8)"
+    },
+    {
+      "tag": "A",
+      "name": "About",
+      "outline": "solid 2px rgba(6, 24, 61, 0.8)"
+    },
+    {
+      "tag": "A",
+      "name": "Contact→",
+      "outline": "solid 2px rgb(255, 255, 255)"
+    },
+    {
+      "tag": "BUTTON",
+      "name": "Open menu",
+      "outline": "none 0px rgb(6, 24, 61)"
+    },
+    {
+      "tag": "A",
+      "name": "See what we're building→",
+      "outline": "solid 2px rgb(255, 255, 255)"
+    },
+    {
+      "tag": "A",
+      "name": "What We Do",
+      "outline": "solid 0px rgb(6, 24, 61)"
+    },
+    {
+      "tag": "A",
+      "name": "Explore Build→",
+      "outline": "solid 2px rgb(255, 255, 255)"
+    },
+    {
+      "tag": "A",
+      "name": "Explore Transform→",
+      "outline": "solid 2px rgb(0, 56, 118)"
+    },
+    {
+      "tag": "A",
+      "name": "Explore WYZ Finance↗",
+      "outline": "solid 2px rgb(255, 255, 255)"
+    },
+    {
+      "tag": "path",
+      "name": "01 Understand the Work",
+      "outline": "solid 0px rgb(6, 24, 61)"
+    },
+    {
+      "tag": "path",
+      "name": "02 Design for Impact",
+      "outline": "solid 0px rgb(6, 24, 61)"
+    },
+    {
+      "tag": "path",
+      "name": "03 Engineer for Reality",
+      "outline": "solid 0px rgb(6, 24, 61)"
+    },
+    {
+      "tag": "path",
+      "name": "04 Measure What Matters",
+      "outline": "solid 0px rgb(6, 24, 61)"
+    },
+    {
+      "tag": "path",
+      "name": "05 Keep Humans in Control",
+      "outline": "solid 0px rgb(6, 24, 61)"
+    }
+  ],
+  "wwdKeyboard": {
+    "menuOpen": true,
+    "menuClosed": true
+  }
+}
